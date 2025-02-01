@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjgq0nxhkr82u"]
+[gd_scene load_steps=6 format=3 uid="uid://cjgq0nxhkr82u"]
 
 [ext_resource type="Script" path="res://survivors_game.gd" id="1_110yh"]
 [ext_resource type="PackedScene" uid="uid://5mo22e3ci4vu" path="res://characters/Miner/player.tscn" id="1_n6sk1"]
 [ext_resource type="Texture2D" uid="uid://caqfk2xng5v5u" path="res://OldFilesFromDemo2/trees/pine_tree.png" id="3_m5kdh"]
+[ext_resource type="PackedScene" uid="uid://d2itpclivav52" path="res://Collectables/oil_can.tscn" id="4_1d46e"]
 
 [sub_resource type="Curve2D" id="Curve2D_0v7uw"]
 _data = {
@@ -13,20 +14,23 @@ point_count = 5
 [node name="Game" type="Node2D"]
 script = ExtResource("1_110yh")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -2
+offset_left = -903.0
+offset_top = -676.0
+offset_right = 2820.0
+offset_bottom = 1661.0
+color = Color(0.214352, 0.199947, 0.121722, 1)
+
+[node name="CanvasModulateDARKNESS" type="CanvasModulate" parent="."]
+color = Color(0.158472, 0.158472, 0.158472, 1)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -9
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-z_index = -2
-offset_left = -1233.0
-offset_top = -752.0
-offset_right = 2490.0
-offset_bottom = 1585.0
-color = Color(0.473976, 0.473976, 0.473976, 1)
-
 [node name="Player" parent="." instance=ExtResource("1_n6sk1")]
 y_sort_enabled = true
-position = Vector2(890, 583)
+position = Vector2(994, 597)
 
 [node name="Path2D" type="Path2D" parent="Player"]
 visible = false
@@ -83,8 +87,18 @@ position = Vector2(-809, -339)
 texture = ExtResource("3_m5kdh")
 
 [node name="PineTree3" type="Sprite2D" parent="."]
-position = Vector2(1392, 175)
+position = Vector2(1074, 264)
 texture = ExtResource("3_m5kdh")
+
+[node name="OilCan" parent="." instance=ExtResource("4_1d46e")]
+position = Vector2(1344, 670)
+
+[node name="OilCan2" parent="." instance=ExtResource("4_1d46e")]
+position = Vector2(665, 819)
+
+[node name="OilCan3" parent="." instance=ExtResource("4_1d46e")]
+position = Vector2(517, 212)
+metadata/_edit_group_ = true
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

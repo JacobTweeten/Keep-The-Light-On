@@ -1,2 +1,7 @@
+res://Collectables/oil_can.tscn
 res://survivors_game.tscn
 res://characters/Miner/player.tscn
+res://characters/slime/slime.tscn
+res://Collectables/oil_pick_up.gd
+res://Collectables/oil_can.gd
+res://characters/Miner/player.gd
