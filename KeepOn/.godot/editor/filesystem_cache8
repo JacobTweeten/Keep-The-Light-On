@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1738425837
+::res://::1738426783
 survivors_game.gd::GDScript::-1::1738424463::0::1::::<>Node2D<>::
-survivors_game.tscn::PackedScene::5417944062050910070::1738425837::0::1::::<><>::res://survivors_game.gd<>uid://5mo22e3ci4vu::::res://characters/Miner/player.tscn<>uid://caqfk2xng5v5u::::res://OldFilesFromDemo2/trees/pine_tree.png
+survivors_game.tscn::PackedScene::5417944062050910070::1738425886::0::1::::<><>::res://survivors_game.gd<>uid://5mo22e3ci4vu::::res://characters/Miner/player.tscn<>uid://caqfk2xng5v5u::::res://OldFilesFromDemo2/trees/pine_tree.png
 ::res://addons/::1738423678
 ::res://addons/colorpicker_presets/::1738423678
 colorpicker_presets.gd::GDScript::-1::1737842738::0::1::::<>EditorPlugin<>::
@@ -9,10 +9,10 @@ plugin.cfg::TextFile::-1::1737842738::0::1::::<><>::
 README.md::TextFile::-1::1737842738::0::1::::<><>::
 ::res://characters/::1738425342
 ground_shadow.png::CompressedTexture2D::2671517082038095037::1737842738::1738425179::1::::<><>::
-::res://characters/Miner/::1738425815
+::res://characters/Miner/::1738425886
 miner.png::CompressedTexture2D::5847059947275553913::1738425072::1738425179::1::::<><>::
 player.gd::GDScript::-1::1738425236::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::2131337522108736306::1738425815::0::1::::<><>::res://characters/Miner/player.gd<>uid://cpkmht4mou57b::::res://characters/Miner/miner.png<>uid://cmgkom8c8hvly::::res://OldFilesFromDemo2/gun.tscn
+player.tscn::PackedScene::2131337522108736306::1738425886::0::1::::<><>::res://characters/Miner/player.gd<>uid://cpkmht4mou57b::::res://characters/Miner/miner.png<>uid://cmgkom8c8hvly::::res://OldFilesFromDemo2/gun.tscn
 ::res://characters/slime/::1738423679
 slime.gd::GDScript::-1::1737842738::0::1::::<>Node2D<>::
 slime.tscn::PackedScene::995535223809565591::1737862464::0::1::::<><>::uid://dvgfmy6vtvjji::::res://characters/slime/slime_body.png<>res://characters/slime/slime.gd<>uid://b7rhtttevhxtj::::res://characters/ground_shadow.png<>uid://c078jrp2yvc4s::::res://characters/slime/slime_face.png<>uid://btbxea1f3vwot::::res://characters/slime/slime_body_hurt.png<>uid://cai2ijnbypqtr::::res://characters/slime/slime_hurt_eyes.png
@@ -55,5 +55,5 @@ circle_32.png::CompressedTexture2D::6271663262871881894::1737842738::1738425836:
 smoke_explosion.gd::GDScript::-1::1737842738::0::1::::<>Node2D<>::
 smoke_explosion.gdshader::Shader::-1::1737842738::0::1::::<><>::
 smoke_explosion.tscn::PackedScene::7675803860678853612::1738425835::0::1::::<><>::res://OldFilesFromDemo2/smoke_explosion/smoke_explosion.gdshader<>res://OldFilesFromDemo2/smoke_explosion/smoke_explosion.gd
-::res://OldFilesFromDemo2/trees/::1738425521
+::res://OldFilesFromDemo2/trees/::1738425838
 pine_tree.png::CompressedTexture2D::4806194308614878228::1737842738::1738425838::1::::<><>::
