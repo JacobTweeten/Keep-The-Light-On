@@ -4,9 +4,13 @@ extends CharacterBody2D
 signal health_depleted
 
 var health = 100.0
+var direction: Vector2 = Vector2.ZERO
+var cardinal_direction: Vector2 = Vector2.DOWN
 
 func _physics_process(delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	if direction != Vector2.ZERO:
+		cardinal_direction = direction.normalized()
 	velocity = direction * 600 
 	move_and_slide()
 	'if velocity.length() > 0.0:
@@ -30,12 +34,3 @@ func _physics_process(delta):
 			health_depleted.emit()
 			
 			
-
-#this dont work
-func _on_hurt_box_body_entered(body: Node2D) -> void:
-	if body is Oil:
-		health = 100.0
-		
-		# Optionally, clamp the player's health to a maximum value (e.g., 100).
-		body.health = min(body.health, 100)
-		body.queue_free()

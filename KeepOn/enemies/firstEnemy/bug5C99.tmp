@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://dcowc0sjqjet0"]
+
+[ext_resource type="Script" path="res://enemies/firstEnemy/bug.gd" id="1_kgsuq"]
+[ext_resource type="Texture2D" uid="uid://ck2uojqfo4cnf" path="res://enemies/firstEnemy/bug.png" id="2_0qwgw"]
+[ext_resource type="Script" path="res://enemies/firstEnemy/enemy.gd" id="3_1dxci"]
+[ext_resource type="Script" path="res://enemies/firstEnemy/mob.gd" id="4_tjjc1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vnva8"]
+radius = 41.1096
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0wmqv"]
+radius = 422.001
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_exxy7"]
+radius = 41.1947
+
+[node name="bug" type="Node2D" groups=["bug"]]
+script = ExtResource("1_kgsuq")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Bug" type="Sprite2D" parent="."]
+position = Vector2(1, -4)
+scale = Vector2(0.422705, 0.368132)
+texture = ExtResource("2_0qwgw")
+
+[node name="Enemy" type="Area2D" parent="." groups=["PlayersLight", "bug"]]
+unique_name_in_owner = true
+collision_mask = 3
+script = ExtResource("3_1dxci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+shape = SubResource("CircleShape2D_vnva8")
+debug_color = Color(0.754414, 0.441724, 0.32055, 0.42)
+
+[node name="BugSight" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BugSight"]
+position = Vector2(4, 2)
+shape = SubResource("CircleShape2D_0wmqv")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("4_tjjc1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_exxy7")
+
+[connection signal="area_entered" from="Enemy" to="." method="_on_enemy_area_entered"]
+[connection signal="body_entered" from="Enemy" to="." method="_on_enemy_body_entered"]
+[connection signal="body_exited" from="Enemy" to="." method="_on_enemy_body_exited"]
+[connection signal="body_entered" from="BugSight" to="." method="_on_bug_sight_body_entered"]
+[connection signal="body_entered" from="BugSight" to="CharacterBody2D" method="_on_bug_sight_body_entered"]
+[connection signal="body_exited" from="BugSight" to="CharacterBody2D" method="_on_bug_sight_body_exited"]
