@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcowc0sjqjet0"]
+
+[ext_resource type="Script" path="res://enemies/firstEnemy/bug.gd" id="1_kgsuq"]
+[ext_resource type="Texture2D" uid="uid://ck2uojqfo4cnf" path="res://enemies/firstEnemy/bug.png" id="2_0qwgw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0wmqv"]
+radius = 422.001
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vnva8"]
+radius = 41.1096
+
+[node name="bug" type="Node2D" groups=["bug"]]
+script = ExtResource("1_kgsuq")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Bug" type="Sprite2D" parent="."]
+position = Vector2(1, -4)
+scale = Vector2(0.422705, 0.368132)
+texture = ExtResource("2_0qwgw")
+
+[node name="BugSight" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BugSight"]
+shape = SubResource("CircleShape2D_0wmqv")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_vnva8")
+debug_color = Color(0.754414, 0.441724, 0.32055, 0.42)
