@@ -11,7 +11,7 @@ func _physics_process(delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	if direction != Vector2.ZERO:
 		cardinal_direction = direction.normalized()
-	velocity = direction * 600 
+	velocity = direction * 600
 	move_and_slide()
 	'if velocity.length() > 0.0:
 		%HappyBoo.play_walk_animation()
@@ -22,15 +22,7 @@ func _physics_process(delta):
 	var light_node = $light
 	health = light_node.fuel
 	%ProgressBar.value = health
-	 
-	
-	
-	const DAMAGE_RATE = 5.0
-	var overlapping_mobs = %HurtBox.get_overlapping_bodies()
-	if overlapping_mobs.size() > 0:
-		health -= DAMAGE_RATE * overlapping_mobs.size() * delta
-		%ProgressBar.value = health
-		if health <= 0.0:
-			health_depleted.emit()
+	if health <= 0.0:
+		health_depleted.emit()
 			
 			

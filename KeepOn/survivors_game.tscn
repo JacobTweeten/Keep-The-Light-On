@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://cjgq0nxhkr82u"]
+[gd_scene load_steps=9 format=3 uid="uid://cjgq0nxhkr82u"]
 
 [ext_resource type="Script" path="res://survivors_game.gd" id="1_110yh"]
 [ext_resource type="PackedScene" uid="uid://5mo22e3ci4vu" path="res://characters/Miner/player.tscn" id="1_n6sk1"]
 [ext_resource type="Texture2D" uid="uid://caqfk2xng5v5u" path="res://OldFilesFromDemo2/trees/pine_tree.png" id="3_m5kdh"]
 [ext_resource type="PackedScene" uid="uid://d2itpclivav52" path="res://Collectables/oil_can.tscn" id="4_1d46e"]
-[ext_resource type="PackedScene" uid="uid://bh2qs4252a5b6" path="res://enemies/firstEnemy/fixed_bug.tscn" id="6_lmi5a"]
+[ext_resource type="PackedScene" uid="uid://c3028soe562lp" path="res://enemies/secondenemy/bat.tscn" id="5_o15b2"]
+[ext_resource type="PackedScene" uid="uid://bh2qs4252a5b6" path="res://enemies/firstEnemy/fixed_bug.tscn" id="6_s4qvd"]
+[ext_resource type="PackedScene" uid="uid://ugrkuhmnukym" path="res://Collectables/super_oil_can.tscn" id="7_miykr"]
 
 [sub_resource type="Curve2D" id="Curve2D_0v7uw"]
 _data = {
@@ -32,7 +34,7 @@ layer = -9
 
 [node name="Player" parent="." instance=ExtResource("1_n6sk1")]
 y_sort_enabled = true
-position = Vector2(881, 523)
+position = Vector2(864, 545)
 
 [node name="Path2D" type="Path2D" parent="Player"]
 visible = false
@@ -102,27 +104,6 @@ position = Vector2(665, 819)
 position = Vector2(517, 212)
 metadata/_edit_group_ = true
 
-[node name="FixedBug" parent="." instance=ExtResource("6_lmi5a")]
-position = Vector2(414, 569)
-
-[node name="FixedBug2" parent="." instance=ExtResource("6_lmi5a")]
-position = Vector2(1340, 499)
-
-[node name="FixedBug3" parent="." instance=ExtResource("6_lmi5a")]
-position = Vector2(884, 990)
-
-[node name="FixedBug4" parent="." instance=ExtResource("6_lmi5a")]
-position = Vector2(845, 9)
-
-[node name="FixedBug5" parent="." instance=ExtResource("6_lmi5a")]
-position = Vector2(-28, -51)
-
-[node name="FixedBug6" parent="." instance=ExtResource("6_lmi5a")]
-position = Vector2(-241, 953)
-
-[node name="FixedBug7" parent="." instance=ExtResource("6_lmi5a")]
-position = Vector2(1768, -454)
-
 [node name="OilCan4" parent="." instance=ExtResource("4_1d46e")]
 position = Vector2(1734, 1008)
 
@@ -137,6 +118,21 @@ position = Vector2(2226, 994)
 
 [node name="OilCan8" parent="." instance=ExtResource("4_1d46e")]
 position = Vector2(-536, -507)
+
+[node name="bat" parent="." instance=ExtResource("5_o15b2")]
+position = Vector2(-564, 1039)
+
+[node name="bat2" parent="." instance=ExtResource("5_o15b2")]
+position = Vector2(2136, 1057)
+
+[node name="bat3" parent="." instance=ExtResource("5_o15b2")]
+position = Vector2(1735, -559)
+
+[node name="FixedBug" parent="." instance=ExtResource("6_s4qvd")]
+position = Vector2(418, 231)
+
+[node name="OilCan9" parent="." instance=ExtResource("7_miykr")]
+position = Vector2(1051, 550)
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -8,24 +8,17 @@ var motion = Vector2.ZERO
 
 func _physics_process(delta):
 	
-	if player:  # ✅ Prevents null access
+	if player:
 		var direction = position.direction_to(player.position)
-		velocity = direction * 200  # Example speed
+		velocity = direction * 200 
 		direction = move_and_slide()
-		
-		
-		
-	
-	
-		
 
 
-	
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	
-	player = body
+	if body.is_in_group("player"):
+		player = body
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:

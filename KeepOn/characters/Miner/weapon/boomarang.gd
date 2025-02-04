@@ -36,10 +36,10 @@ func _physics_process(delta: float) -> void:
 	
 	
 	
-func throw( throw_direction : Vector2) -> void:
-	direction = throw_direction
+func throw() -> void:
+	direction = (get_global_mouse_position() - global_position).normalized()
 	speed = max_speed
 	state = State.THROW
-	animation_player.play("boomarang")
+	animation_player.play("boomerang")
 	visible = true
 	
