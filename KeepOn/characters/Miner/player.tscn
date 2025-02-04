@@ -10,8 +10,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_63j6a"]
 radius = 28.4605
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_a2jwu"]
-radius = 78.3967
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ou5wt"]
+size = Vector2(161.109, 96.7283)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w0t54"]
 bg_color = Color(0.303233, 0.303233, 0.303233, 1)
@@ -24,9 +24,9 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tgff5"]
-radius = 1495.98
+radius = 2720.53
 
-[node name="Player" type="CharacterBody2D" groups=["PlayersLight"]]
+[node name="Player" type="CharacterBody2D" groups=["PlayersLight", "player"]]
 scale = Vector2(0.55, 0.55)
 script = ExtResource("1_vs1wh")
 
@@ -53,10 +53,10 @@ visibility_layer = 2
 position = Vector2(-1, -4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(-2, -38.38)
-rotation = -2.26931
+position = Vector2(1, -36)
+rotation = -1.56831
 scale = Vector2(0.755, 0.755)
-shape = SubResource("CircleShape2D_a2jwu")
+shape = SubResource("RectangleShape2D_ou5wt")
 debug_color = Color(0.976029, 0, 0.414963, 0.42)
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
@@ -82,8 +82,8 @@ shape = SubResource("CircleShape2D_tgff5")
 debug_color = Color(0.642286, 0.52375, 0, 0.42)
 
 [node name="Lantern" type="PointLight2D" parent="light/CollisionShape2D"]
-position = Vector2(-5.45459, -1.81818)
-scale = Vector2(1.01953, 1.02344)
+position = Vector2(-29.0908, -120)
+scale = Vector2(1.86644, 1.86416)
 color = Color(1, 1, 0.298039, 1)
 energy = 2.38
 texture = ExtResource("4_80wto")

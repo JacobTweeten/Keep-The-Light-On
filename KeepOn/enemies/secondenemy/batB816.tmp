@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bh2qs4252a5b6"]
+[gd_scene load_steps=7 format=3 uid="uid://c3028soe562lp"]
 
-[ext_resource type="Script" path="res://enemies/firstEnemy/fixed_bug.gd" id="1_l8htu"]
-[ext_resource type="Texture2D" uid="uid://ck2uojqfo4cnf" path="res://enemies/firstEnemy/bug.png" id="2_h6cvf"]
-[ext_resource type="Script" path="res://enemies/firstEnemy/hitbox.gd" id="3_eyixp"]
+[ext_resource type="Script" path="res://enemies/secondenemy/bat.gd" id="1_hhvif"]
+[ext_resource type="Script" path="res://enemies/secondenemy/bathitbox.gd" id="2_k8ffs"]
+[ext_resource type="Texture2D" uid="uid://cura71tyjrcys" path="res://enemies/secondenemy/Untitled-1.png" id="3_4eqvm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6jku2"]
 radius = 35.0
@@ -13,13 +13,8 @@ radius = 378.132
 [sub_resource type="CircleShape2D" id="CircleShape2D_vshmx"]
 radius = 46.0435
 
-[node name="FixedBug" type="CharacterBody2D"]
-script = ExtResource("1_l8htu")
-
-[node name="Bug" type="Sprite2D" parent="."]
-position = Vector2(1, -4)
-scale = Vector2(0.422705, 0.368132)
-texture = ExtResource("2_h6cvf")
+[node name="bat" type="CharacterBody2D"]
+script = ExtResource("1_hhvif")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_6jku2")
@@ -30,11 +25,15 @@ shape = SubResource("CircleShape2D_6jku2")
 shape = SubResource("CircleShape2D_h6r3a")
 
 [node name="Hitbox" type="Area2D" parent="."]
-script = ExtResource("3_eyixp")
+script = ExtResource("2_k8ffs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("CircleShape2D_vshmx")
 debug_color = Color(0.983018, 0.128908, 0, 0.42)
+
+[node name="Untitled-1" type="Sprite2D" parent="."]
+scale = Vector2(0.210769, 0.210714)
+texture = ExtResource("3_4eqvm")
 
 [connection signal="body_entered" from="Sight" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Sight" to="." method="_on_area_2d_body_exited"]
