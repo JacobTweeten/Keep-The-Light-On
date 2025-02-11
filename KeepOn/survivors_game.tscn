@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cjgq0nxhkr82u"]
+[gd_scene load_steps=11 format=3 uid="uid://cjgq0nxhkr82u"]
 
 [ext_resource type="Script" path="res://survivors_game.gd" id="1_110yh"]
 [ext_resource type="PackedScene" uid="uid://5mo22e3ci4vu" path="res://characters/Miner/player.tscn" id="1_n6sk1"]
@@ -14,6 +14,9 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -695, -496, 0, 0, 0, 0, 2511, -591, 0, 0, 0, 0, 2502, 1464, 0, 0, 0, 0, -714, 1436, 0, 0, 0, 0, -695, -496)
 }
 point_count = 5
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gvaxd"]
+polygon = PackedVector2Array(296.364, -412.727, 540, -254.545, 592.727, -30.9091, 369.091, -27.2727)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_110yh")
@@ -35,7 +38,7 @@ layer = -9
 
 [node name="Player" parent="." instance=ExtResource("1_n6sk1")]
 y_sort_enabled = true
-position = Vector2(934, 477)
+position = Vector2(1052, 728)
 
 [node name="Path2D" type="Path2D" parent="Player"]
 visible = false
@@ -130,7 +133,7 @@ position = Vector2(2136, 1057)
 position = Vector2(1735, -559)
 
 [node name="OilCan9" parent="." instance=ExtResource("7_miykr")]
-position = Vector2(1051, 550)
+position = Vector2(1296, 908)
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
@@ -141,7 +144,13 @@ offset_right = 768.0
 offset_bottom = 83.0
 
 [node name="Shadow_person" parent="." instance=ExtResource("8_o3eak")]
-position = Vector2(423, 604)
+position = Vector2(228, 651)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+modulate = Color(0.0569268, 0.159853, 0.0656713, 1)
+position = Vector2(1073, 472)
+scale = Vector2(0.55, 0.55)
+occluder = SubResource("OccluderPolygon2D_gvaxd")
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
