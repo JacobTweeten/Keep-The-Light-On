@@ -6,7 +6,7 @@ var chasing: bool = false            # Whether the bat is currently chasing the 
 var chase_timer: float = 0.0         # Timer to track how long it has been chasing
 var chase_interval: float = 1      # Time interval to chase the player
 var speed: float = 1000              # Movement speed during the chase
-
+@export var scoreIncrease: int = 5
 
 
 

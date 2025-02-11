@@ -1,14 +1,13 @@
-class_name BatHitBox
 extends Node2D
-var bughealth = 3
+var bughealth = 2
 var player: Player = null  # Store the player reference
 var boomerang: Boomerang = null
 const OIL_SCENE = preload("res://Collectables/oil_can.tscn")
-@export var scoreIncrease: int = 20
+@export var scoreIncrease: int = 50
 
 func _process(delta: float) -> void:
 	if player:
-		player.health -= 50 * delta  # Damage over time
+		player.health -= 10 * delta  # Damage over time
 		player.health = min(player.health, 100)
 		player.get_node("light").fuel = player.health
 		print("hurtin player")

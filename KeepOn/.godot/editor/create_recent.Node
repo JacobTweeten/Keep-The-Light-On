@@ -1,7 +1,10 @@
+Node2D
+CharacterBody2D
+CanvasLayer
+Label
+Control
 CollisionShape2D
 Area2D
-CharacterBody2D
-Node2D
 AnimationPlayer
 Marker2D
 PointLight2D
@@ -9,6 +12,3 @@ CanvasModulate
 LightOccluder2D
 DirectionalLight2D
 ParallaxBackground
-Label
-ColorRect
-CanvasLayer
