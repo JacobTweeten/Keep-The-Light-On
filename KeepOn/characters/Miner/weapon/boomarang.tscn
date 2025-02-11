@@ -68,6 +68,6 @@ libraries = {
 }
 autoplay = "spin"
 
-[connection signal="area_entered" from="boomarang" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="boomarang" to="." method="_on_boomarang_area_entered"]
+[connection signal="area_entered" from="boomarang" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="boomarang" to="." method="_on_boomarang_body_entered"]
