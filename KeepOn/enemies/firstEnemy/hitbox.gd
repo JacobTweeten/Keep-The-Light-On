@@ -4,7 +4,7 @@ var bughealth = 1
 var player: Player = null  # Store the player reference
 var boomerang: Boomerang = null
 const OIL_SCENE = preload("res://Collectables/oil_can.tscn")
-
+@export var scoreIncrease: int = 5
 
 func _process(delta: float) -> void:
 	if player:
@@ -40,6 +40,7 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 		if bughealth <= 0:
 			print("Bug destroyed!")
 			spawn_oil(global_position)
+			Global.score += scoreIncrease
 			queue_free()  # Destroy the bug
 			get_parent().queue_free()
 			

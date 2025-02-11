@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://yj58ag7uuckf"]
+
+[ext_resource type="Script" path="res://enemies/thirdEnemy/shadow_person.gd" id="1_8tnfi"]
+[ext_resource type="Texture2D" uid="uid://dxkerj1xra2ti" path="res://enemies/thirdEnemy/shadowPerson.png" id="2_enhan"]
+[ext_resource type="Script" path="res://enemies/thirdEnemy/Shadow_person_hitbox.gd" id="3_llvuh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2j2fi"]
+radius = 35.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uo4en"]
+radius = 685.747
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ibsl1"]
+radius = 53.8238
+
+[node name="Shadow_person" type="CharacterBody2D"]
+script = ExtResource("1_8tnfi")
+
+[node name="ShadowPerson" type="Sprite2D" parent="."]
+position = Vector2(-1, 1)
+texture = ExtResource("2_enhan")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2j2fi")
+debug_color = Color(0.0106946, 0.651139, 0, 0.42)
+
+[node name="Sight" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sight"]
+shape = SubResource("CircleShape2D_uo4en")
+
+[node name="Hitbox" type="Area2D" parent="."]
+script = ExtResource("3_llvuh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_ibsl1")
+debug_color = Color(0.983018, 0.128908, 0, 0.42)
+
+[connection signal="body_entered" from="Sight" to="." method="_on_sight_body_entered"]
+[connection signal="area_entered" from="Hitbox" to="Hitbox" method="_on_hitbox_area_entered"]
+[connection signal="body_entered" from="Hitbox" to="Hitbox" method="_on_hitbox_body_entered"]
+[connection signal="body_exited" from="Hitbox" to="Hitbox" method="_on_hitbox_body_exited"]
