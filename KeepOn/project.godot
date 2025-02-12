@@ -102,6 +102,7 @@ enabled=PackedStringArray("res://addons/colorpicker_presets/plugin.cfg")
 PlayersLight=""
 bug=""
 boomarang=""
+Player=""
 
 [input]
 

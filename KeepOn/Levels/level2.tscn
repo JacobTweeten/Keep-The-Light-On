@@ -1,13 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://cjgq0nxhkr82u"]
+[gd_scene load_steps=11 format=3 uid="uid://83rfqn118p6l"]
 
-[ext_resource type="Script" path="res://survivors_game.gd" id="1_110yh"]
-[ext_resource type="PackedScene" uid="uid://5mo22e3ci4vu" path="res://characters/Miner/player.tscn" id="1_n6sk1"]
-[ext_resource type="Texture2D" uid="uid://caqfk2xng5v5u" path="res://OldFilesFromDemo2/trees/pine_tree.png" id="3_m5kdh"]
-[ext_resource type="PackedScene" uid="uid://d2itpclivav52" path="res://Collectables/oil_can.tscn" id="4_1d46e"]
-[ext_resource type="PackedScene" uid="uid://c3028soe562lp" path="res://enemies/secondenemy/bat.tscn" id="5_o15b2"]
-[ext_resource type="PackedScene" uid="uid://ugrkuhmnukym" path="res://Collectables/super_oil_can.tscn" id="7_miykr"]
-[ext_resource type="PackedScene" uid="uid://yj58ag7uuckf" path="res://enemies/thirdEnemy/shadow_person.tscn" id="8_o3eak"]
-[ext_resource type="PackedScene" uid="uid://c63vlxu56qld8" path="res://characters/Miner/ui.tscn" id="9_41hwq"]
+[ext_resource type="Script" path="res://survivors_game.gd" id="1_vf5ql"]
+[ext_resource type="PackedScene" uid="uid://5mo22e3ci4vu" path="res://characters/Miner/player.tscn" id="2_sqa3i"]
+[ext_resource type="Texture2D" uid="uid://caqfk2xng5v5u" path="res://OldFilesFromDemo2/trees/pine_tree.png" id="3_qngw3"]
+[ext_resource type="PackedScene" uid="uid://d2itpclivav52" path="res://Collectables/oil_can.tscn" id="4_e1a8i"]
+[ext_resource type="PackedScene" uid="uid://c3028soe562lp" path="res://enemies/secondenemy/bat.tscn" id="5_jqkwe"]
+[ext_resource type="PackedScene" uid="uid://ugrkuhmnukym" path="res://Collectables/super_oil_can.tscn" id="6_172sm"]
+[ext_resource type="PackedScene" uid="uid://c63vlxu56qld8" path="res://characters/Miner/ui.tscn" id="7_r0vfg"]
+[ext_resource type="PackedScene" uid="uid://yj58ag7uuckf" path="res://enemies/thirdEnemy/shadow_person.tscn" id="8_j8tsq"]
 
 [sub_resource type="Curve2D" id="Curve2D_0v7uw"]
 _data = {
@@ -18,8 +18,8 @@ point_count = 5
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_gvaxd"]
 polygon = PackedVector2Array(296.364, -412.727, 540, -254.545, 592.727, -30.9091, 369.091, -27.2727)
 
-[node name="Game" type="Node2D"]
-script = ExtResource("1_110yh")
+[node name="Level2" type="Node2D"]
+script = ExtResource("1_vf5ql")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -2
@@ -36,9 +36,9 @@ color = Color(0.158472, 0.158472, 0.158472, 1)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -9
 
-[node name="Player" parent="." instance=ExtResource("1_n6sk1")]
+[node name="Player" parent="." instance=ExtResource("2_sqa3i")]
 y_sort_enabled = true
-position = Vector2(1065, 673)
+position = Vector2(1052, 728)
 
 [node name="Path2D" type="Path2D" parent="Player"]
 visible = false
@@ -88,67 +88,67 @@ vertical_alignment = 1
 
 [node name="PineTree" type="Sprite2D" parent="."]
 position = Vector2(130, 945)
-texture = ExtResource("3_m5kdh")
+texture = ExtResource("3_qngw3")
 
 [node name="PineTree2" type="Sprite2D" parent="."]
 position = Vector2(-809, -339)
-texture = ExtResource("3_m5kdh")
+texture = ExtResource("3_qngw3")
 
 [node name="PineTree3" type="Sprite2D" parent="."]
 position = Vector2(1074, 264)
-texture = ExtResource("3_m5kdh")
+texture = ExtResource("3_qngw3")
 
-[node name="OilCan" parent="." instance=ExtResource("4_1d46e")]
+[node name="OilCan" parent="." instance=ExtResource("4_e1a8i")]
 position = Vector2(1344, 670)
 
-[node name="OilCan2" parent="." instance=ExtResource("4_1d46e")]
+[node name="OilCan2" parent="." instance=ExtResource("4_e1a8i")]
 position = Vector2(665, 819)
 
-[node name="OilCan3" parent="." instance=ExtResource("4_1d46e")]
+[node name="OilCan3" parent="." instance=ExtResource("4_e1a8i")]
 position = Vector2(517, 212)
 metadata/_edit_group_ = true
 
-[node name="OilCan4" parent="." instance=ExtResource("4_1d46e")]
+[node name="OilCan4" parent="." instance=ExtResource("4_e1a8i")]
 position = Vector2(1734, 1008)
 
-[node name="OilCan5" parent="." instance=ExtResource("4_1d46e")]
+[node name="OilCan5" parent="." instance=ExtResource("4_e1a8i")]
 position = Vector2(2165, -175)
 
-[node name="OilCan6" parent="." instance=ExtResource("4_1d46e")]
+[node name="OilCan6" parent="." instance=ExtResource("4_e1a8i")]
 position = Vector2(-654, 320)
 
-[node name="OilCan7" parent="." instance=ExtResource("4_1d46e")]
+[node name="OilCan7" parent="." instance=ExtResource("4_e1a8i")]
 position = Vector2(2226, 994)
 
-[node name="OilCan8" parent="." instance=ExtResource("4_1d46e")]
+[node name="OilCan8" parent="." instance=ExtResource("4_e1a8i")]
 position = Vector2(-536, -507)
 
-[node name="bat" parent="." instance=ExtResource("5_o15b2")]
+[node name="bat" parent="." instance=ExtResource("5_jqkwe")]
 position = Vector2(-545, 1087)
 
-[node name="bat2" parent="." instance=ExtResource("5_o15b2")]
+[node name="bat2" parent="." instance=ExtResource("5_jqkwe")]
 position = Vector2(2136, 1057)
 
-[node name="bat3" parent="." instance=ExtResource("5_o15b2")]
+[node name="bat3" parent="." instance=ExtResource("5_jqkwe")]
 position = Vector2(1735, -559)
 
-[node name="OilCan9" parent="." instance=ExtResource("7_miykr")]
+[node name="OilCan9" parent="." instance=ExtResource("6_172sm")]
 position = Vector2(1296, 908)
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
-[node name="Control" parent="CanvasLayer2" instance=ExtResource("9_41hwq")]
+[node name="Control" parent="CanvasLayer2" instance=ExtResource("7_r0vfg")]
 offset_left = 528.0
 offset_top = 43.0
 offset_right = 768.0
 offset_bottom = 83.0
 
-[node name="Shadow_person" parent="." instance=ExtResource("8_o3eak")]
+[node name="Shadow_person" parent="." instance=ExtResource("8_j8tsq")]
 position = Vector2(228, 651)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 modulate = Color(0.0569268, 0.159853, 0.0656713, 1)
-position = Vector2(1092, 489)
+position = Vector2(1073, 472)
 scale = Vector2(0.55, 0.55)
 occluder = SubResource("OccluderPolygon2D_gvaxd")
 
