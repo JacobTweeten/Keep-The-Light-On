@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://d2itpclivav52" path="res://Collectables/oil_can.tscn" id="3_mnwkl"]
 [ext_resource type="PackedScene" uid="uid://c63vlxu56qld8" path="res://characters/Miner/ui.tscn" id="4_tkkfy"]
 [ext_resource type="PackedScene" uid="uid://oet7fm1ib1xd" path="res://Assets/NextLevel.tscn" id="5_180u0"]
-[ext_resource type="PackedScene" uid="uid://c8opftvsyqqr3" path="res://Assets/SceneTranstion/SceneSwitcher.tscn" id="6_pb5x4"]
+[ext_resource type="PackedScene" uid="uid://bctqgkxcog7ep" path="res://Assets/SceneTranstion/SceneSwitcher.tscn" id="6_pb5x4"]
 
 [sub_resource type="Curve2D" id="Curve2D_0v7uw"]
 _data = {
@@ -105,7 +105,7 @@ scale = Vector2(0.55, 0.55)
 occluder = SubResource("OccluderPolygon2D_gvaxd")
 
 [node name="NextLevel" parent="." instance=ExtResource("5_180u0")]
-position = Vector2(978, 496)
+position = Vector2(999, 487)
 
 [node name="SceneSwitcher" parent="." instance=ExtResource("6_pb5x4")]
 
