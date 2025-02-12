@@ -1,13 +1,7 @@
-res://characters/Miner/player.tscn
 res://survivors_game.tscn
+res://characters/Miner/player.tscn
 res://Collectables/oil_can.tscn
 res://characters/Miner/weapon/boomarang.tscn
 res://enemies/firstEnemy/fixed_bug.tscn
 res://enemies/secondenemy/bat.tscn
-res://enemies/secondenemy/bat.gd
-res://enemies/secondenemy/bathitbox.gd
-res://enemies/firstEnemy/hitbox.gd
-res://enemies/firstEnemy/fixed_bug.gd
-res://Collectables/oil_can.gd
 res://Collectables/super_oil_can.tscn
-res://Collectables/super_oil_can.gd
