@@ -1,11 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://c3028soe562lp"]
+[gd_scene load_steps=19 format=3 uid="uid://c3028soe562lp"]
 
 [ext_resource type="Script" path="res://enemies/secondenemy/bat.gd" id="1_hhvif"]
 [ext_resource type="Script" path="res://enemies/secondenemy/bathitbox.gd" id="2_k8ffs"]
 [ext_resource type="Texture2D" uid="uid://bh05hyaam1i2n" path="res://enemies/secondenemy/Bat Top wing.png" id="3_dv4gf"]
 [ext_resource type="Texture2D" uid="uid://cf7vu47hon0u6" path="res://enemies/secondenemy/Bat bottom wing.png" id="4_k0lkg"]
+[ext_resource type="AudioStream" uid="uid://campk2keassbj" path="res://Sounds/KeepOn_Bat_Hit_A1.wav" id="5_6le2p"]
 [ext_resource type="Texture2D" uid="uid://bpxjw55478hgc" path="res://enemies/secondenemy/hurt bat up.png" id="5_je1jd"]
 [ext_resource type="Texture2D" uid="uid://pak68bjl8tec" path="res://enemies/secondenemy/hurt bat down.png" id="6_ec5n5"]
+[ext_resource type="AudioStream" uid="uid://bhp4a3ip3qr0w" path="res://Sounds/BATFLY.wav" id="8_e8xub"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6jku2"]
 radius = 35.0
@@ -15,6 +17,47 @@ radius = 685.747
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vshmx"]
 radius = 53.8238
+
+[sub_resource type="Animation" id="Animation_x2aou"]
+resource_name = "Hurtanimation"
+
+[sub_resource type="Animation" id="Animation_wtxjf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BatTopWing:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_dv4gf")]
+}
+
+[sub_resource type="Animation" id="Animation_56rix"]
+resource_name = "hurtanimation"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BatTopWing:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.367606, 0.515897, 0.75, 0.867606),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_dv4gf"), ExtResource("6_ec5n5"), ExtResource("5_je1jd"), ExtResource("6_ec5n5"), ExtResource("6_ec5n5"), ExtResource("5_je1jd")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pkahg"]
+_data = {
+"Hurtanimation": SubResource("Animation_x2aou"),
+"RESET": SubResource("Animation_wtxjf"),
+"hurtanimation": SubResource("Animation_56rix")
+}
 
 [sub_resource type="Animation" id="Animation_tnd6a"]
 length = 0.6
@@ -55,48 +98,6 @@ _data = {
 "Wingmove": SubResource("Animation_xw1pf")
 }
 
-[sub_resource type="Animation" id="Animation_x2aou"]
-resource_name = "Hurtanimation"
-
-[sub_resource type="Animation" id="Animation_wtxjf"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HurtBatUp:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("5_je1jd")]
-}
-
-[sub_resource type="Animation" id="Animation_56rix"]
-resource_name = "hurtanimation"
-length = 0.2
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HurtBatUp:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("5_je1jd"), ExtResource("6_ec5n5")]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_pkahg"]
-_data = {
-"Hurtanimation": SubResource("Animation_x2aou"),
-"RESET": SubResource("Animation_wtxjf"),
-"hurtanimation": SubResource("Animation_56rix")
-}
-
 [node name="bat" type="CharacterBody2D"]
 script = ExtResource("1_hhvif")
 
@@ -115,9 +116,14 @@ script = ExtResource("2_k8ffs")
 shape = SubResource("CircleShape2D_vshmx")
 debug_color = Color(0.983018, 0.128908, 0, 0.42)
 
-[node name="BatTopWing" type="Sprite2D" parent="."]
-position = Vector2(4, 12)
-texture = ExtResource("3_dv4gf")
+[node name="Hurt" type="AnimationPlayer" parent="Hitbox"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_pkahg")
+}
+
+[node name="HurtSound" type="AudioStreamPlayer2D" parent="Hitbox"]
+stream = ExtResource("5_6le2p")
 
 [node name="Flying" type="AnimationPlayer" parent="."]
 libraries = {
@@ -125,16 +131,19 @@ libraries = {
 }
 autoplay = "Wingmove"
 
-[node name="Hurt" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_pkahg")
-}
-autoplay = "hurtanimation"
+[node name="BatTopWing" type="Sprite2D" parent="."]
+position = Vector2(4, 11)
+scale = Vector2(1.2675, 1.2675)
+texture = ExtResource("3_dv4gf")
 
-[node name="HurtBatUp" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(4, 12)
-texture = ExtResource("5_je1jd")
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-3, 5)
+stream = ExtResource("8_e8xub")
+volume_db = -48.552
+
+[node name="batfly" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_e8xub")
+volume_db = -9.905
 
 [connection signal="body_entered" from="Sight" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Sight" to="." method="_on_area_2d_body_exited"]

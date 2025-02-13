@@ -4,6 +4,9 @@ var player: Player = null  # Store the player reference
 var boomerang: Boomerang = null
 const OIL_SCENE = preload("res://Collectables/oil_can.tscn")
 @export var scoreIncrease: int = 50
+@onready var hurtanimation: AnimationPlayer = $Hurtanimation
+
+
 
 func _process(delta: float) -> void:
 	if player:
@@ -35,6 +38,8 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 
 	if area.is_in_group("boomarang"): 
 		print("Boomerang hit the bug!")
+		if hurtanimation.has_animation("ShadowHurt"):  # Check if the animation exists
+			hurtanimation.play("ShadowHurt") 
 		bughealth -= 1  # Reduce Bug health
 
 		if bughealth <= 0:

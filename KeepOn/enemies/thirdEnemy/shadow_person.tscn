@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://yj58ag7uuckf"]
+[gd_scene load_steps=12 format=3 uid="uid://yj58ag7uuckf"]
 
 [ext_resource type="Script" path="res://enemies/thirdEnemy/shadow_person.gd" id="1_8tnfi"]
 [ext_resource type="Texture2D" uid="uid://dxkerj1xra2ti" path="res://enemies/thirdEnemy/shadowPerson.png" id="2_enhan"]
 [ext_resource type="Texture2D" uid="uid://cncftd46os2le" path="res://enemies/thirdEnemy/Shadowhurt.png" id="2_n7h14"]
 [ext_resource type="Script" path="res://enemies/thirdEnemy/Shadow_person_hitbox.gd" id="3_llvuh"]
+[ext_resource type="AudioStream" uid="uid://cns6agl3yd5h4" path="res://Sounds/KeepOn_Shadow_Sound_A2.wav" id="4_aayky"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2j2fi"]
 radius = 35.0
@@ -14,10 +15,23 @@ radius = 685.747
 [sub_resource type="CircleShape2D" id="CircleShape2D_ibsl1"]
 radius = 53.8238
 
-[sub_resource type="Animation" id="Animation_ck4py"]
-resource_name = "Shadowhurt"
-length = 0.5
-loop_mode = 1
+[sub_resource type="Animation" id="Animation_u03bq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ShadowPerson:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_enhan")]
+}
+
+[sub_resource type="Animation" id="Animation_4as08"]
+resource_name = "ShadowHurt"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -31,25 +45,10 @@ tracks/0/keys = {
 "values": [ExtResource("2_enhan"), ExtResource("2_n7h14")]
 }
 
-[sub_resource type="Animation" id="Animation_r68ic"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ShadowPerson:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_n7h14")]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_74lbd"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vg1y2"]
 _data = {
-"RESET": SubResource("Animation_r68ic"),
-"Shadowhurt": SubResource("Animation_ck4py")
+"RESET": SubResource("Animation_u03bq"),
+"ShadowHurt": SubResource("Animation_4as08")
 }
 
 [node name="Shadow_person" type="CharacterBody2D"]
@@ -57,7 +56,7 @@ script = ExtResource("1_8tnfi")
 
 [node name="ShadowPerson" type="Sprite2D" parent="."]
 position = Vector2(-1, 1)
-texture = ExtResource("2_n7h14")
+texture = ExtResource("2_enhan")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_2j2fi")
@@ -75,11 +74,14 @@ script = ExtResource("3_llvuh")
 shape = SubResource("CircleShape2D_ibsl1")
 debug_color = Color(0.983018, 0.128908, 0, 0.42)
 
-[node name="Shadowhurt" type="AnimationPlayer" parent="."]
+[node name="Hurtanimation" type="AnimationPlayer" parent="Hitbox"]
+root_node = NodePath("../..")
 libraries = {
-"": SubResource("AnimationLibrary_74lbd")
+"": SubResource("AnimationLibrary_vg1y2")
 }
-autoplay = "Shadowhurt"
+
+[node name="shadowWalksound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_aayky")
 
 [connection signal="body_entered" from="Sight" to="." method="_on_sight_body_entered"]
 [connection signal="area_entered" from="Hitbox" to="Hitbox" method="_on_hitbox_area_entered"]

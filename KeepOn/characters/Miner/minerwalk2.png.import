@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkshorfs0nqqa"
-path="res://.godot/imported/pixil-frame-0 (6).png-3e10c61e97c5f93a8e2c02f2d87a92cf.ctex"
+uid="uid://ywr8ip6gn4op"
+path="res://.godot/imported/minerwalk2.png-6064dbe615ecaddc972de5e37c4a382b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Miner/pixil-frame-0 (6).png"
-dest_files=["res://.godot/imported/pixil-frame-0 (6).png-3e10c61e97c5f93a8e2c02f2d87a92cf.ctex"]
+source_file="res://characters/Miner/minerwalk2.png"
+dest_files=["res://.godot/imported/minerwalk2.png-6064dbe615ecaddc972de5e37c4a382b.ctex"]
 
 [params]
 

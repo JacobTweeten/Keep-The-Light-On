@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bwysksq6ulekl"]
+[gd_scene load_steps=15 format=3 uid="uid://bwysksq6ulekl"]
 
 [ext_resource type="Script" path="res://survivors_game.gd" id="1_ebt1e"]
 [ext_resource type="PackedScene" uid="uid://5mo22e3ci4vu" path="res://characters/Miner/player.tscn" id="2_38b16"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dh820eveop7rx" path="res://Levels/lvl1/NextLevelFromLevel1To2.tscn" id="9_8fmu0"]
 [ext_resource type="PackedScene" uid="uid://c3028soe562lp" path="res://enemies/secondenemy/bat.tscn" id="10_83m44"]
 [ext_resource type="PackedScene" uid="uid://bh2qs4252a5b6" path="res://enemies/firstEnemy/rat.tscn" id="11_rexg7"]
+[ext_resource type="PackedScene" uid="uid://yj58ag7uuckf" path="res://enemies/thirdEnemy/shadow_person.tscn" id="12_2jr2r"]
 
 [sub_resource type="Curve2D" id="Curve2D_0v7uw"]
 _data = {
@@ -134,19 +135,22 @@ scale = Vector2(0.55, 0.55)
 occluder = SubResource("OccluderPolygon2D_gvaxd")
 
 [node name="Lantern" parent="." instance=ExtResource("8_ug0sm")]
-position = Vector2(1396, 461)
+position = Vector2(1428, 461)
 
 [node name="Pickaxe" parent="." instance=ExtResource("9_3qv58")]
-position = Vector2(1570, 238)
+position = Vector2(1485, 126)
 
 [node name="NextLevel" parent="." instance=ExtResource("9_8fmu0")]
 position = Vector2(1033, 204)
 
 [node name="bat" parent="." instance=ExtResource("10_83m44")]
-position = Vector2(-228, 866)
+position = Vector2(2387, -414)
 
 [node name="FixedBug" parent="." instance=ExtResource("11_rexg7")]
-position = Vector2(1295, 469)
+position = Vector2(2439, 833)
+
+[node name="Shadow_person" parent="." instance=ExtResource("12_2jr2r")]
+position = Vector2(85, 813)
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -153,7 +153,7 @@ libraries = {
 
 [node name="ratwalk" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_dsx68")
-volume_db = 0.22
+volume_db = -18.689
 
 [node name="Ratmoving" type="AnimationPlayer" parent="."]
 libraries = {

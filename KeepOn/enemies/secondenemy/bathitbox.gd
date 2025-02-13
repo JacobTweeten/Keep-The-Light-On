@@ -5,6 +5,12 @@ var player: Player = null  # Store the player reference
 var boomerang: Boomerang = null
 const OIL_SCENE = preload("res://Collectables/oil_can.tscn")
 @export var scoreIncrease: int = 20
+@onready var hurt_sound: AudioStreamPlayer2D = $HurtSound
+@onready var Hurt: AnimationPlayer = $Hurt
+
+
+
+
 
 func _process(delta: float) -> void:
 	if player:
@@ -26,16 +32,17 @@ func _on_hitbox_body_exited(body: Node2D) -> void:
 
 
 
-		
-		
-
-
 #Kill the bug if it runs out of health
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	print("Bug detected collision with:", area.name)
 
 	if area.is_in_group("boomarang"): 
 		print("Boomerang hit the bug!")
+		$HurtSound.play()
+		$Hurt.play()
+		if Hurt.has_animation("hurtanimation"):  # Check if the animation exists
+			print("Playing Hurt Animation")
+			Hurt.play("hurtanimation") 
 		bughealth -= 1  # Reduce Bug health
 
 		if bughealth <= 0:

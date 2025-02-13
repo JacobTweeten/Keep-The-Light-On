@@ -1,6 +1,8 @@
 class_name Player
 extends CharacterBody2D
 @onready var sfx_footstep: AudioStreamPlayer2D = $sfx_footstep
+@onready var player_walk: AnimationPlayer = $PlayerWalk
+
 
 signal health_depleted
 
@@ -27,6 +29,9 @@ func _physics_process(delta):
 			sfx_footstep.play()
 			
 	move_and_slide()
+	if velocity.length() > 0:
+		if player_walk.has_animation("WALK"):  # Check if the animation exists
+			player_walk.play("WALK") 
 	'if velocity.length() > 0.0:
 		%HappyBoo.play_walk_animation()
 	else:

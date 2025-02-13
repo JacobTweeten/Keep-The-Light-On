@@ -39,6 +39,8 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 		print("Boomerang hit the bug!")
 		$Rathurt.play()
 		$Rathit.play()
+		if Rathurt.has_animation("hurtrat"):  # Check if the animation exists
+			Rathurt.play("hurtrat") 
 		
 		bughealth -= 1  # Reduce Bug health
 

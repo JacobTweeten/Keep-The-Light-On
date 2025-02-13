@@ -13,6 +13,9 @@ var dash_cooldown: float = 3.0  # Time before the next dash
 var time_since_last_dash: float = 0.0  # Timer to track when to dash again
 
 var dash_direction: Vector2 = Vector2.ZERO  # Direction for the dash
+@onready var shadow_walksound: AudioStreamPlayer2D = $shadowWalksound
+
+
 
 func _physics_process(delta: float) -> void:
 	if player == null:
@@ -33,6 +36,9 @@ func _physics_process(delta: float) -> void:
 				time_since_last_dash = 0.0
 				dash_direction = position.direction_to(player.position)
 				state = "dash"
+			if velocity.length() > 0:
+				if not shadow_walksound.playing:
+					shadow_walksound.play()
 
 		"dash":
 			# Move quickly toward the player
@@ -41,6 +47,9 @@ func _physics_process(delta: float) -> void:
 			if dash_timer >= dash_duration:
 				dash_timer = 0.0
 				state = "return"
+			if velocity.length() > 0:
+				if not shadow_walksound.playing:
+					shadow_walksound.play()
 
 		"return":
 			# Return to orbit after dashing

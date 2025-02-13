@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7y14fs6cbmrj"
-path="res://.godot/imported/BVstandstill.png-5f1a4260d8538e9f351567a75685a766.ctex"
+uid="uid://bm4lwssamvxfc"
+path="res://.godot/imported/minerwalkNUETRAL.png-8339f230323af8de5d7c4b85079fe61e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Miner/BVstandstill.png"
-dest_files=["res://.godot/imported/BVstandstill.png-5f1a4260d8538e9f351567a75685a766.ctex"]
+source_file="res://characters/Miner/minerwalkNUETRAL.png"
+dest_files=["res://.godot/imported/minerwalkNUETRAL.png-8339f230323af8de5d7c4b85079fe61e.ctex"]
 
 [params]
 

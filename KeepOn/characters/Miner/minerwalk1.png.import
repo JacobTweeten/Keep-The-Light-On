@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmfw0o0k8gg32"
-path="res://.godot/imported/BVLeft.png-a9e67d1e97a0a3643d4cb3bdad076d01.ctex"
+uid="uid://b68dk31u30enu"
+path="res://.godot/imported/minerwalk1.png-4e47350edd68367928f2960f52747364.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Miner/BVLeft.png"
-dest_files=["res://.godot/imported/BVLeft.png-a9e67d1e97a0a3643d4cb3bdad076d01.ctex"]
+source_file="res://characters/Miner/minerwalk1.png"
+dest_files=["res://.godot/imported/minerwalk1.png-4e47350edd68367928f2960f52747364.ctex"]
 
 [params]
 
