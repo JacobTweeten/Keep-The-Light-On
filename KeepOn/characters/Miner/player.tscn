@@ -256,6 +256,7 @@ The cold and distant stars twinkle in the endless dark.
 The only thing left is to keep the light on."
 
 [node name="Death1" type="Label" parent="."]
+unique_name_in_owner = true
 visible = false
 visibility_layer = 512
 offset_left = -110.909
@@ -267,6 +268,7 @@ text = "The dark is so loud
 "
 
 [node name="Death2" type="Label" parent="."]
+unique_name_in_owner = true
 visible = false
 visibility_layer = 512
 offset_left = -187.273
@@ -277,6 +279,7 @@ theme_override_font_sizes/font_size = 25
 text = "You can hear it so much clearer"
 
 [node name="Death3" type="Label" parent="."]
+unique_name_in_owner = true
 visible = false
 visibility_layer = 512
 offset_left = -47.2727
@@ -399,5 +402,15 @@ theme_override_font_sizes/font_size = 25
 text = "please
 
 "
+
+[node name="PickaxePickup" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -321.818
+offset_top = 49.0909
+offset_right = 321.182
+offset_bottom = 100.091
+theme_override_font_sizes/font_size = 25
+text = "Use left click to throw and mouse to aim"
 
 [connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]

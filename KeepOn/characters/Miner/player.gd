@@ -22,7 +22,22 @@ func _physics_process(delta):
 	var light_node = $light
 	health = light_node.fuel
 	%ProgressBar.value = health
+	if health > 30.0:
+		%Death1.hide()
+		%Death2.hide()
+		%Death3.hide()
+	if health <= 30.0:
+		%Death1.show()
+	if health <= 20.0:
+		%Death1.hide()
+		%Death2.show()
+	if health <= 10.0:
+		%Death2.hide()
+		%Death3.show()
 	if health <= 0.0:
+		%Death1.hide()
+		%Death2.hide()
+		%Death3.hide()
 		health_depleted.emit()
 			
 			

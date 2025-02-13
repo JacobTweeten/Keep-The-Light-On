@@ -3,3 +3,4 @@ res://Levels/level_0_and_1.tscn
 res://enemies/thirdEnemy/shadow_person.tscn
 res://characters/Miner/player.tscn
 res://enemies/thirdEnemy/shadow_person.gdshader
+res://characters/Miner/player.gd
