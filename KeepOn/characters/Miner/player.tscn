@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://5mo22e3ci4vu"]
+[gd_scene load_steps=23 format=3 uid="uid://5mo22e3ci4vu"]
 
 [ext_resource type="Script" path="res://characters/Miner/player.gd" id="1_vs1wh"]
 [ext_resource type="Texture2D" uid="uid://bkshorfs0nqqa" path="res://characters/Miner/pixil-frame-0 (6).png" id="2_cqn5o"]
@@ -8,6 +8,9 @@
 [ext_resource type="Script" path="res://characters/Miner/throw.gd" id="6_wwf4s"]
 [ext_resource type="Texture2D" uid="uid://ccoh0whypqsm4" path="res://characters/Miner/pixil-frame-0 (5).png" id="7_qmkft"]
 [ext_resource type="Texture2D" uid="uid://b85p0wbdnpxwc" path="res://characters/Miner/pixil-frame-0 (7).png" id="8_sawri"]
+[ext_resource type="Texture2D" uid="uid://c7y14fs6cbmrj" path="res://characters/Miner/BVstandstill.png" id="9_r6xb1"]
+[ext_resource type="Texture2D" uid="uid://dmfw0o0k8gg32" path="res://characters/Miner/BVLeft.png" id="10_f7wfi"]
+[ext_resource type="Texture2D" uid="uid://b1l7shjklllxy" path="res://characters/Miner/BVRight.png" id="11_g8rld"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_63j6a"]
 radius = 28.4605
@@ -28,6 +31,21 @@ corner_radius_bottom_left = 8
 [sub_resource type="CircleShape2D" id="CircleShape2D_tgff5"]
 radius = 2720.53
 
+[sub_resource type="Animation" id="Animation_x4w7j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pixil-frame-0(5):texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_cqn5o")]
+}
+
 [sub_resource type="Animation" id="Animation_c5qvd"]
 resource_name = "playerwalk"
 length = 1.6
@@ -44,25 +62,47 @@ tracks/0/keys = {
 "values": [ExtResource("7_qmkft"), ExtResource("2_cqn5o"), ExtResource("8_sawri")]
 }
 
-[sub_resource type="Animation" id="Animation_x4w7j"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hle51"]
+_data = {
+"RESET": SubResource("Animation_x4w7j"),
+"playerwalk": SubResource("Animation_c5qvd")
+}
+
+[sub_resource type="Animation" id="Animation_yib7h"]
+resource_name = "Backview Walk"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BVstandstill:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("9_r6xb1"), ExtResource("10_f7wfi"), ExtResource("11_g8rld")]
+}
+
+[sub_resource type="Animation" id="Animation_gqfl2"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Pixil-frame-0(5):texture")
+tracks/0/path = NodePath("BVstandstill:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_cqn5o")]
+"values": [ExtResource("10_f7wfi")]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_hle51"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4o1x8"]
 _data = {
-"RESET": SubResource("Animation_x4w7j"),
-"playerwalk": SubResource("Animation_c5qvd")
+"Backview Walk": SubResource("Animation_yib7h"),
+"RESET": SubResource("Animation_gqfl2")
 }
 
 [node name="Player" type="CharacterBody2D" groups=["PlayersLight", "player"]]
@@ -135,5 +175,14 @@ script = ExtResource("6_wwf4s")
 libraries = {
 "": SubResource("AnimationLibrary_hle51")
 }
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4o1x8")
+}
+
+[node name="BVstandstill" type="Sprite2D" parent="."]
+position = Vector2(-5.45455, -43.6364)
+texture = ExtResource("10_f7wfi")
 
 [connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]

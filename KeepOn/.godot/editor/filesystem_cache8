@@ -11,16 +11,19 @@ plugin.cfg::TextFile::-1::1738849304::0::1::::<><>::
 README.md::TextFile::-1::1738849304::0::1::::<><>::
 ::res://characters/::1739455364
 ground_shadow.png::CompressedTexture2D::2671517082038095037::1738849304::1739455364::1::::<><>::
-::res://characters/Miner/::1739459224
+::res://characters/Miner/::1739460631
 area_2d.gd::GDScript::-1::1738849304::0::1::::<>Area2D<>::
+BVLeft.png::CompressedTexture2D::8013231256640184747::1739460590::1739460636::1::::<><>::
+BVRight.png::CompressedTexture2D::4236014243671606106::1739460597::1739460636::1::::<><>::
+BVstandstill.png::CompressedTexture2D::7070060151570297859::1739460583::1739460636::1::::<><>::
 light.gd::GDScript::-1::1738849304::0::1::::<>Area2D<>::
 light.png::CompressedTexture2D::5583436511672675307::1738849304::1739455364::1::::<><>::
 miner.png::CompressedTexture2D::5847059947275553913::1738849304::1739455364::1::::<><>::
-pixil-frame-0 (5).png::CompressedTexture2D::4942591174454570797::1739459183::1739459228::1::::<><>::
-pixil-frame-0 (6).png::CompressedTexture2D::3125918841183285208::1739459207::1739459228::1::::<><>::
-pixil-frame-0 (7).png::CompressedTexture2D::4765540413321885490::1739459213::1739459228::1::::<><>::
+pixil-frame-0 (5).png::CompressedTexture2D::4942591174454570797::1739459183::1739460534::1::::<><>::
+pixil-frame-0 (6).png::CompressedTexture2D::3125918841183285208::1739460530::1739460534::1::::<><>::
+pixil-frame-0 (7).png::CompressedTexture2D::4765540413321885490::1739460530::1739460534::1::::<><>::
 player.gd::GDScript::-1::1738849304::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::2131337522108736306::1739459109::0::1::::<><>::res://characters/Miner/player.gd<>uid://cpkmht4mou57b::::res://characters/Miner/miner.png<>uid://cmgkom8c8hvly::::res://OldFilesFromDemo2/gun.tscn<>res://characters/Miner/light.gd<>uid://clswnbo5o1ir0::::res://characters/Miner/light.png<>res://characters/Miner/throw.gd
+player.tscn::PackedScene::2131337522108736306::1739460467::0::1::::<><>::res://characters/Miner/player.gd<>uid://c1owyri3xsvv8::::res://characters/Miner/pixil-frame-0 (5).png<>uid://cmgkom8c8hvly::::res://OldFilesFromDemo2/gun.tscn<>res://characters/Miner/light.gd<>uid://clswnbo5o1ir0::::res://characters/Miner/light.png<>res://characters/Miner/throw.gd<>uid://b1obiqguvqrnl::::res://characters/Miner/leftfoot.png<>uid://c7fqqeutxq5av::::res://characters/Miner/rightfoot.png<>uid://dt5lickxh1lig::::res://characters/Miner/BV.png<>uid://ckiu2xtg48k8h::::res://characters/Miner/BVLeft.png<>uid://hrlmmpjkys4b::::res://characters/Miner/BVRight.png
 throw.gd::GDScript::-1::1738849304::0::1::::PlayerAbilities<>Node2D<>::
 ui.gd::GDScript::-1::1739455274::0::1::::<>Control<>::
 ui.tscn::PackedScene::7007794038198201827::1739455274::0::1::::<><>::res://characters/Miner/ui.gd
@@ -41,11 +44,11 @@ bug.png::CompressedTexture2D::5531707841770188079::1738849304::1739455364::1::::
 fixed_bug.gd::GDScript::-1::1738849304::0::1::::<>CharacterBody2D<>::
 fixed_bug.tscn::PackedScene::2934485970979545193::1739284435::0::1::::<><>::res://enemies/firstEnemy/fixed_bug.gd<>uid://ck2uojqfo4cnf::::res://enemies/firstEnemy/bug.png<>res://enemies/firstEnemy/hitbox.gd
 hitbox.gd::GDScript::-1::1739455274::0::1::::Bug<>Node2D<>::
-::res://enemies/secondenemy/::1739459134
+::res://enemies/secondenemy/::1739460530
 Bat bottom wing.png::CompressedTexture2D::5191158019380663251::1739457679::1739459134::1::::<><>::
 Bat Top wing.png::CompressedTexture2D::2931187303928621907::1739457679::1739459134::1::::<><>::
 bat.gd::GDScript::-1::1739455274::0::1::::<>CharacterBody2D<>::
-bat.tscn::PackedScene::6791437690376805577::1739459109::0::1::::<><>::res://enemies/secondenemy/bat.gd<>res://enemies/secondenemy/bathitbox.gd<>uid://bh05hyaam1i2n::::res://enemies/secondenemy/Bat Top wing.png<>uid://cf7vu47hon0u6::::res://enemies/secondenemy/Bat bottom wing.png<>uid://bpxjw55478hgc::::res://enemies/secondenemy/hurt bat up.png<>uid://pak68bjl8tec::::res://enemies/secondenemy/hurt bat down.png
+bat.tscn::PackedScene::6791437690376805577::1739459283::0::1::::<><>::res://enemies/secondenemy/bat.gd<>res://enemies/secondenemy/bathitbox.gd<>uid://bh05hyaam1i2n::::res://enemies/secondenemy/Bat Top wing.png<>uid://cf7vu47hon0u6::::res://enemies/secondenemy/Bat bottom wing.png<>uid://bpxjw55478hgc::::res://enemies/secondenemy/hurt bat up.png<>uid://pak68bjl8tec::::res://enemies/secondenemy/hurt bat down.png
 bathitbox.gd::GDScript::-1::1739455274::0::1::::BatHitBox<>Node2D<>::
 hurt bat down.png::CompressedTexture2D::1053496919349498990::1739457679::1739459134::1::::<><>::
 hurt bat up.png::CompressedTexture2D::3487321390414099730::1739457679::1739459134::1::::<><>::
