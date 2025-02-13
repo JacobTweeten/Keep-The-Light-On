@@ -1,8 +1,124 @@
-[gd_scene load_steps=2 format=3 uid="uid://kidy1uuu8cpm"]
+[gd_scene load_steps=13 format=3 uid="uid://kidy1uuu8cpm"]
 
-[sub_resource type="TileSet" id="TileSet_wmh7s"]
+[ext_resource type="Texture2D" uid="uid://c10731jmkpson" path="res://Levels/KTLO_Frame_8.png" id="1_2p7uw"]
+[ext_resource type="Texture2D" uid="uid://dgboijdijrjt7" path="res://Levels/KTLO_Frame_2_A1.png" id="2_6hhhq"]
+[ext_resource type="Texture2D" uid="uid://v4rkjpwj053v" path="res://Levels/KTLO_Frame_5_A2.png" id="2_6n20c"]
+[ext_resource type="Texture2D" uid="uid://bp4g85g5n0qdf" path="res://Levels/pixil-frame-0 (26).png" id="3_q70bn"]
+[ext_resource type="PackedScene" uid="uid://d2itpclivav52" path="res://Collectables/oil_can.tscn" id="5_f6tlu"]
+[ext_resource type="PackedScene" uid="uid://5mo22e3ci4vu" path="res://characters/Miner/player.tscn" id="5_hotw7"]
+[ext_resource type="PackedScene" uid="uid://bh2qs4252a5b6" path="res://enemies/firstEnemy/fixed_bug.tscn" id="6_ksodg"]
+[ext_resource type="PackedScene" uid="uid://c3028soe562lp" path="res://enemies/secondenemy/bat.tscn" id="8_b35xb"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_q04xn"]
+polygon = PackedVector2Array(81.6, 1, 80, 34, -26.4, 32, -128, 32, -168, 30, -156, 5, -138.4, -26, -124, -41, -108, -24, -96.8, -13, -88.8, -48, -77.6, -83, -62.4, -124, -52.8, -109, -45.6, -95, -38.4, -59, -34.4, -21, -22.4, -7, -9.60004, -27, 8.79999, -36, 16.8, -57, 35.2, -73, 46.4, -62, 57.6, -38)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_lmk3c"]
+polygon = PackedVector2Array(-635.55, -707, -633.632, -726, -631.074, -749, -620.205, -753, -617.008, -764, -612.532, -778, -608.696, -795, -596.547, -810, -583.12, -812, -573.529, -802, -567.775, -789, -566.496, -768, -558.184, -768, -553.708, -759, -553.069, -747, -547.315, -743, -541.56, -734, -541.56, -720, -542.839, -704, -546.036, -684, -562.66, -672, -584.399, -667, -605.499, -667, -613.811, -671, -619.565, -673, -624.041, -674, -637.468, -673, -638.747, -694)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ih83q"]
+polygon = PackedVector2Array(-2032.43, -2550, -2026.7, -2577, -2016.87, -2532, -2014.82, -2473, -2014, -2460, -2003.76, -2525, -1998.03, -2498, -1993.52, -2449, -1983.28, -2515, -1978.77, -2497, -1971.4, -2399, -1968.94, -2351, -1972.63, -2329, -2000.89, -2328, -2032.43, -2327)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8kcol"]
+polygon = PackedVector2Array(-1942.32, -2785, -1932.49, -2786, -1931.49, -2374.59, -1930.85, -2111, -1942.73, -2110)
 
 [node name="Level" type="Node2D"]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_set = SubResource("TileSet_wmh7s")
+[node name="Frame_8" type="Sprite2D" parent="."]
+position = Vector2(1200, 1189)
+scale = Vector2(1.25, 1)
+texture = ExtResource("1_2p7uw")
+
+[node name="Frame_9" type="Sprite2D" parent="."]
+position = Vector2(2000, 1189)
+scale = Vector2(1.25, 1)
+
+[node name="Frame_2" type="Sprite2D" parent="."]
+position = Vector2(1200, 240)
+scale = Vector2(1.25, 1)
+texture = ExtResource("2_6hhhq")
+
+[node name="Frame_3" type="Sprite2D" parent="."]
+position = Vector2(2000, 240)
+scale = Vector2(1.25, 1)
+
+[node name="Frame_1" type="Sprite2D" parent="."]
+position = Vector2(400, 240)
+scale = Vector2(1.25, 1)
+texture = ExtResource("3_q70bn")
+
+[node name="Frame_5" type="Sprite2D" parent="."]
+position = Vector2(1200, 719)
+scale = Vector2(1.25, 1)
+texture = ExtResource("2_6n20c")
+
+[node name="Frame_4" type="Sprite2D" parent="."]
+position = Vector2(400, 719)
+scale = Vector2(1.25, 1)
+
+[node name="Frame_6" type="Sprite2D" parent="."]
+position = Vector2(2000, 719)
+scale = Vector2(1.25, 1)
+
+[node name="Frame_7" type="Sprite2D" parent="."]
+position = Vector2(400, 1189)
+scale = Vector2(1.25, 1)
+
+[node name="Player" parent="." instance=ExtResource("5_hotw7")]
+visible = false
+position = Vector2(1142, 846)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+visible = false
+position = Vector2(1119, 1214)
+scale = Vector2(1.25, 1)
+occluder = SubResource("OccluderPolygon2D_q04xn")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+visible = false
+position = Vector2(2418, 2085)
+scale = Vector2(1.564, 1)
+occluder = SubResource("OccluderPolygon2D_lmk3c")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
+visible = false
+position = Vector2(5762, 3764)
+scale = Vector2(2.44141, 1)
+occluder = SubResource("OccluderPolygon2D_ih83q")
+
+[node name="OilCan" parent="." instance=ExtResource("5_f6tlu")]
+visible = false
+position = Vector2(1230, 731)
+
+[node name="OilCan2" parent="." instance=ExtResource("5_f6tlu")]
+visible = false
+position = Vector2(1548, 165)
+
+[node name="OilCan3" parent="." instance=ExtResource("5_f6tlu")]
+visible = false
+position = Vector2(864, 234)
+
+[node name="FixedBug" parent="." instance=ExtResource("6_ksodg")]
+visible = false
+position = Vector2(1496, 520)
+
+[node name="FixedBug2" parent="." instance=ExtResource("6_ksodg")]
+visible = false
+position = Vector2(868, 130)
+
+[node name="bat" parent="." instance=ExtResource("8_b35xb")]
+visible = false
+position = Vector2(44, 69)
+
+[node name="bat2" parent="." instance=ExtResource("8_b35xb")]
+visible = false
+position = Vector2(420, 47)
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
+position = Vector2(5542, 3548)
+scale = Vector2(2.44141, 1)
+occluder = SubResource("OccluderPolygon2D_8kcol")
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="."]
+position = Vector2(6321, 3546)
+scale = Vector2(2.44141, 1)
+occluder = SubResource("OccluderPolygon2D_8kcol")

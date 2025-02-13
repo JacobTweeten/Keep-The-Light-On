@@ -42,14 +42,12 @@ y_sort_enabled = true
 position = Vector2(1065, 673)
 
 [node name="Path2D" type="Path2D" parent="Player"]
-visible = false
 position = Vector2(-698.899, -680.518)
 scale = Vector2(0.92031, 0.902676)
 curve = SubResource("Curve2D_0v7uw")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D"]
 unique_name_in_owner = true
-visible = false
 position = Vector2(-695, -496)
 rotation = -0.0296233
 
