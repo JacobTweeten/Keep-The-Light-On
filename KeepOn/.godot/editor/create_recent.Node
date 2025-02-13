@@ -1,4 +1,6 @@
+CanvasModulate
 LightOccluder2D
+Sprite2D
 Node2D
 CharacterBody2D
 CanvasLayer
@@ -9,6 +11,4 @@ Area2D
 AnimationPlayer
 Marker2D
 PointLight2D
-CanvasModulate
 DirectionalLight2D
-ParallaxBackground
