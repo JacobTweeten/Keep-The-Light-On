@@ -1,56 +1,50 @@
 [gd_scene load_steps=7 format=3 uid="uid://dmvppo1uftcg5"]
 
 [ext_resource type="Script" path="res://characters/Miner/weapon/boomarang.gd" id="1_8lxbj"]
-[ext_resource type="Texture2D" uid="uid://cffjlvr6yymx7" path="res://characters/Miner/weapon/wrenchs.png" id="2_k5eia"]
+[ext_resource type="Texture2D" uid="uid://c4v1k5lljrjfb" path="res://characters/Miner/weapon/boomarangAxe.png" id="2_1tife"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vnw13"]
 radius = 17.1172
 
-[sub_resource type="Animation" id="Animation_asne0"]
+[sub_resource type="Animation" id="Animation_4f53g"]
+resource_name = "spinning"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BoomarangAxe:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="Animation" id="Animation_equ1g"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Wrenchs:frame")
+tracks/0/path = NodePath("BoomarangAxe:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
+"update": 0,
+"values": [0.0]
 }
 
-[sub_resource type="Animation" id="Animation_gyx4l"]
-resource_name = "spin"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Wrenchs:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.0333333, 0.2, 0.366667, 0.466667, 0.633333, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 2, 1, 0, 2, 1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_6k1mp"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dge80"]
 _data = {
-"RESET": SubResource("Animation_asne0"),
-"spin": SubResource("Animation_gyx4l")
+"RESET": SubResource("Animation_equ1g"),
+"spinning": SubResource("Animation_4f53g")
 }
 
 [node name="Boomarang" type="Node2D" groups=["PlayersLight", "boomarang"]]
 script = ExtResource("1_8lxbj")
-
-[node name="Wrenchs" type="Sprite2D" parent="." groups=["PlayersLight"]]
-position = Vector2(4, -12)
-scale = Vector2(0.204371, 0.173661)
-texture = ExtResource("2_k5eia")
-hframes = 3
 
 [node name="boomarang" type="Area2D" parent="." groups=["PlayersLight", "boomarang"]]
 position = Vector2(1.52588e-05, -64.25)
@@ -58,15 +52,21 @@ collision_mask = 3
 script = ExtResource("1_8lxbj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boomarang" groups=["PlayersLight"]]
-position = Vector2(-1.00002, 46.25)
+position = Vector2(-1.00002, 62.25)
+scale = Vector2(1.76238, 1.254)
 shape = SubResource("CircleShape2D_vnw13")
 debug_color = Color(0, 0.650838, 0.0627796, 0.42)
 
+[node name="BoomarangAxe" type="Sprite2D" parent="."]
+position = Vector2(-5.96046e-08, -3)
+scale = Vector2(0.115404, 0.118126)
+texture = ExtResource("2_1tife")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_6k1mp")
+"": SubResource("AnimationLibrary_dge80")
 }
-autoplay = "spin"
+autoplay = "spinning"
 
 [connection signal="area_entered" from="boomarang" to="." method="_on_boomarang_area_entered"]
 [connection signal="area_entered" from="boomarang" to="." method="_on_area_2d_area_entered"]

@@ -17,3 +17,10 @@ res://Assets/SceneTranstion/scene_transition.gd
 res://Levels/titleScreen/main_menu.gd
 res://survivors_game.gd
 res://characters/Miner/player.gd
+res://characters/Miner/throw.gd
+res://characters/Miner/ui.tscn
+res://Assets/score_label.gd
+res://Levels/testLevel.tscn
+res://characters/Miner/lvl1miner/firstlvlplayer.gd
+res://characters/Miner/lvl1miner/firstlvlthrow.gd
+res://Levels/lvl1/lantern.tscn

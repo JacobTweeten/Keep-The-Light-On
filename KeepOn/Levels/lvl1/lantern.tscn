@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnc47aisa587q"]
+
+[ext_resource type="Texture2D" uid="uid://doobbagnktiiv" path="res://Levels/lvl1/lanternimg.png" id="1_u75ci"]
+
+[node name="Lantern" type="Node2D"]
+
+[node name="Lanternimg" type="Sprite2D" parent="."]
+position = Vector2(-3, 1)
+scale = Vector2(0.325235, 0.313043)
+texture = ExtResource("1_u75ci")

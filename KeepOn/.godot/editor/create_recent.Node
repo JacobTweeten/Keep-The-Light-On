@@ -1,11 +1,11 @@
-Button
-Label
-TextEdit
+Node2D
 AnimationPlayer
+Label
+Button
+TextEdit
 ColorRect
 CanvasLayer
 AnimatedSprite2D
-Node2D
 Node
 Area2D
 CollisionShape2D

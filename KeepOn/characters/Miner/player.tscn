@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://5mo22e3ci4vu"]
+[gd_scene load_steps=14 format=3 uid="uid://5mo22e3ci4vu"]
 
 [ext_resource type="Script" path="res://characters/Miner/player.gd" id="1_vs1wh"]
 [ext_resource type="PackedScene" uid="uid://cmgkom8c8hvly" path="res://OldFilesFromDemo2/gun.tscn" id="3_viovp"]
 [ext_resource type="Script" path="res://characters/Miner/light.gd" id="4_8drag"]
 [ext_resource type="Texture2D" uid="uid://clswnbo5o1ir0" path="res://characters/Miner/light.png" id="4_80wto"]
-[ext_resource type="Script" path="res://characters/Miner/throw.gd" id="6_wwf4s"]
+[ext_resource type="Script" path="res://characters/Miner/lvl1miner/firstlvlthrow.gd" id="6_wwf4s"]
+[ext_resource type="FontFile" uid="uid://dql203qeyagwm" path="res://Assets/FFFFORWA.TTF" id="7_eb1u4"]
 [ext_resource type="Texture2D" uid="uid://cyx3gpi1hjv7x" path="res://characters/miner.png" id="7_vruiw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_63j6a"]
@@ -99,16 +100,19 @@ script = ExtResource("6_wwf4s")
 [node name="Miner" type="Sprite2D" parent="." groups=["Player"]]
 modulate = Color(0.393086, 0.393086, 0.393085, 1)
 light_mask = 3
-position = Vector2(-7.27273, -32.7273)
-scale = Vector2(1.10601, 1.18155)
+position = Vector2(-10.9091, -43.6364)
+scale = Vector2(1.69123, 1.84744)
 texture = ExtResource("7_vruiw")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -885.455
-offset_top = 610.909
-offset_right = -845.455
-offset_bottom = 633.909
-scale = Vector2(11.1425, 7.32727)
+offset_left = -945.454
+offset_top = 601.818
+offset_right = -893.454
+offset_bottom = 645.818
+scale = Vector2(5.64409, 4.54229)
+theme_override_colors/font_color = Color(0.574219, 0.363373, 0, 1)
+theme_override_fonts/font = ExtResource("7_eb1u4")
+theme_override_font_sizes/font_size = 32
 text = "Oil"
 
 [connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]

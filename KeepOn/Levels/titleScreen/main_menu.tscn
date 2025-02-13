@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cx1kaoddun1cs"]
+[gd_scene load_steps=8 format=3 uid="uid://cx1kaoddun1cs"]
 
 [ext_resource type="Script" path="res://Levels/titleScreen/main_menu.gd" id="1_xij5f"]
 [ext_resource type="Texture2D" uid="uid://v63nbfhrufa7" path="res://Levels/titleScreen/titleimg1.png" id="2_b4u8j"]
 [ext_resource type="Texture2D" uid="uid://cn8qear7d7bgw" path="res://Levels/titleScreen/titleimg2.png" id="3_cvtul"]
 [ext_resource type="Texture2D" uid="uid://hd76answh0ug" path="res://Levels/titleScreen/titleimg3.png" id="4_yic74"]
 [ext_resource type="Texture2D" uid="uid://jgrimxpyilwp" path="res://Levels/titleScreen/title4.png" id="5_xfpf6"]
+[ext_resource type="FontFile" uid="uid://dql203qeyagwm" path="res://Assets/FFFFORWA.TTF" id="6_7gqjy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kd31r"]
 animations = [{
@@ -47,16 +48,27 @@ anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 693.0
+offset_left = 690.0
 offset_top = 914.0
-offset_right = 1213.0
+offset_right = 1210.0
 offset_bottom = 1036.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_disabled_color = Color(0.3125, 0.146484, 0.146484, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.85098, 0.85098, 0.129412, 1)
+theme_override_colors/font_hover_color = Color(0.722656, 0.508118, 0.508118, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0.223529, 1)
+theme_override_colors/font_focus_color = Color(1, 0.785156, 0.785156, 1)
+theme_override_colors/font_color = Color(0.770643, 0.839844, 0.485535, 1)
+theme_override_colors/font_outline_color = Color(0.742188, 0.576935, 0.576935, 1)
+theme_override_colors/icon_normal_color = Color(0.78125, 0.57373, 0.57373, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.890625, 0.890625, 1)
+theme_override_colors/icon_pressed_color = Color(0.839844, 0.692215, 0.692215, 1)
 theme_override_colors/icon_hover_color = Color(0.560784, 0, 0, 1)
-theme_override_font_sizes/font_size = 42
+theme_override_colors/icon_hover_pressed_color = Color(0.816406, 0.491119, 0.491119, 1)
+theme_override_colors/icon_disabled_color = Color(0.832031, 0.54277, 0.54277, 1)
+theme_override_fonts/font = ExtResource("6_7gqjy")
+theme_override_font_sizes/font_size = 33
 text = "Start Game"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
