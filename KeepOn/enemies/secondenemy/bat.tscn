@@ -16,6 +16,21 @@ radius = 685.747
 [sub_resource type="CircleShape2D" id="CircleShape2D_vshmx"]
 radius = 53.8238
 
+[sub_resource type="Animation" id="Animation_tnd6a"]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BatTopWing:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("3_dv4gf"), ExtResource("4_k0lkg")]
+}
+
 [sub_resource type="Animation" id="Animation_xw1pf"]
 resource_name = "Wingmove"
 length = 0.27
@@ -34,21 +49,6 @@ tracks/0/keys = {
 "values": [ExtResource("3_dv4gf"), ExtResource("4_k0lkg")]
 }
 
-[sub_resource type="Animation" id="Animation_tnd6a"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("BatTopWing:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_dv4gf")]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ssb22"]
 _data = {
 "RESET": SubResource("Animation_tnd6a"),
@@ -57,6 +57,21 @@ _data = {
 
 [sub_resource type="Animation" id="Animation_x2aou"]
 resource_name = "Hurtanimation"
+
+[sub_resource type="Animation" id="Animation_wtxjf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HurtBatUp:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_je1jd")]
+}
 
 [sub_resource type="Animation" id="Animation_56rix"]
 resource_name = "hurtanimation"
@@ -73,21 +88,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [ExtResource("5_je1jd"), ExtResource("6_ec5n5")]
-}
-
-[sub_resource type="Animation" id="Animation_wtxjf"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HurtBatUp:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("5_je1jd")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pkahg"]
@@ -132,6 +132,7 @@ libraries = {
 autoplay = "hurtanimation"
 
 [node name="HurtBatUp" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(4, 12)
 texture = ExtResource("5_je1jd")
 

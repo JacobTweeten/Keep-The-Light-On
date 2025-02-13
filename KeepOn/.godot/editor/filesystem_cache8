@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739455360
+::res://::1739459133
 Global.gd::GDScript::-1::1739455273::0::1::::<>Node<>::
 Score.gd::GDScript::-1::1739455273::0::1::::<>Label<>::
 survivors_game.gd::GDScript::-1::1738849304::0::1::::<>Node2D<>::
@@ -11,13 +11,16 @@ plugin.cfg::TextFile::-1::1738849304::0::1::::<><>::
 README.md::TextFile::-1::1738849304::0::1::::<><>::
 ::res://characters/::1739455364
 ground_shadow.png::CompressedTexture2D::2671517082038095037::1738849304::1739455364::1::::<><>::
-::res://characters/Miner/::1739455364
+::res://characters/Miner/::1739459224
 area_2d.gd::GDScript::-1::1738849304::0::1::::<>Area2D<>::
 light.gd::GDScript::-1::1738849304::0::1::::<>Area2D<>::
 light.png::CompressedTexture2D::5583436511672675307::1738849304::1739455364::1::::<><>::
 miner.png::CompressedTexture2D::5847059947275553913::1738849304::1739455364::1::::<><>::
+pixil-frame-0 (5).png::CompressedTexture2D::4942591174454570797::1739459183::1739459228::1::::<><>::
+pixil-frame-0 (6).png::CompressedTexture2D::3125918841183285208::1739459207::1739459228::1::::<><>::
+pixil-frame-0 (7).png::CompressedTexture2D::4765540413321885490::1739459213::1739459228::1::::<><>::
 player.gd::GDScript::-1::1738849304::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::2131337522108736306::1739455274::0::1::::<><>::res://characters/Miner/player.gd<>uid://cpkmht4mou57b::::res://characters/Miner/miner.png<>uid://cmgkom8c8hvly::::res://OldFilesFromDemo2/gun.tscn<>res://characters/Miner/light.gd<>uid://clswnbo5o1ir0::::res://characters/Miner/light.png<>res://characters/Miner/throw.gd
+player.tscn::PackedScene::2131337522108736306::1739459109::0::1::::<><>::res://characters/Miner/player.gd<>uid://cpkmht4mou57b::::res://characters/Miner/miner.png<>uid://cmgkom8c8hvly::::res://OldFilesFromDemo2/gun.tscn<>res://characters/Miner/light.gd<>uid://clswnbo5o1ir0::::res://characters/Miner/light.png<>res://characters/Miner/throw.gd
 throw.gd::GDScript::-1::1738849304::0::1::::PlayerAbilities<>Node2D<>::
 ui.gd::GDScript::-1::1739455274::0::1::::<>Control<>::
 ui.tscn::PackedScene::7007794038198201827::1739455274::0::1::::<><>::res://characters/Miner/ui.gd
@@ -38,14 +41,14 @@ bug.png::CompressedTexture2D::5531707841770188079::1738849304::1739455364::1::::
 fixed_bug.gd::GDScript::-1::1738849304::0::1::::<>CharacterBody2D<>::
 fixed_bug.tscn::PackedScene::2934485970979545193::1739284435::0::1::::<><>::res://enemies/firstEnemy/fixed_bug.gd<>uid://ck2uojqfo4cnf::::res://enemies/firstEnemy/bug.png<>res://enemies/firstEnemy/hitbox.gd
 hitbox.gd::GDScript::-1::1739455274::0::1::::Bug<>Node2D<>::
-::res://enemies/secondenemy/::1739456146
-Bat bottom wing.png::CompressedTexture2D::5191158019380663251::1739454971::1739455470::1::::<><>::
-Bat Top wing.png::CompressedTexture2D::2931187303928621907::1739454951::1739455470::1::::<><>::
+::res://enemies/secondenemy/::1739459134
+Bat bottom wing.png::CompressedTexture2D::5191158019380663251::1739457679::1739459134::1::::<><>::
+Bat Top wing.png::CompressedTexture2D::2931187303928621907::1739457679::1739459134::1::::<><>::
 bat.gd::GDScript::-1::1739455274::0::1::::<>CharacterBody2D<>::
-bat.tscn::PackedScene::6791437690376805577::1739284435::0::1::::<><>::res://enemies/secondenemy/bat.gd<>res://enemies/secondenemy/bathitbox.gd<>uid://cura71tyjrcys::::res://enemies/secondenemy/Untitled-1.png
+bat.tscn::PackedScene::6791437690376805577::1739459109::0::1::::<><>::res://enemies/secondenemy/bat.gd<>res://enemies/secondenemy/bathitbox.gd<>uid://bh05hyaam1i2n::::res://enemies/secondenemy/Bat Top wing.png<>uid://cf7vu47hon0u6::::res://enemies/secondenemy/Bat bottom wing.png<>uid://bpxjw55478hgc::::res://enemies/secondenemy/hurt bat up.png<>uid://pak68bjl8tec::::res://enemies/secondenemy/hurt bat down.png
 bathitbox.gd::GDScript::-1::1739455274::0::1::::BatHitBox<>Node2D<>::
-hurt bat down.png::CompressedTexture2D::1053496919349498990::1739456077::1739456151::1::::<><>::
-hurt bat up.png::CompressedTexture2D::3487321390414099730::1739456099::1739456151::1::::<><>::
+hurt bat down.png::CompressedTexture2D::1053496919349498990::1739457679::1739459134::1::::<><>::
+hurt bat up.png::CompressedTexture2D::3487321390414099730::1739457679::1739459134::1::::<><>::
 Untitled-1.png::CompressedTexture2D::6211771203432358818::1738849304::1739455364::1::::<><>::
 ::res://enemies/thirdEnemy/::1739455364
 shadowPerson.png::CompressedTexture2D::8794522972704925290::1739455274::1739455364::1::::<><>::
