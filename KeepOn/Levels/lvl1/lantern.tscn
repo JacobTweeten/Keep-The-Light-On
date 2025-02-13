@@ -1,10 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnc47aisa587q"]
+[gd_scene load_steps=6 format=3 uid="uid://cnc47aisa587q"]
 
+[ext_resource type="Script" path="res://Levels/lvl1/lantern.gd" id="1_ddjlt"]
 [ext_resource type="Texture2D" uid="uid://doobbagnktiiv" path="res://Levels/lvl1/lanternimg.png" id="1_u75ci"]
+[ext_resource type="Script" path="res://Levels/lvl1/lantern_pickup.gd" id="3_5ttmm"]
+[ext_resource type="Texture2D" uid="uid://46aqpqw47msy" path="res://OldFilesFromDemo2/light.png" id="4_dnbjl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f4pum"]
+radius = 94.1329
 
 [node name="Lantern" type="Node2D"]
+script = ExtResource("1_ddjlt")
 
 [node name="Lanternimg" type="Sprite2D" parent="."]
 position = Vector2(-3, 1)
-scale = Vector2(0.325235, 0.313043)
+scale = Vector2(0.164089, 0.148875)
 texture = ExtResource("1_u75ci")
+
+[node name="LanternPickup" type="Area2D" parent="."]
+scale = Vector2(0.474525, 0.475366)
+script = ExtResource("3_5ttmm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LanternPickup"]
+shape = SubResource("CircleShape2D_f4pum")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+texture = ExtResource("4_dnbjl")
+texture_scale = 6.85
+
+[connection signal="body_entered" from="LanternPickup" to="." method="_on_lantern_pickup_body_entered"]
+[connection signal="body_entered" from="LanternPickup" to="LanternPickup" method="_on_body_entered"]

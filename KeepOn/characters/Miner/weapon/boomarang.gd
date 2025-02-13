@@ -37,9 +37,14 @@ func _physics_process(delta: float) -> void:
 	
 	
 func throw() -> void:
+	print("DEBUG: Global.has_pickaxe =", Global.has_pickaxe)
+
+	if not Global.has_pickaxe:
+		print("You can't throw! You need to pick up the pickaxe first.")
+		return
+	
 	direction = (get_global_mouse_position() - global_position).normalized()
 	speed = max_speed
 	state = State.THROW
 	animation_player.play("boomerang")
 	visible = true
-	

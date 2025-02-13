@@ -1,15 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://bwysksq6ulekl"]
+[gd_scene load_steps=12 format=3 uid="uid://20pcaesg8ftj"]
 
-[ext_resource type="Script" path="res://survivors_game.gd" id="1_ebt1e"]
-[ext_resource type="PackedScene" uid="uid://5mo22e3ci4vu" path="res://characters/Miner/player.tscn" id="2_38b16"]
-[ext_resource type="FontFile" uid="uid://dql203qeyagwm" path="res://Assets/FFFFORWA.TTF" id="3_joo1q"]
-[ext_resource type="Script" path="res://Assets/score_label.gd" id="4_4ryvv"]
-[ext_resource type="PackedScene" uid="uid://d2itpclivav52" path="res://Collectables/oil_can.tscn" id="5_1x1ey"]
-[ext_resource type="PackedScene" uid="uid://c63vlxu56qld8" path="res://characters/Miner/ui.tscn" id="8_kq6vk"]
-[ext_resource type="PackedScene" uid="uid://cnc47aisa587q" path="res://Levels/lvl1/lantern.tscn" id="8_ug0sm"]
-[ext_resource type="PackedScene" uid="uid://dfrf0d5uadrn" path="res://Levels/lvl1/pickaxe.tscn" id="9_3qv58"]
-[ext_resource type="PackedScene" uid="uid://dh820eveop7rx" path="res://Levels/lvl1/NextLevelFromLevel1To2.tscn" id="9_8fmu0"]
-[ext_resource type="PackedScene" uid="uid://c3028soe562lp" path="res://enemies/secondenemy/bat.tscn" id="10_83m44"]
+[ext_resource type="Script" path="res://survivors_game.gd" id="1_xwlxr"]
+[ext_resource type="PackedScene" uid="uid://5mo22e3ci4vu" path="res://characters/Miner/player.tscn" id="2_48bnd"]
+[ext_resource type="FontFile" uid="uid://dql203qeyagwm" path="res://Assets/FFFFORWA.TTF" id="3_pnpci"]
+[ext_resource type="Script" path="res://Assets/score_label.gd" id="4_yt18e"]
+[ext_resource type="PackedScene" uid="uid://d2itpclivav52" path="res://Collectables/oil_can.tscn" id="5_6echn"]
+[ext_resource type="PackedScene" uid="uid://c63vlxu56qld8" path="res://characters/Miner/ui.tscn" id="6_glto1"]
+[ext_resource type="PackedScene" uid="uid://oet7fm1ib1xd" path="res://Assets/NextLevel.tscn" id="7_0d1mi"]
+[ext_resource type="Script" path="res://Levels/lvl2/next_level_from_level_2_end.gd" id="8_inf2g"]
+[ext_resource type="PackedScene" uid="uid://yj58ag7uuckf" path="res://enemies/thirdEnemy/shadow_person.tscn" id="8_krpuf"]
 
 [sub_resource type="Curve2D" id="Curve2D_0v7uw"]
 _data = {
@@ -21,7 +20,7 @@ point_count = 5
 polygon = PackedVector2Array(296.364, -412.727, 540, -254.545, 592.727, -30.9091, 369.091, -27.2727)
 
 [node name="Game" type="Node2D"]
-script = ExtResource("1_ebt1e")
+script = ExtResource("1_xwlxr")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -2
@@ -38,9 +37,9 @@ color = Color(0.158472, 0.158472, 0.158472, 1)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -9
 
-[node name="Player" parent="." instance=ExtResource("2_38b16")]
+[node name="Player" parent="." instance=ExtResource("2_48bnd")]
 y_sort_enabled = true
-position = Vector2(863, 608)
+position = Vector2(1019, 595)
 
 [node name="Path2D" type="Path2D" parent="Player"]
 visible = false
@@ -79,7 +78,7 @@ offset_right = 1200.0
 offset_bottom = 879.0
 theme_override_colors/font_color = Color(0.56665, 0.824219, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0.752941, 0, 1)
-theme_override_fonts/font = ExtResource("3_joo1q")
+theme_override_fonts/font = ExtResource("3_pnpci")
 theme_override_font_sizes/font_size = 23
 toggle_mode = true
 button_pressed = true
@@ -98,7 +97,7 @@ offset_right = 889.0
 offset_bottom = 5.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_joo1q")
+theme_override_fonts/font = ExtResource("3_pnpci")
 theme_override_font_sizes/font_size = 120
 text = "YOUR LIGHT WENT OUT"
 horizontal_alignment = 1
@@ -110,16 +109,16 @@ offset_top = 557.0
 offset_right = 776.0
 offset_bottom = 572.0
 scale = Vector2(6.05536, 5.66043)
-theme_override_fonts/font = ExtResource("3_joo1q")
+theme_override_fonts/font = ExtResource("3_pnpci")
 theme_override_font_sizes/font_size = 10
-script = ExtResource("4_4ryvv")
+script = ExtResource("4_yt18e")
 
-[node name="OilCan" parent="." instance=ExtResource("5_1x1ey")]
-position = Vector2(484, 253)
+[node name="OilCan" parent="." instance=ExtResource("5_6echn")]
+position = Vector2(1071, 379)
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
-[node name="Control" parent="CanvasLayer2" instance=ExtResource("8_kq6vk")]
+[node name="Control" parent="CanvasLayer2" instance=ExtResource("6_glto1")]
 offset_left = 24.0
 offset_top = 12.0
 offset_right = 264.0
@@ -132,17 +131,16 @@ position = Vector2(1617, 309)
 scale = Vector2(0.55, 0.55)
 occluder = SubResource("OccluderPolygon2D_gvaxd")
 
-[node name="Lantern" parent="." instance=ExtResource("8_ug0sm")]
-position = Vector2(1396, 461)
+[node name="NextLevel" parent="." instance=ExtResource("7_0d1mi")]
+position = Vector2(1009, 179)
+scale = Vector2(0.603913, 0.652222)
+script = ExtResource("8_inf2g")
 
-[node name="Pickaxe" parent="." instance=ExtResource("9_3qv58")]
-position = Vector2(1570, 238)
+[node name="Shadow_person" parent="." instance=ExtResource("8_krpuf")]
+position = Vector2(257, 626)
 
-[node name="NextLevel" parent="." instance=ExtResource("9_8fmu0")]
-position = Vector2(1033, 204)
-
-[node name="bat" parent="." instance=ExtResource("10_83m44")]
-position = Vector2(75, 688)
+[node name="Shadow_person2" parent="." instance=ExtResource("8_krpuf")]
+position = Vector2(1638, 495)
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

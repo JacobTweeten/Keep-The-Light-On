@@ -3,10 +3,15 @@ extends CharacterBody2D
 
 signal health_depleted
 
-var health = 100.0
+var health = 1.0
 var direction: Vector2 = Vector2.ZERO
 var cardinal_direction: Vector2 = Vector2.DOWN
 var game_over = false
+
+func _ready():
+	if Global.has_lantern:
+		health = 100
+		print("Player health:", health)
 
 func _physics_process(delta):
 	if game_over:

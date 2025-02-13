@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://cmgkom8c8hvly" path="res://OldFilesFromDemo2/gun.tscn" id="3_viovp"]
 [ext_resource type="Script" path="res://characters/Miner/light.gd" id="4_8drag"]
 [ext_resource type="Texture2D" uid="uid://clswnbo5o1ir0" path="res://characters/Miner/light.png" id="4_80wto"]
-[ext_resource type="Script" path="res://characters/Miner/lvl1miner/firstlvlthrow.gd" id="6_wwf4s"]
 [ext_resource type="FontFile" uid="uid://dql203qeyagwm" path="res://Assets/FFFFORWA.TTF" id="7_eb1u4"]
 [ext_resource type="Texture2D" uid="uid://cyx3gpi1hjv7x" path="res://characters/miner.png" id="7_vruiw"]
 
@@ -30,6 +29,48 @@ corner_radius_bottom_left = 8
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tgff5"]
 radius = 2720.53
+
+[sub_resource type="GDScript" id="GDScript_d1evx"]
+script/source = "class_name PlayerAbilities
+extends Node2D
+
+const BOOMERANG = preload(\"res://characters/Miner/weapon/boomarang.tscn\")
+
+enum Abilities { BOOMARANG }
+
+var selected_ability = Abilities.BOOMARANG
+var player: Player
+var boomerang_instance: Boomerang = null
+
+func _ready() -> void:
+	player = get_node(\"/root/Game/Player\")
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		print(\"Mouse event detected: \", event.button_index, \" Pressed: \", event.pressed)
+	if event.is_action_pressed(\"throw\"):
+		if selected_ability == Abilities.BOOMARANG:
+
+			boomerang_ability()
+
+func boomerang_ability() -> void:
+	if boomerang_instance != null:
+		print(\"Boomerang is already active!\")
+		return
+
+	print(\"Instantiating Boomerang...\")
+	var _b = BOOMERANG.instantiate() as Boomerang
+	if _b == null:
+		return
+
+	print(\"Adding Boomerang to scene...\")
+	player.add_sibling(_b)  # Add it to the scene
+	_b.global_position = player.global_position
+
+
+	_b.throw()  # Calls throw() in Boomerang script
+	boomerang_instance = _b
+"
 
 [node name="Player" type="CharacterBody2D" groups=["Player", "PlayersLight", "player"]]
 scale = Vector2(0.55, 0.55)
@@ -95,7 +136,7 @@ texture = ExtResource("4_80wto")
 texture_scale = 4.65
 
 [node name="Throw" type="Node2D" parent="."]
-script = ExtResource("6_wwf4s")
+script = SubResource("GDScript_d1evx")
 
 [node name="Miner" type="Sprite2D" parent="." groups=["Player"]]
 modulate = Color(0.393086, 0.393086, 0.393085, 1)

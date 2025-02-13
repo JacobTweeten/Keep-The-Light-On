@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfrf0d5uadrn"]
+
+[ext_resource type="Texture2D" uid="uid://c4v1k5lljrjfb" path="res://characters/Miner/weapon/boomarangAxe.png" id="1_d3ank"]
+[ext_resource type="Script" path="res://Levels/lvl1/pickaxe.gd" id="1_wmkdg"]
+[ext_resource type="Script" path="res://Levels/lvl1/pickaxe_pickup.gd" id="2_6rmqd"]
+[ext_resource type="Texture2D" uid="uid://46aqpqw47msy" path="res://OldFilesFromDemo2/light.png" id="4_kj63t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6rqy3"]
+radius = 126.016
+
+[node name="Pickaxe" type="Node2D"]
+script = ExtResource("1_wmkdg")
+
+[node name="BoomarangAxe" type="Sprite2D" parent="."]
+position = Vector2(-1, 16)
+scale = Vector2(0.181805, 0.119756)
+texture = ExtResource("1_d3ank")
+
+[node name="PickaxePickup" type="Area2D" parent="."]
+script = ExtResource("2_6rmqd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickaxePickup"]
+scale = Vector2(0.60415, 0.586076)
+shape = SubResource("CircleShape2D_6rqy3")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+texture = ExtResource("4_kj63t")
+texture_scale = 2.35
+
+[connection signal="body_entered" from="PickaxePickup" to="." method="_on_pickaxe_pickup_body_entered"]
+[connection signal="body_entered" from="PickaxePickup" to="PickaxePickup" method="_on_body_entered"]

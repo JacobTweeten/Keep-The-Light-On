@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bwysksq6ulekl"]
+[gd_scene load_steps=12 format=3 uid="uid://bwysksq6ulekl"]
 
 [ext_resource type="Script" path="res://survivors_game.gd" id="1_ebt1e"]
 [ext_resource type="PackedScene" uid="uid://5mo22e3ci4vu" path="res://characters/Miner/player.tscn" id="2_38b16"]
@@ -8,8 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c63vlxu56qld8" path="res://characters/Miner/ui.tscn" id="8_kq6vk"]
 [ext_resource type="PackedScene" uid="uid://cnc47aisa587q" path="res://Levels/lvl1/lantern.tscn" id="8_ug0sm"]
 [ext_resource type="PackedScene" uid="uid://dfrf0d5uadrn" path="res://Levels/lvl1/pickaxe.tscn" id="9_3qv58"]
-[ext_resource type="PackedScene" uid="uid://dh820eveop7rx" path="res://Levels/lvl1/NextLevelFromLevel1To2.tscn" id="9_8fmu0"]
-[ext_resource type="PackedScene" uid="uid://c3028soe562lp" path="res://enemies/secondenemy/bat.tscn" id="10_83m44"]
+[ext_resource type="PackedScene" uid="uid://oet7fm1ib1xd" path="res://Assets/NextLevel.tscn" id="10_7xivh"]
 
 [sub_resource type="Curve2D" id="Curve2D_0v7uw"]
 _data = {
@@ -40,7 +39,7 @@ layer = -9
 
 [node name="Player" parent="." instance=ExtResource("2_38b16")]
 y_sort_enabled = true
-position = Vector2(863, 608)
+position = Vector2(1019, 595)
 
 [node name="Path2D" type="Path2D" parent="Player"]
 visible = false
@@ -132,17 +131,15 @@ position = Vector2(1617, 309)
 scale = Vector2(0.55, 0.55)
 occluder = SubResource("OccluderPolygon2D_gvaxd")
 
+[node name="NextLevel" parent="." instance=ExtResource("10_7xivh")]
+position = Vector2(1009, 179)
+scale = Vector2(0.603913, 0.652222)
+
 [node name="Lantern" parent="." instance=ExtResource("8_ug0sm")]
 position = Vector2(1396, 461)
 
 [node name="Pickaxe" parent="." instance=ExtResource("9_3qv58")]
-position = Vector2(1570, 238)
-
-[node name="NextLevel" parent="." instance=ExtResource("9_8fmu0")]
-position = Vector2(1033, 204)
-
-[node name="bat" parent="." instance=ExtResource("10_83m44")]
-position = Vector2(75, 688)
+position = Vector2(712, 523)
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

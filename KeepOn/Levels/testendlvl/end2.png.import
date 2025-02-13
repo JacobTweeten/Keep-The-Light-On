@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxu1kqto3olo5"
-path="res://.godot/imported/wrench.png-ec157cbb1a86ef53593f4edf13f0043f.ctex"
+uid="uid://iuvxfojp4ivc"
+path="res://.godot/imported/end2.png-56ddbe412cbd8aa6b84549faeafbb43a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Miner/weapon/wrench.png"
-dest_files=["res://.godot/imported/wrench.png-ec157cbb1a86ef53593f4edf13f0043f.ctex"]
+source_file="res://Levels/testendlvl/end2.png"
+dest_files=["res://.godot/imported/end2.png-56ddbe412cbd8aa6b84549faeafbb43a.ctex"]
 
 [params]
 
