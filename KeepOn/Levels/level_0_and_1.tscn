@@ -1,27 +1,49 @@
-[gd_scene load_steps=13 format=3 uid="uid://kidy1uuu8cpm"]
+[gd_scene load_steps=22 format=3 uid="uid://kidy1uuu8cpm"]
 
-[ext_resource type="Texture2D" uid="uid://c10731jmkpson" path="res://Levels/KTLO_Frame_8.png" id="1_2p7uw"]
+[ext_resource type="Texture2D" uid="uid://c10731jmkpson" path="res://Levels/KTLO_Frame_8_A1.png" id="1_2p7uw"]
 [ext_resource type="Texture2D" uid="uid://dgboijdijrjt7" path="res://Levels/KTLO_Frame_2_A1.png" id="2_6hhhq"]
 [ext_resource type="Texture2D" uid="uid://v4rkjpwj053v" path="res://Levels/KTLO_Frame_5_A2.png" id="2_6n20c"]
-[ext_resource type="Texture2D" uid="uid://bp4g85g5n0qdf" path="res://Levels/pixil-frame-0 (26).png" id="3_q70bn"]
+[ext_resource type="Texture2D" uid="uid://dgsmu8n8to068" path="res://Levels/KTLO_Frame_9_A1.png" id="2_jqe67"]
+[ext_resource type="Texture2D" uid="uid://bp4g85g5n0qdf" path="res://Levels/KLTO_Frame_1_A1.png" id="3_q70bn"]
+[ext_resource type="Texture2D" uid="uid://dmy2nnqy80mu8" path="res://Levels/KTLO_Frame_3_A1.png" id="3_ry7yg"]
 [ext_resource type="PackedScene" uid="uid://d2itpclivav52" path="res://Collectables/oil_can.tscn" id="5_f6tlu"]
 [ext_resource type="PackedScene" uid="uid://5mo22e3ci4vu" path="res://characters/Miner/player.tscn" id="5_hotw7"]
+[ext_resource type="Texture2D" uid="uid://c01t0pfr08krn" path="res://Levels/KTLO_Frame_4_A1.png" id="6_jht7f"]
 [ext_resource type="PackedScene" uid="uid://bh2qs4252a5b6" path="res://enemies/firstEnemy/fixed_bug.tscn" id="6_ksodg"]
+[ext_resource type="Texture2D" uid="uid://du5rqxp0g8f0f" path="res://Levels/KLTO_Frame_6_A1.png" id="7_njx31"]
 [ext_resource type="PackedScene" uid="uid://c3028soe562lp" path="res://enemies/secondenemy/bat.tscn" id="8_b35xb"]
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_q04xn"]
-polygon = PackedVector2Array(81.6, 1, 80, 34, -26.4, 32, -128, 32, -168, 30, -156, 5, -138.4, -26, -124, -41, -108, -24, -96.8, -13, -88.8, -48, -77.6, -83, -62.4, -124, -52.8, -109, -45.6, -95, -38.4, -59, -34.4, -21, -22.4, -7, -9.60004, -27, 8.79999, -36, 16.8, -57, 35.2, -73, 46.4, -62, 57.6, -38)
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_lmk3c"]
-polygon = PackedVector2Array(-635.55, -707, -633.632, -726, -631.074, -749, -620.205, -753, -617.008, -764, -612.532, -778, -608.696, -795, -596.547, -810, -583.12, -812, -573.529, -802, -567.775, -789, -566.496, -768, -558.184, -768, -553.708, -759, -553.069, -747, -547.315, -743, -541.56, -734, -541.56, -720, -542.839, -704, -546.036, -684, -562.66, -672, -584.399, -667, -605.499, -667, -613.811, -671, -619.565, -673, -624.041, -674, -637.468, -673, -638.747, -694)
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ih83q"]
-polygon = PackedVector2Array(-2032.43, -2550, -2026.7, -2577, -2016.87, -2532, -2014.82, -2473, -2014, -2460, -2003.76, -2525, -1998.03, -2498, -1993.52, -2449, -1983.28, -2515, -1978.77, -2497, -1971.4, -2399, -1968.94, -2351, -1972.63, -2329, -2000.89, -2328, -2032.43, -2327)
+[ext_resource type="Texture2D" uid="uid://bj3e5gair8hjc" path="res://Levels/pixil-frame-0 (38).png" id="9_4yyn2"]
+[ext_resource type="PackedScene" uid="uid://ugrkuhmnukym" path="res://Collectables/super_oil_can.tscn" id="14_8i7l6"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8kcol"]
-polygon = PackedVector2Array(-1942.32, -2785, -1932.49, -2786, -1931.49, -2374.59, -1930.85, -2111, -1942.73, -2110)
+polygon = PackedVector2Array(-1942.32, -3069, -1930.03, -3070, -1931.49, -2374.59, -1930.85, -2111, -1942.73, -2110)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_q7die"]
+polygon = PackedVector2Array(-2639.46, -3591, -2469.28, -3592.9, -1655.6, -3602, -1656.01, -3556, -1973.96, -3556, -2152.03, -3556, -2655.02, -3557)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_j3o4w"]
+polygon = PackedVector2Array(3, 1431, 2393, 1426, 2393, 1493, 4, 1500)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_lo0mm"]
+polygon = PackedVector2Array(-1759, -191, -1705, -189, -1700, 1309, -1773, 1307)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ajtpf"]
+polygon = PackedVector2Array(-2110, -147, -2049, -90, -2039, 1390, -2118, 1392)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a3l4u"]
+radius = 54.28
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nkgco"]
+radius = 87.49
 
 [node name="Level" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -1238.0
+offset_top = -1230.0
+offset_right = 3334.0
+offset_bottom = 2163.0
+color = Color(0.12549, 0.0941176, 0.164706, 1)
 
 [node name="Frame_8" type="Sprite2D" parent="."]
 position = Vector2(1200, 1189)
@@ -31,6 +53,7 @@ texture = ExtResource("1_2p7uw")
 [node name="Frame_9" type="Sprite2D" parent="."]
 position = Vector2(2000, 1189)
 scale = Vector2(1.25, 1)
+texture = ExtResource("2_jqe67")
 
 [node name="Frame_2" type="Sprite2D" parent="."]
 position = Vector2(1200, 240)
@@ -40,6 +63,7 @@ texture = ExtResource("2_6hhhq")
 [node name="Frame_3" type="Sprite2D" parent="."]
 position = Vector2(2000, 240)
 scale = Vector2(1.25, 1)
+texture = ExtResource("3_ry7yg")
 
 [node name="Frame_1" type="Sprite2D" parent="."]
 position = Vector2(400, 240)
@@ -54,67 +78,50 @@ texture = ExtResource("2_6n20c")
 [node name="Frame_4" type="Sprite2D" parent="."]
 position = Vector2(400, 719)
 scale = Vector2(1.25, 1)
+texture = ExtResource("6_jht7f")
 
 [node name="Frame_6" type="Sprite2D" parent="."]
 position = Vector2(2000, 719)
 scale = Vector2(1.25, 1)
+texture = ExtResource("7_njx31")
 
 [node name="Frame_7" type="Sprite2D" parent="."]
 position = Vector2(400, 1189)
 scale = Vector2(1.25, 1)
+texture = ExtResource("9_4yyn2")
 
 [node name="Player" parent="." instance=ExtResource("5_hotw7")]
-visible = false
-position = Vector2(1142, 846)
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-visible = false
-position = Vector2(1119, 1214)
-scale = Vector2(1.25, 1)
-occluder = SubResource("OccluderPolygon2D_q04xn")
-
-[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
-visible = false
-position = Vector2(2418, 2085)
-scale = Vector2(1.564, 1)
-occluder = SubResource("OccluderPolygon2D_lmk3c")
-
-[node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
-visible = false
-position = Vector2(5762, 3764)
-scale = Vector2(2.44141, 1)
-occluder = SubResource("OccluderPolygon2D_ih83q")
+position = Vector2(1003, 1375)
 
 [node name="OilCan" parent="." instance=ExtResource("5_f6tlu")]
-visible = false
-position = Vector2(1230, 731)
+position = Vector2(1230, 843)
 
 [node name="OilCan2" parent="." instance=ExtResource("5_f6tlu")]
-visible = false
 position = Vector2(1548, 165)
 
 [node name="OilCan3" parent="." instance=ExtResource("5_f6tlu")]
-visible = false
 position = Vector2(864, 234)
 
+[node name="OilCan4" parent="." instance=ExtResource("5_f6tlu")]
+position = Vector2(279, 454)
+
+[node name="OilCan5" parent="." instance=ExtResource("5_f6tlu")]
+position = Vector2(1934, 414)
+
 [node name="FixedBug" parent="." instance=ExtResource("6_ksodg")]
-visible = false
-position = Vector2(1496, 520)
+position = Vector2(1520, 501)
 
 [node name="FixedBug2" parent="." instance=ExtResource("6_ksodg")]
-visible = false
 position = Vector2(868, 130)
 
 [node name="bat" parent="." instance=ExtResource("8_b35xb")]
-visible = false
 position = Vector2(44, 69)
 
 [node name="bat2" parent="." instance=ExtResource("8_b35xb")]
-visible = false
 position = Vector2(420, 47)
 
 [node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
-position = Vector2(5542, 3548)
+position = Vector2(5515, 3555)
 scale = Vector2(2.44141, 1)
 occluder = SubResource("OccluderPolygon2D_8kcol")
 
@@ -122,3 +129,112 @@ occluder = SubResource("OccluderPolygon2D_8kcol")
 position = Vector2(6321, 3546)
 scale = Vector2(2.44141, 1)
 occluder = SubResource("OccluderPolygon2D_8kcol")
+
+[node name="LightOccluder2D7" type="LightOccluder2D" parent="."]
+position = Vector2(6444, 3556)
+scale = Vector2(2.44141, 1)
+occluder = SubResource("OccluderPolygon2D_q7die")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.197937, 0.197937, 0.197937, 1)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_j3o4w")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+position = Vector2(1703, 190)
+occluder = SubResource("OccluderPolygon2D_lo0mm")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
+position = Vector2(4512, 103)
+occluder = SubResource("OccluderPolygon2D_ajtpf")
+
+[node name="OilCan6" parent="." instance=ExtResource("14_8i7l6")]
+position = Vector2(2072, 1169)
+
+[node name="bat3" parent="." instance=ExtResource("8_b35xb")]
+position = Vector2(2401, 982)
+
+[node name="bat4" parent="." instance=ExtResource("8_b35xb")]
+position = Vector2(1843, 1016)
+
+[node name="FixedBug3" parent="." instance=ExtResource("6_ksodg")]
+position = Vector2(2231, 644)
+
+[node name="FixedBug4" parent="." instance=ExtResource("6_ksodg")]
+position = Vector2(1258, 270)
+
+[node name="FixedBug5" parent="." instance=ExtResource("6_ksodg")]
+position = Vector2(1766, 123)
+
+[node name="bat5" parent="." instance=ExtResource("8_b35xb")]
+position = Vector2(2304, 59)
+
+[node name="bat6" parent="." instance=ExtResource("8_b35xb")]
+position = Vector2(70, 104)
+
+[node name="bat7" parent="." instance=ExtResource("8_b35xb")]
+position = Vector2(446, 47)
+
+[node name="bat8" parent="." instance=ExtResource("8_b35xb")]
+position = Vector2(570, 1365)
+
+[node name="FixedBug6" parent="." instance=ExtResource("6_ksodg")]
+position = Vector2(902, 608)
+
+[node name="Collision" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision"]
+visible = false
+polygon = PackedVector2Array(3, 1422, 367, 1426, 379, 1366, 386, 1316, 399, 1258, 424, 1208, 449, 1177, 463, 1146, 475, 1101, 483, 1062, 503, 1023, 512, 1028, 517, 1000, 535, 982, 547, 957, 597, 950, 617, 971, 638, 1023, 638, 1052, 672, 1082, 668, 1110, 677, 1159, 658, 1172, 614, 1183, 631, 1219, 649, 1189, 676, 1285, 712, 1192, 747, 1258, 774, 1163, 601, 935, 599, 840, 614, 815, 691, 787, 755, 781, 792, 724, 795, 646, 812, 577, 826, 594, 846, 671, 851, 689, 876, 671, 898, 678, 907, 649, 936, 634, 968, 667, 989, 618, 1000, 615, 1025, 669, 1045, 734, 1054, 766, 1053, 1096, 1033, 1089, 1007, 1134, 970, 1150, 915, 1163, 870, 1162, 798, 1147, 797, 1224, 813, 1193, 831, 1220, 840, 1287, 871, 1237, 887, 1258, 893, 1302, 919, 1230, 938, 1269, 956, 1383, 943, 1431, 1581, 1430, 1577, 1210, 1544, 1198, 1511, 1189, 1488, 1202, 1433, 1179, 1402, 1154, 1360, 1141, 1362, 776, 1308, 783, 1320, 750, 1343, 721, 1365, 684, 1398, 650, 1427, 682, 1464, 565, 1490, 577, 1516, 679, 1544, 661, 1583, 637, 1595, 624, 1591, 666, 1592, 702, 1596, 728, 1593, 765, 1636, 777, 1712, 823, 1739, 871, 1736, 941, 1772, 967, 1788, 994, 1799, 1023, 1823, 1034, 1827, 1053, 1848, 1079, 1891, 1096, 1913, 1106, 1939, 1124, 1953, 1143, 1966, 1162, 1956, 1173, 1935, 1171, 1913, 1186, 1896, 1193, 1919, 1206, 1928, 1218, 1949, 1218, 1965, 1230, 1971, 1249, 1981, 1267, 1988, 1239, 1998, 1212, 2010, 1215, 2039, 1228, 2053, 1242, 2079, 1255, 2096, 1258, 2107, 1226, 2100, 1196, 2103, 1168, 2116, 1151, 2141, 1162, 2146, 1188, 2157, 1201, 2180, 1186, 2182, 1151, 2194, 1124, 2205, 1073, 2213, 1042, 2217, 1031, 2236, 1054, 2237, 1024, 2244, 1014, 2248, 1003, 2272, 1003, 2269, 980, 2290, 968, 2286, 913, 2294, 829, 2285, 754, 2264, 722, 2286, 693, 2318, 686, 2320, 660, 2287, 625, 2261, 603, 2221, 593, 2210, 559, 2181, 515, 2200, 458, 2196, 414, 2180, 375, 2127, 363, 2112, 312, 2136, 259, 2194, 266, 2163, 204, 2131, 161, 2061, 125, 2015, 129, 1933, 135, 1883, 151, 1821, 125, 1704, 82, 1620, 72, 1595, 59, 1457, 77, 1425, 98, 1437, 121, 1445, 138, 1467, 157, 1474, 187, 1456, 207, 1423, 210, 1396, 210, 1364, 211, 1328, 208, 1291, 208, 1277, 219, 1251, 221, 1235, 234, 1200, 242, 1165, 235, 1128, 236, 1104, 233, 1053, 233, 980, 225, 963, 208, 949, 199, 914, 197, 898, 184, 923, 154, 944, 118, 913, 118, 867, 119, 821, 84, 770, 74, 732, 71, 692, 79, 621, 97, 569, 121, 547, 142, 483, 143, 413, 126, 354, 119, 301, 139, 256, 174, 220, 244, 274, 267, 271, 317, 272, 368, 228, 386, 194, 434, 200, 524, 248, 592, 290, 588, 315, 672, 303, 730, 274, 811, 230, 873, 184, 959, 163, 1051, 202, 1069, 229, 1083, 237, 1118, 261, 1146, 278, 1161, 244, 1186, 190, 1194, 156, 1212, 69, 1086, 27, 1158, 80, 1219, 27, 1217, 0, 1192, 0, -46, 2470, -53, 2472, 1538, -118, 1502, -90, -54, 0, -47)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Collision"]
+visible = false
+polygon = PackedVector2Array(1825, 670, 1811, 715, 1864, 764, 1913, 831, 1993, 878, 2090, 903, 2145, 870, 2178, 819, 2222, 790, 2208, 764, 2157, 720, 2104, 680, 2078, 657, 2064, 629, 2035, 596, 1989, 581, 1928, 577, 1882, 586, 1848, 601, 1838, 649)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Collision"]
+visible = false
+polygon = PackedVector2Array(1571, 477, 1619, 475, 1599, 1470, 1550, 1463)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Collision"]
+visible = false
+polygon = PackedVector2Array(774, 481, 800, 483, 801, 1577, 743, 1578, 770, 1425)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
+visible = false
+position = Vector2(1252, 546)
+shape = SubResource("CircleShape2D_a3l4u")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Collision"]
+visible = false
+position = Vector2(2068, 1008)
+shape = SubResource("CircleShape2D_a3l4u")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Collision"]
+visible = false
+position = Vector2(917, 547)
+shape = SubResource("CircleShape2D_a3l4u")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Collision"]
+visible = false
+position = Vector2(1542, 575)
+shape = SubResource("CircleShape2D_a3l4u")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Collision"]
+visible = false
+position = Vector2(1478, 424)
+shape = SubResource("CircleShape2D_nkgco")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Collision"]
+visible = false
+position = Vector2(1497, 1356)
+shape = SubResource("CircleShape2D_nkgco")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Collision"]
+visible = false
+position = Vector2(903, 376)
+shape = SubResource("CircleShape2D_nkgco")
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Collision"]
+visible = false
+polygon = PackedVector2Array(916, 1234, 1018, 1247, 1131, 1242, 1215, 1243, 1217, 1209, 1193, 1166, 1167, 1139, 1140, 1159, 1131, 1176, 1107, 1182, 1095, 1207, 1080, 1191, 1074, 1165, 1068, 1138, 1061, 1100, 1050, 1094, 1042, 1085, 1020, 1132, 1009, 1176, 1002, 1202, 985, 1184, 959, 1172)
