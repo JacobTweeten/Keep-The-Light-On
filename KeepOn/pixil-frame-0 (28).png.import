@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1dqwyvlt36oc"
-path="res://.godot/imported/KTLO_Ground_Hole_Var3.png-97ce47deea80255aa64cc885b239b912.ctex"
+uid="uid://cbryb4lixh4ei"
+path="res://.godot/imported/pixil-frame-0 (28).png-7ae813d2305a507fc5acaeaa78db7528.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Levels/KTLO_Ground_Hole_Var3.png"
-dest_files=["res://.godot/imported/KTLO_Ground_Hole_Var3.png-97ce47deea80255aa64cc885b239b912.ctex"]
+source_file="res://pixil-frame-0 (28).png"
+dest_files=["res://.godot/imported/pixil-frame-0 (28).png-7ae813d2305a507fc5acaeaa78db7528.ctex"]
 
 [params]
 
