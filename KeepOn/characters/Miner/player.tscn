@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [gd_scene load_steps=14 format=3 uid="uid://5mo22e3ci4vu"]
 
 [ext_resource type="Script" path="res://characters/Miner/player.gd" id="1_vs1wh"]
@@ -7,18 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://clswnbo5o1ir0" path="res://characters/Miner/light.png" id="4_80wto"]
 [ext_resource type="FontFile" uid="uid://dql203qeyagwm" path="res://Assets/FFFFORWA.TTF" id="7_eb1u4"]
 [ext_resource type="Texture2D" uid="uid://cyx3gpi1hjv7x" path="res://characters/miner.png" id="7_vruiw"]
-=======
-[gd_scene load_steps=17 format=3 uid="uid://5mo22e3ci4vu"]
-
-[ext_resource type="Script" path="res://characters/Miner/player.gd" id="1_vs1wh"]
-[ext_resource type="Texture2D" uid="uid://bkshorfs0nqqa" path="res://characters/Miner/pixil-frame-0 (6).png" id="2_cqn5o"]
-[ext_resource type="PackedScene" uid="uid://cmgkom8c8hvly" path="res://OldFilesFromDemo2/gun.tscn" id="3_viovp"]
-[ext_resource type="Script" path="res://characters/Miner/light.gd" id="4_8drag"]
-[ext_resource type="Texture2D" uid="uid://clswnbo5o1ir0" path="res://characters/Miner/light.png" id="4_80wto"]
-[ext_resource type="Script" path="res://characters/Miner/throw.gd" id="6_wwf4s"]
-[ext_resource type="Texture2D" uid="uid://ccoh0whypqsm4" path="res://characters/Miner/pixil-frame-0 (5).png" id="7_qmkft"]
-[ext_resource type="Texture2D" uid="uid://b85p0wbdnpxwc" path="res://characters/Miner/pixil-frame-0 (7).png" id="8_sawri"]
->>>>>>> main
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_63j6a"]
 radius = 28.4605
@@ -43,7 +30,6 @@ corner_radius_bottom_left = 8
 [sub_resource type="CircleShape2D" id="CircleShape2D_tgff5"]
 radius = 2720.53
 
-<<<<<<< HEAD
 [sub_resource type="GDScript" id="GDScript_d1evx"]
 script/source = "class_name PlayerAbilities
 extends Node2D
@@ -90,53 +76,6 @@ func boomerang_ability() -> void:
 scale = Vector2(0.55, 0.55)
 script = ExtResource("1_vs1wh")
 
-=======
-[sub_resource type="Animation" id="Animation_c5qvd"]
-resource_name = "playerwalk"
-length = 1.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Pixil-frame-0(5):texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [ExtResource("7_qmkft"), ExtResource("2_cqn5o"), ExtResource("8_sawri")]
-}
-
-[sub_resource type="Animation" id="Animation_x4w7j"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Pixil-frame-0(5):texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_cqn5o")]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_hle51"]
-_data = {
-"RESET": SubResource("Animation_x4w7j"),
-"playerwalk": SubResource("Animation_c5qvd")
-}
-
-[node name="Player" type="CharacterBody2D" groups=["PlayersLight", "player"]]
-scale = Vector2(0.55, 0.55)
-script = ExtResource("1_vs1wh")
-
-[node name="Pixil-frame-0(5)" type="Sprite2D" parent="."]
-position = Vector2(-5.45455, -43.6364)
-texture = ExtResource("2_cqn5o")
-
->>>>>>> main
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_63j6a")
@@ -216,10 +155,5 @@ theme_override_colors/font_color = Color(0.574219, 0.363373, 0, 1)
 theme_override_fonts/font = ExtResource("7_eb1u4")
 theme_override_font_sizes/font_size = 32
 text = "Oil"
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_hle51")
-}
 
 [connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]
