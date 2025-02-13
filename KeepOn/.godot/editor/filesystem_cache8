@@ -1,34 +1,36 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739456329
-Global.gd::GDScript::-1::1739455380::0::1::::<>Node<>::
+::res://::1739471117
+Global.gd::GDScript::-1::1739471007::0::1::::<>Node<>::
 Score.gd::GDScript::-1::1739455380::0::1::::<>Label<>::
-survivors_game.gd::GDScript::-1::1739455380::0::1::::<>Node2D<>::
-survivors_game.tscn::PackedScene::5417944062050910070::1739455986::0::1::::<><>::res://survivors_game.gd<>uid://5mo22e3ci4vu::::res://characters/Miner/player.tscn<>uid://caqfk2xng5v5u::::res://OldFilesFromDemo2/trees/pine_tree.png<>uid://d2itpclivav52::::res://Collectables/oil_can.tscn<>uid://c3028soe562lp::::res://enemies/secondenemy/bat.tscn<>uid://ugrkuhmnukym::::res://Collectables/super_oil_can.tscn<>uid://yj58ag7uuckf::::res://enemies/thirdEnemy/shadow_person.tscn<>uid://c63vlxu56qld8::::res://characters/Miner/ui.tscn
+survivors_game.gd::GDScript::-1::1739471007::0::1::::<>Node2D<>::
+survivors_game.tscn::PackedScene::5417944062050910070::1739471007::0::1::::<><>::res://survivors_game.gd<>uid://5mo22e3ci4vu::::res://characters/Miner/player.tscn<>uid://caqfk2xng5v5u::::res://OldFilesFromDemo2/trees/pine_tree.png<>uid://d2itpclivav52::::res://Collectables/oil_can.tscn<>uid://c3028soe562lp::::res://enemies/secondenemy/bat.tscn<>uid://ugrkuhmnukym::::res://Collectables/super_oil_can.tscn<>uid://yj58ag7uuckf::::res://enemies/thirdEnemy/shadow_person.tscn<>uid://c63vlxu56qld8::::res://characters/Miner/ui.tscn
 ::res://addons/::1739455921
 ::res://addons/colorpicker_presets/::1739455407
 colorpicker_presets.gd::GDScript::-1::1739455380::0::1::::<>EditorPlugin<>::
 plugin.cfg::TextFile::-1::1739455380::0::1::::<><>::
 README.md::TextFile::-1::1739455380::0::1::::<><>::
-::res://addons/Road_Rage/::1739456015
-OFL.txt::TextFile::-1::1739283784::0::1::::<><>::
-RoadRage-Regular.ttf::FontFile::4940277066680190411::1739283784::1739456015::1::::<><>::
-::res://characters/::1739455439
+::res://addons/Road_Rage/::1739471007
+OFL.txt::TextFile::-1::1739471007::0::1::::<><>::
+RoadRage-Regular.ttf::FontFile::4940277066680190411::1739471007::1739471119::1::::<><>::
+::res://Assets/::1739471006
+::res://Assets/SceneTranstion/::1739471005
+::res://characters/::1739471006
 ground_shadow.png::CompressedTexture2D::2671517082038095037::1739455380::1739455439::1::::<><>::
-::res://characters/Miner/::1739455440
-area_2d.gd::GDScript::-1::1739455380::0::1::::<>Area2D<>::
-light.gd::GDScript::-1::1739455380::0::1::::<>Area2D<>::
+::res://characters/Miner/::1739471007
+area_2d.gd::GDScript::-1::1739471007::0::1::::<>Area2D<>::
+light.gd::GDScript::-1::1739471007::0::1::::<>Area2D<>::
 light.png::CompressedTexture2D::5583436511672675307::1739455380::1739455439::1::::<><>::
-miner.png::CompressedTexture2D::5847059947275553913::1739455380::1739455440::1::::<><>::
-player.gd::GDScript::-1::1739455380::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::2131337522108736306::1739454626::0::1::::<><>::res://characters/Miner/player.gd<>uid://cpkmht4mou57b::::res://characters/Miner/miner.png<>uid://cmgkom8c8hvly::::res://OldFilesFromDemo2/gun.tscn<>res://characters/Miner/light.gd<>uid://clswnbo5o1ir0::::res://characters/Miner/light.png<>res://characters/Miner/throw.gd
-throw.gd::GDScript::-1::1739455380::0::1::::PlayerAbilities<>Node2D<>::
+miner.png::CompressedTexture2D::5847059947275553913::1739471007::1739471120::1::::<><>::
+player.gd::GDScript::-1::1739471007::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::2131337522108736306::1739471007::0::1::::<><>::res://characters/Miner/player.gd<>uid://cpkmht4mou57b::::res://characters/Miner/miner.png<>uid://cmgkom8c8hvly::::res://OldFilesFromDemo2/gun.tscn<>res://characters/Miner/light.gd<>uid://clswnbo5o1ir0::::res://characters/Miner/light.png<>res://characters/Miner/throw.gd
+throw.gd::GDScript::-1::1739471007::0::1::::PlayerAbilities<>Node2D<>::
 ui.gd::GDScript::-1::1739455380::0::1::::<>Control<>::
-ui.tscn::PackedScene::7007794038198201827::1739455380::0::1::::<><>::res://characters/Miner/ui.gd
-::res://characters/Miner/weapon/::1739455440
-boomarang.gd::GDScript::-1::1739455380::0::1::::Boomerang<>Node2D<>::
-boomarang.tscn::PackedScene::8045818425778973786::1739455380::0::1::::<><>::res://characters/Miner/weapon/boomarang.gd<>uid://cffjlvr6yymx7::::res://characters/Miner/weapon/wrenchs.png
-wrench.png::CompressedTexture2D::6430069696292082518::1739455380::1739455440::1::::<><>::
-wrenchs.png::CompressedTexture2D::5134674701708071230::1739455380::1739455440::1::::<><>::
+ui.tscn::PackedScene::7007794038198201827::1739471007::0::1::::<><>::res://characters/Miner/ui.gd
+::res://characters/Miner/weapon/::1739471007
+boomarang.gd::GDScript::-1::1739471007::0::1::::Boomerang<>Node2D<>::
+boomarang.tscn::PackedScene::8045818425778973786::1739471007::0::1::::<><>::res://characters/Miner/weapon/boomarang.gd<>uid://cffjlvr6yymx7::::res://characters/Miner/weapon/wrenchs.png
+wrench.png::CompressedTexture2D::6430069696292082518::1739471007::1739471120::1::::<><>::
+wrenchs.png::CompressedTexture2D::5134674701708071230::1739471007::1739471120::1::::<><>::
 ::res://Collectables/::1739455440
 OIL.png::CompressedTexture2D::8353635132815275801::1739455380::1739455440::1::::<><>::
 oil_can.gd::GDScript::-1::1739455380::0::1::::Oil<>Node2D<>::
@@ -41,17 +43,18 @@ bug.png::CompressedTexture2D::5531707841770188079::1739455380::1739455439::1::::
 fixed_bug.gd::GDScript::-1::1739455380::0::1::::<>CharacterBody2D<>::
 fixed_bug.tscn::PackedScene::2934485970979545193::1739455380::0::1::::<><>::res://enemies/firstEnemy/fixed_bug.gd<>uid://ck2uojqfo4cnf::::res://enemies/firstEnemy/bug.png<>res://enemies/firstEnemy/hitbox.gd
 hitbox.gd::GDScript::-1::1739455380::0::1::::Bug<>Node2D<>::
-::res://enemies/secondenemy/::1739455439
+::res://enemies/secondenemy/::1739471007
 bat.gd::GDScript::-1::1739455380::0::1::::<>CharacterBody2D<>::
-bat.tscn::PackedScene::6791437690376805577::1739455380::0::1::::<><>::res://enemies/secondenemy/bat.gd<>res://enemies/secondenemy/bathitbox.gd<>uid://cura71tyjrcys::::res://enemies/secondenemy/Untitled-1.png
+bat.tscn::PackedScene::6791437690376805577::1739471007::0::1::::<><>::res://enemies/secondenemy/bat.gd<>res://enemies/secondenemy/bathitbox.gd<>uid://cura71tyjrcys::::res://enemies/secondenemy/Untitled-1.png
 bathitbox.gd::GDScript::-1::1739455380::0::1::::BatHitBox<>Node2D<>::
 Untitled-1.png::CompressedTexture2D::6211771203432358818::1739455380::1739455439::1::::<><>::
-::res://enemies/thirdEnemy/::1739455987
+::res://enemies/thirdEnemy/::1739471007
 shadowPerson.png::CompressedTexture2D::8794522972704925290::1739455380::1739455439::1::::<><>::
 shadow_person.gd::GDScript::-1::1739455380::0::1::::<>CharacterBody2D<>::
-shadow_person.tscn::PackedScene::1704992098831446209::1739455987::0::1::::<><>::res://enemies/thirdEnemy/shadow_person.gd<>uid://dxkerj1xra2ti::::res://enemies/thirdEnemy/shadowPerson.png<>res://enemies/thirdEnemy/Shadow_person_hitbox.gd<>uid://ccndv2tx3rfj4::::res://addons/Road_Rage/RoadRage-Regular.ttf
+shadow_person.gdshader::Shader::-1::1739471007::0::1::::<><>::
+shadow_person.tscn::PackedScene::1704992098831446209::1739471007::0::1::::<><>::res://enemies/thirdEnemy/shadow_person.gd<>uid://dxkerj1xra2ti::::res://enemies/thirdEnemy/shadowPerson.png<>res://enemies/thirdEnemy/Shadow_person_hitbox.gd<>res://enemies/thirdEnemy/shadow_person.gdshader<>uid://ccndv2tx3rfj4::::res://addons/Road_Rage/RoadRage-Regular.ttf
 Shadow_person_hitbox.gd::GDScript::-1::1739455380::0::1::::<>Node2D<>::
-::res://KTLO_art/::1739455440
+::res://KTLO_art/::1739471006
 bat_side.png::CompressedTexture2D::7271229805347443074::1739455380::1739455439::1::::<><>::
 gas_can.png::CompressedTexture2D::8677951069317680239::1739455380::1739455439::1::::<><>::
 miner_side.png::CompressedTexture2D::1543657185246280531::1739455380::1739455439::1::::<><>::
@@ -59,7 +62,7 @@ oil_can.png::CompressedTexture2D::2229354913659143281::1739455380::1739455440::1
 pixil-frame-0 (1).png::CompressedTexture2D::1365860705101584003::1739455380::1739455440::1::::<><>::
 rat_side.png::CompressedTexture2D::1252607069793247684::1739455380::1739455440::1::::<><>::
 shadow_side.png::CompressedTexture2D::7277504571453168086::1739455380::1739455440::1::::<><>::
-::res://Levels/::1739455986
+::res://Levels/::1739471006
 KTLO_Frame_2_A1.png::CompressedTexture2D::7583324292632281122::1739455380::1739455440::1::::<><>::
 KTLO_Frame_5_A1.png::CompressedTexture2D::7408875888769238346::1739455380::1739455440::1::::<><>::
 KTLO_Frame_5_A2.png::CompressedTexture2D::1534883214977334557::1739455380::1739455440::1::::<><>::
@@ -71,10 +74,14 @@ KTLO_Ground_Var1.png::CompressedTexture2D::5582507759774528283::1739455380::1739
 KTLO_Ground_Var2.png::CompressedTexture2D::3351225890693744837::1739455380::1739455439::1::::<><>::
 KTLO_Ground_Var3.png::CompressedTexture2D::4443855529829041499::1739455380::1739455439::1::::<><>::
 KTLO_Ground_Var4.png::CompressedTexture2D::6410215375389774554::1739455380::1739455439::1::::<><>::
-level_0_and_1.tscn::PackedScene::718629865884746074::1739455986::0::1::::<><>::uid://c10731jmkpson::::res://Levels/KTLO_Frame_8.png<>uid://dgboijdijrjt7::::res://Levels/KTLO_Frame_2_A1.png<>uid://v4rkjpwj053v::::res://Levels/KTLO_Frame_5_A2.png<>uid://bp4g85g5n0qdf::::res://Levels/pixil-frame-0 (26).png<>uid://d2itpclivav52::::res://Collectables/oil_can.tscn<>uid://5mo22e3ci4vu::::res://characters/Miner/player.tscn<>uid://bh2qs4252a5b6::::res://enemies/firstEnemy/fixed_bug.tscn<>uid://c3028soe562lp::::res://enemies/secondenemy/bat.tscn
+level_0_and_1.tscn::PackedScene::718629865884746074::1739470843::0::1::::<><>::uid://c10731jmkpson::::res://Levels/KTLO_Frame_8.png<>uid://dgboijdijrjt7::::res://Levels/KTLO_Frame_2_A1.png<>uid://v4rkjpwj053v::::res://Levels/KTLO_Frame_5_A2.png<>uid://bp4g85g5n0qdf::::res://Levels/pixil-frame-0 (26).png<>uid://d2itpclivav52::::res://Collectables/oil_can.tscn<>uid://5mo22e3ci4vu::::res://characters/Miner/player.tscn<>uid://bh2qs4252a5b6::::res://enemies/firstEnemy/fixed_bug.tscn<>uid://c3028soe562lp::::res://enemies/secondenemy/bat.tscn
 pixil-frame-0 (24).png::CompressedTexture2D::6027230963810734595::1739455380::1739455439::1::::<><>::
 pixil-frame-0 (25).png::CompressedTexture2D::4787217457168645952::1739455380::1739455439::1::::<><>::
 pixil-frame-0 (26).png::CompressedTexture2D::3499545112637547779::1739455380::1739455439::1::::<><>::
+::res://Levels/lvl1/::1739471006
+::res://Levels/lvl2/::1739471006
+::res://Levels/testendlvl/::1739471006
+::res://Levels/titleScreen/::1739471006
 ::res://OldFilesFromDemo2/::1739455439
 bullet.gd::GDScript::-1::1739455380::0::1::::<>Area2D<>::
 bullet.tscn::PackedScene::4491320622619923452::1739455380::0::1::::<><>::uid://dftkbqwsfd68r::::res://OldFilesFromDemo2/pistol/projectile.png<>res://bullet.gd
