@@ -39,10 +39,10 @@ oil_can.tscn::PackedScene::9072056383540912635::1739284435::0::1::::<><>::res://
 super_oil_can.gd::GDScript::-1::1739455273::0::1::::SuperOil<>Node2D<>::
 super_oil_can.tscn::PackedScene::1417214247945114900::1739284435::0::1::::<><>::res://Collectables/super_oil_can.gd<>uid://0rdq1lrxf4um::::res://characters/Miner/OIL.png<>uid://clswnbo5o1ir0::::res://characters/Miner/light.png
 ::res://enemies/::1739284435
-::res://enemies/firstEnemy/::1739461481
+::res://enemies/firstEnemy/::1739461607
 bug.png::CompressedTexture2D::5531707841770188079::1738849304::1739455364::1::::<><>::
 fixed_bug.gd::GDScript::-1::1738849304::0::1::::<>CharacterBody2D<>::
-fixed_bug.tscn::PackedScene::2934485970979545193::1739461245::0::1::::<><>::res://enemies/firstEnemy/fixed_bug.gd<>uid://dgal8i2l5pe0a::::res://enemies/firstEnemy/ratbob.png<>res://enemies/firstEnemy/hitbox.gd<>uid://du5xrdisjslyx::::res://enemies/firstEnemy/ratstill.png
+fixed_bug.tscn::PackedScene::2934485970979545193::1739461607::0::1::::<><>::res://enemies/firstEnemy/fixed_bug.gd<>uid://bom3gveyados5::::res://enemies/firstEnemy/Rathurt.png<>uid://dgal8i2l5pe0a::::res://enemies/firstEnemy/ratbob.png<>res://enemies/firstEnemy/hitbox.gd<>uid://du5xrdisjslyx::::res://enemies/firstEnemy/ratstill.png
 hitbox.gd::GDScript::-1::1739455274::0::1::::Bug<>Node2D<>::
 ratbob.png::CompressedTexture2D::7581122393463785306::1739461005::1739461089::1::::<><>::
 Rathurt.png::CompressedTexture2D::3395548928495317714::1739461457::1739461492::1::::<><>::
@@ -56,7 +56,8 @@ bathitbox.gd::GDScript::-1::1739455274::0::1::::BatHitBox<>Node2D<>::
 hurt bat down.png::CompressedTexture2D::1053496919349498990::1739457679::1739459134::1::::<><>::
 hurt bat up.png::CompressedTexture2D::3487321390414099730::1739457679::1739459134::1::::<><>::
 Untitled-1.png::CompressedTexture2D::6211771203432358818::1738849304::1739455364::1::::<><>::
-::res://enemies/thirdEnemy/::1739455364
+::res://enemies/thirdEnemy/::1739461924
+Shadowhurt.png::CompressedTexture2D::5689762809034092406::1739461830::1739461927::1::::<><>::
 shadowPerson.png::CompressedTexture2D::8794522972704925290::1739455274::1739455364::1::::<><>::
 shadow_person.gd::GDScript::-1::1739455274::0::1::::<>CharacterBody2D<>::
 shadow_person.tscn::PackedScene::1704992098831446209::1739455274::0::1::::<><>::res://enemies/thirdEnemy/shadow_person.gd<>uid://dxkerj1xra2ti::::res://enemies/thirdEnemy/shadowPerson.png<>res://enemies/thirdEnemy/Shadow_person_hitbox.gd
