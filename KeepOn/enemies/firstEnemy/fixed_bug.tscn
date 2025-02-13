@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bh2qs4252a5b6"]
+[gd_scene load_steps=15 format=3 uid="uid://bh2qs4252a5b6"]
 
 [ext_resource type="Script" path="res://enemies/firstEnemy/fixed_bug.gd" id="1_l8htu"]
-[ext_resource type="Texture2D" uid="uid://ck2uojqfo4cnf" path="res://enemies/firstEnemy/bug.png" id="2_h6cvf"]
+[ext_resource type="Texture2D" uid="uid://bom3gveyados5" path="res://enemies/firstEnemy/Rathurt.png" id="2_8dn7n"]
+[ext_resource type="Texture2D" uid="uid://dgal8i2l5pe0a" path="res://enemies/firstEnemy/ratbob.png" id="2_qo3me"]
 [ext_resource type="Script" path="res://enemies/firstEnemy/hitbox.gd" id="3_eyixp"]
+[ext_resource type="Texture2D" uid="uid://du5xrdisjslyx" path="res://enemies/firstEnemy/ratstill.png" id="4_iuk4j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6jku2"]
 radius = 35.0
@@ -13,13 +15,87 @@ radius = 378.132
 [sub_resource type="CircleShape2D" id="CircleShape2D_vshmx"]
 radius = 46.0435
 
+[sub_resource type="Animation" id="Animation_eanue"]
+resource_name = "Ratmove"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ratstill:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("4_iuk4j"), ExtResource("2_qo3me")]
+}
+
+[sub_resource type="Animation" id="Animation_q7jbg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ratstill:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_qo3me")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kfy3r"]
+_data = {
+"RESET": SubResource("Animation_q7jbg"),
+"Ratmove": SubResource("Animation_eanue")
+}
+
+[sub_resource type="Animation" id="Animation_f07hm"]
+resource_name = "hurtrat"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ratstill:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("4_iuk4j"), ExtResource("2_8dn7n")]
+}
+
+[sub_resource type="Animation" id="Animation_2o3vs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ratstill:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_8dn7n")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o0op1"]
+_data = {
+"RESET": SubResource("Animation_2o3vs"),
+"hurtrat": SubResource("Animation_f07hm")
+}
+
 [node name="FixedBug" type="CharacterBody2D"]
 script = ExtResource("1_l8htu")
 
-[node name="Bug" type="Sprite2D" parent="."]
-position = Vector2(1, -4)
-scale = Vector2(0.422705, 0.368132)
-texture = ExtResource("2_h6cvf")
+[node name="Ratstill" type="Sprite2D" parent="."]
+position = Vector2(2, 2)
+texture = ExtResource("2_8dn7n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_6jku2")
@@ -35,6 +111,17 @@ script = ExtResource("3_eyixp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("CircleShape2D_vshmx")
 debug_color = Color(0.983018, 0.128908, 0, 0.42)
+
+[node name="Ratmoving" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kfy3r")
+}
+autoplay = "Ratmove"
+
+[node name="Rathurt" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_o0op1")
+}
 
 [connection signal="body_entered" from="Sight" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Sight" to="." method="_on_area_2d_body_exited"]
