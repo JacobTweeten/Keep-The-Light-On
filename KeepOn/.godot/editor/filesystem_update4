@@ -1,0 +1,9 @@
+res://Levels/titleScreen/main_menu.tscn
+res://characters/Miner/player.tscn
+res://enemies/secondenemy/bat.tscn
+res://enemies/firstEnemy/rat.tscn
+res://Levels/testLevel.tscn
+res://Levels/lvl2/NextLevelFromLevel2Toend.tscn
+res://enemies/firstEnemy/hitbox.gd
+res://enemies/firstEnemy/fixed_bug.gd
+res://characters/Miner/player.gd

@@ -5,6 +5,8 @@ var player: Player = null  # Store the player reference
 var boomerang: Boomerang = null
 const OIL_SCENE = preload("res://Collectables/oil_can.tscn")
 @export var scoreIncrease: int = 5
+@onready var Rathit: AudioStreamPlayer2D = $Rathit
+@onready var Rathurt: AnimationPlayer = $Rathurt
 
 func _process(delta: float) -> void:
 	if player:
@@ -35,12 +37,18 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 
 	if area.is_in_group("boomarang"): 
 		print("Boomerang hit the bug!")
+		$Rathurt.play()
+		$Rathit.play()
+		
 		bughealth -= 1  # Reduce Bug health
 
 		if bughealth <= 0:
 			print("Bug destroyed!")
+			
 			spawn_oil(global_position)
 			Global.score += scoreIncrease
+			await $Rathit.finished
+			await $Rathurt.animation_finished
 			queue_free()  # Destroy the bug
 			get_parent().queue_free()
 			

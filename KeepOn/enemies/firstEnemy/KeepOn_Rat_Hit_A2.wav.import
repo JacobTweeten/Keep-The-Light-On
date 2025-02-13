@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bgkxrfrs7qt4d"
-path="res://.godot/imported/KeepOn_Rat_Hit_A2.wav-4e23e938cb239899a6b57c1b8f80bc75.sample"
+path="res://.godot/imported/KeepOn_Rat_Hit_A2.wav-ba82edbf0b5195b6b4ca91801c1df075.sample"
 
 [deps]
 
-source_file="res://Sounds/KeepOn_Rat_Hit_A2.wav"
-dest_files=["res://.godot/imported/KeepOn_Rat_Hit_A2.wav-4e23e938cb239899a6b57c1b8f80bc75.sample"]
+source_file="res://enemies/firstEnemy/KeepOn_Rat_Hit_A2.wav"
+dest_files=["res://.godot/imported/KeepOn_Rat_Hit_A2.wav-ba82edbf0b5195b6b4ca91801c1df075.sample"]
 
 [params]
 

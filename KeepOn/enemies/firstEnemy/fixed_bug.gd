@@ -5,6 +5,9 @@ var motion = Vector2.ZERO
 
 
 
+@onready var ratwalk: AudioStreamPlayer2D = $ratwalk
+
+@onready var Ratmoving: AnimationPlayer = $Ratmoving
 
 func _physics_process(delta):
 	
@@ -12,6 +15,10 @@ func _physics_process(delta):
 		var direction = position.direction_to(player.position)
 		velocity = direction * 200 
 		direction = move_and_slide()
+		if velocity.length() > 0:
+			if not ratwalk.playing:
+				ratwalk.play()
+		
 
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://5mo22e3ci4vu"]
+[gd_scene load_steps=14 format=3 uid="uid://vs6ql2da3g3p"]
 
 [ext_resource type="Script" path="res://characters/Miner/player.gd" id="1_vs1wh"]
 [ext_resource type="PackedScene" uid="uid://cmgkom8c8hvly" path="res://OldFilesFromDemo2/gun.tscn" id="3_viovp"]
@@ -6,8 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://clswnbo5o1ir0" path="res://characters/Miner/light.png" id="4_80wto"]
 [ext_resource type="FontFile" uid="uid://dql203qeyagwm" path="res://Assets/FFFFORWA.TTF" id="7_eb1u4"]
 [ext_resource type="Texture2D" uid="uid://cyx3gpi1hjv7x" path="res://characters/miner.png" id="7_vruiw"]
-[ext_resource type="AudioStream" uid="uid://dljfmfp2jg4td" path="res://Sounds/KeepOn_Foot_Step_Var_1.wav" id="7_wje63"]
-[ext_resource type="AudioStream" uid="uid://dtnn06ymuaxyi" path="res://Sounds/KeepOn_Foot_Step_Var_2.wav" id="8_b2561"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_63j6a"]
 radius = 28.4605
@@ -157,15 +155,5 @@ theme_override_colors/font_color = Color(0.574219, 0.363373, 0, 1)
 theme_override_fonts/font = ExtResource("7_eb1u4")
 theme_override_font_sizes/font_size = 32
 text = "Oil"
-
-[node name="KeepOnFootStepVar1" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_wje63")
-
-[node name="KeepOnFootStepVar2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_b2561")
-
-[node name="sfx_footstep" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("8_b2561")
-volume_db = 3.962
 
 [connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]

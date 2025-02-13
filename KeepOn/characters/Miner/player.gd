@@ -1,5 +1,6 @@
 class_name Player
 extends CharacterBody2D
+@onready var sfx_footstep: AudioStreamPlayer2D = $sfx_footstep
 
 signal health_depleted
 
@@ -21,6 +22,10 @@ func _physics_process(delta):
 	if direction != Vector2.ZERO:
 		cardinal_direction = direction.normalized()
 	velocity = direction * 600
+	if velocity.length() > 0:
+		if not sfx_footstep.playing:
+			sfx_footstep.play()
+			
 	move_and_slide()
 	'if velocity.length() > 0.0:
 		%HappyBoo.play_walk_animation()
