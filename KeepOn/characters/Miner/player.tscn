@@ -86,11 +86,318 @@ position = Vector2(-29.0908, -120)
 scale = Vector2(1.86644, 1.86416)
 color = Color(1, 1, 0.298039, 1)
 energy = 2.38
-shadow_enabled = true
 texture = ExtResource("4_80wto")
 texture_scale = 4.65
 
 [node name="Throw" type="Node2D" parent="."]
 script = ExtResource("6_wwf4s")
+
+[node name="Start1" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -321.818
+offset_top = 49.0909
+offset_right = 321.182
+offset_bottom = 100.091
+theme_override_font_sizes/font_size = 25
+text = "Where are you?
+There’s squeaking skittering all around"
+
+[node name="Start2" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -321.818
+offset_top = 49.0909
+offset_right = 321.182
+offset_bottom = 100.091
+theme_override_font_sizes/font_size = 25
+text = "The ground is cold and hard, 
+though less than the fading chill that seemed to wrap itself around your very bones"
+
+[node name="Start3" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -321.818
+offset_top = 49.0909
+offset_right = 321.182
+offset_bottom = 100.091
+theme_override_font_sizes/font_size = 25
+text = "The warmth is welcome, you look to find the cause and, oh, it’s a lantern"
+
+[node name="Pickup1" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -321.818
+offset_top = 49.0909
+offset_right = 321.182
+offset_bottom = 100.091
+theme_override_font_sizes/font_size = 25
+text = "The shadows seem to stick and cling to the edges of the light 
+like they are reluctant to go"
+
+[node name="Pickup2" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -321.818
+offset_top = 49.0909
+offset_right = 321.182
+offset_bottom = 100.091
+theme_override_font_sizes/font_size = 25
+text = "As the lantern swings crystals glint and glitter
+It’s kind of beautiful
+"
+
+[node name="Pickup3" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -321.818
+offset_top = 49.0909
+offset_right = 321.182
+offset_bottom = 100.091
+theme_override_font_sizes/font_size = 25
+text = "But you can't stay here"
+
+[node name="LV2-1" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -321.818
+offset_top = 49.0909
+offset_right = 321.182
+offset_bottom = 100.091
+theme_override_font_sizes/font_size = 25
+text = "The whispers are getting louder, clearer.  The animals seem quieter, almost nervous."
+
+[node name="LV2-2" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -321.818
+offset_top = 49.0909
+offset_right = 321.182
+offset_bottom = 100.091
+theme_override_font_sizes/font_size = 25
+text = "You want to say something, 
+but the words stick in your throat before you can bring yourself to speak."
+
+[node name="LV2-3" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -321.818
+offset_top = 49.0909
+offset_right = 321.182
+offset_bottom = 100.091
+theme_override_font_sizes/font_size = 25
+text = "Glass crunches underfoot.  Is that a lantern?  It looks an awful lot like your’s.
+There’s a sense of familiarity in the air, but you can't stay here
+"
+
+[node name="LV2E-1" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -321.818
+offset_top = 49.0909
+offset_right = 321.182
+offset_bottom = 100.091
+theme_override_font_sizes/font_size = 25
+text = "Fresh air?"
+
+[node name="LV2E-2" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -321.818
+offset_top = 49.0909
+offset_right = 321.182
+offset_bottom = 100.091
+theme_override_font_sizes/font_size = 25
+text = "The wind is blowing!"
+
+[node name="LV2E-3" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -321.818
+offset_top = 49.0909
+offset_right = 321.182
+offset_bottom = 100.091
+theme_override_font_sizes/font_size = 25
+text = "Finally you’re outside!"
+
+[node name="End1" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -321.818
+offset_top = 49.0909
+offset_right = 321.182
+offset_bottom = 100.091
+theme_override_font_sizes/font_size = 25
+text = "The cold, fresh air hits your face. 
+ It’s night, stars glitter in greeting and the moon… "
+
+[node name="End2" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -321.818
+offset_top = 49.0909
+offset_right = 321.182
+offset_bottom = 100.091
+theme_override_font_sizes/font_size = 25
+text = "…It must be behind you?
+…No, that’s not right. "
+
+[node name="End3" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -321.818
+offset_top = 49.0909
+offset_right = 321.182
+offset_bottom = 100.091
+theme_override_font_sizes/font_size = 25
+text = "You remember now, this much at least.  
+The sun is long gone and the moon with it.  
+The cold and distant stars twinkle in the endless dark.  
+The only thing left is to keep the light on."
+
+[node name="Death1" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -110.909
+offset_top = 58.1818
+offset_right = 115.091
+offset_bottom = 109.182
+theme_override_font_sizes/font_size = 25
+text = "The dark is so loud
+"
+
+[node name="Death2" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -187.273
+offset_top = 50.9091
+offset_right = 192.727
+offset_bottom = 101.909
+theme_override_font_sizes/font_size = 25
+text = "You can hear it so much clearer"
+
+[node name="Death3" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -47.2727
+offset_top = 54.5455
+offset_right = 49.7273
+offset_bottom = 105.545
+theme_override_font_sizes/font_size = 25
+text = "It says…"
+
+[node name="OverlapL1" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -138.182
+offset_top = 38.1818
+offset_right = -41.1818
+offset_bottom = 89.1818
+theme_override_font_sizes/font_size = 25
+text = "go back
+"
+
+[node name="OverlapL2" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -29.0909
+offset_top = 34.5455
+offset_right = 20.9091
+offset_bottom = 85.5455
+theme_override_font_sizes/font_size = 25
+text = "stay
+"
+
+[node name="OverlapL3" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = 50.9091
+offset_top = 74.5455
+offset_right = 147.909
+offset_bottom = 125.545
+theme_override_font_sizes/font_size = 25
+text = "help
+"
+
+[node name="OverlapL4" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -141.818
+offset_top = 72.7273
+offset_right = 27.1818
+offset_bottom = 145.727
+theme_override_font_sizes/font_size = 25
+text = "it’s dangerous
+
+"
+
+[node name="OverlapL5" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = 30.9091
+offset_top = 34.5455
+offset_right = 127.909
+offset_bottom = 107.545
+theme_override_font_sizes/font_size = 25
+text = "please
+
+"
+
+[node name="OverlapL6" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -14.5455
+offset_top = 69.0909
+offset_right = 82.4545
+offset_bottom = 120.091
+theme_override_font_sizes/font_size = 25
+text = "go back
+"
+
+[node name="OverlapL7" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -125.455
+offset_top = 72.7273
+offset_right = -75.4545
+offset_bottom = 123.727
+theme_override_font_sizes/font_size = 25
+text = "stay
+"
+
+[node name="OverlapL8" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -121.818
+offset_top = 40.0
+offset_right = -24.8182
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 25
+text = "help
+"
+
+[node name="OverlapL9" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -74.5455
+offset_top = 40.0
+offset_right = 94.4545
+offset_bottom = 113.0
+theme_override_font_sizes/font_size = 25
+text = "it’s dangerous
+
+"
+
+[node name="OverlapL10" type="Label" parent="."]
+visible = false
+visibility_layer = 512
+offset_left = -80.0
+offset_top = 40.0
+offset_right = 17.0
+offset_bottom = 113.0
+theme_override_font_sizes/font_size = 25
+text = "please
+
+"
 
 [connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]
