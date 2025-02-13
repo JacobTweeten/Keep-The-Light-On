@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr4vu4cp103vb"
-path="res://.godot/imported/pixil-frame-0 (24).png-5d659c9ff2264d583c728bd0db3beda4.ctex"
+uid="uid://bbcrqpsqr830q"
+path="res://.godot/imported/KTLO_Frame_7_A1.png-b1426f16ccb07da528282f5b2b1ca6ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Levels/pixil-frame-0 (24).png"
-dest_files=["res://.godot/imported/pixil-frame-0 (24).png-5d659c9ff2264d583c728bd0db3beda4.ctex"]
+source_file="res://Levels/KTLO_Frame_7_A1.png"
+dest_files=["res://.godot/imported/KTLO_Frame_7_A1.png-b1426f16ccb07da528282f5b2b1ca6ad.ctex"]
 
 [params]
 
