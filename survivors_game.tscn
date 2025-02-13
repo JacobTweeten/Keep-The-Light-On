@@ -1,0 +1,138 @@
+[gd_scene load_steps=9 format=3 uid="uid://cjgq0nxhkr82u"]
+
+[ext_resource type="Script" path="res://survivors_game.gd" id="1_110yh"]
+[ext_resource type="PackedScene" uid="uid://5mo22e3ci4vu" path="res://characters/Miner/player.tscn" id="1_n6sk1"]
+[ext_resource type="Texture2D" uid="uid://caqfk2xng5v5u" path="res://OldFilesFromDemo2/trees/pine_tree.png" id="3_m5kdh"]
+[ext_resource type="PackedScene" uid="uid://d2itpclivav52" path="res://Collectables/oil_can.tscn" id="4_1d46e"]
+[ext_resource type="PackedScene" uid="uid://c3028soe562lp" path="res://enemies/secondenemy/bat.tscn" id="5_o15b2"]
+[ext_resource type="PackedScene" uid="uid://bh2qs4252a5b6" path="res://enemies/firstEnemy/fixed_bug.tscn" id="6_s4qvd"]
+[ext_resource type="PackedScene" uid="uid://ugrkuhmnukym" path="res://Collectables/super_oil_can.tscn" id="7_miykr"]
+
+[sub_resource type="Curve2D" id="Curve2D_0v7uw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -695, -496, 0, 0, 0, 0, 2511, -591, 0, 0, 0, 0, 2502, 1464, 0, 0, 0, 0, -714, 1436, 0, 0, 0, 0, -695, -496)
+}
+point_count = 5
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_110yh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -2
+offset_left = -896.0
+offset_top = -760.0
+offset_right = 2827.0
+offset_bottom = 1577.0
+color = Color(0.214352, 0.199947, 0.121722, 1)
+metadata/_edit_group_ = true
+
+[node name="CanvasModulateDARKNESS" type="CanvasModulate" parent="."]
+color = Color(0.158472, 0.158472, 0.158472, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -9
+
+[node name="Player" parent="." instance=ExtResource("1_n6sk1")]
+y_sort_enabled = true
+position = Vector2(864, 545)
+
+[node name="Path2D" type="Path2D" parent="Player"]
+visible = false
+position = Vector2(-698.899, -680.518)
+scale = Vector2(0.92031, 0.902676)
+curve = SubResource("Curve2D_0v7uw")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D"]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-695, -496)
+rotation = -0.0296233
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.334
+autostart = true
+
+[node name="GameOver" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.819608, 0.160784, 0.129412, 0.294118)
+
+[node name="Label" type="Label" parent="GameOver/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -303.0
+offset_top = -166.5
+offset_right = 303.0
+offset_bottom = 166.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 160
+text = "YOU DIED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PineTree" type="Sprite2D" parent="."]
+position = Vector2(130, 945)
+texture = ExtResource("3_m5kdh")
+
+[node name="PineTree2" type="Sprite2D" parent="."]
+position = Vector2(-809, -339)
+texture = ExtResource("3_m5kdh")
+
+[node name="PineTree3" type="Sprite2D" parent="."]
+position = Vector2(1074, 264)
+texture = ExtResource("3_m5kdh")
+
+[node name="OilCan" parent="." instance=ExtResource("4_1d46e")]
+position = Vector2(1344, 670)
+
+[node name="OilCan2" parent="." instance=ExtResource("4_1d46e")]
+position = Vector2(665, 819)
+
+[node name="OilCan3" parent="." instance=ExtResource("4_1d46e")]
+position = Vector2(517, 212)
+metadata/_edit_group_ = true
+
+[node name="OilCan4" parent="." instance=ExtResource("4_1d46e")]
+position = Vector2(1734, 1008)
+
+[node name="OilCan5" parent="." instance=ExtResource("4_1d46e")]
+position = Vector2(2165, -175)
+
+[node name="OilCan6" parent="." instance=ExtResource("4_1d46e")]
+position = Vector2(-654, 320)
+
+[node name="OilCan7" parent="." instance=ExtResource("4_1d46e")]
+position = Vector2(2226, 994)
+
+[node name="OilCan8" parent="." instance=ExtResource("4_1d46e")]
+position = Vector2(-536, -507)
+
+[node name="bat" parent="." instance=ExtResource("5_o15b2")]
+position = Vector2(-564, 1039)
+
+[node name="bat2" parent="." instance=ExtResource("5_o15b2")]
+position = Vector2(2136, 1057)
+
+[node name="bat3" parent="." instance=ExtResource("5_o15b2")]
+position = Vector2(1735, -559)
+
+[node name="FixedBug" parent="." instance=ExtResource("6_s4qvd")]
+position = Vector2(418, 231)
+
+[node name="OilCan9" parent="." instance=ExtResource("7_miykr")]
+position = Vector2(1051, 550)
+
+[connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
