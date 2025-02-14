@@ -1,7 +1,11 @@
-res://Sounds/ThemeSong.tscn
 res://survivors_game.tscn
 res://Levels/level_0_and_1.tscn
+res://Levels/Level_2/Level_2.tscn
 res://characters/Miner/weapon/boomarang.tscn
-res://Levels/testLevel.tscn
 res://Levels/titleScreen/main_menu.tscn
 res://characters/Miner/player.tscn
+res://Levels/testLevel.tscn
+res://Levels/testLevel2.tscn
+res://Levels/lvl2/NextLevelFromLevel2Toend.tscn
+res://Levels/level_0_and_1.gd
+res://Levels/Level_2/level_2.gd

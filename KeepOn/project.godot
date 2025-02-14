@@ -75,7 +75,7 @@ Settings/Show_Tooltips=true
 [application]
 
 config/name="Keep The Light On"
-run/main_scene="res://survivors_game.tscn"
+run/main_scene="res://Levels/titleScreen/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.png"
 

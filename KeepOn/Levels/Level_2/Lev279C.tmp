@@ -1,0 +1,192 @@
+[gd_scene load_steps=26 format=3 uid="uid://dh0owmkhrurg1"]
+
+[ext_resource type="Script" path="res://Levels/Level_2/level_2.gd" id="1_v3r0v"]
+[ext_resource type="Texture2D" uid="uid://dxh5q2swxhmch" path="res://Levels/Level_2/pixil-frame-0_3.png" id="1_xx6f7"]
+[ext_resource type="Texture2D" uid="uid://bdyiyhx7iye6h" path="res://Levels/Level_2/pixil-frame-0 (39).png" id="2_c5bv6"]
+[ext_resource type="Texture2D" uid="uid://ddutfp7i5j71k" path="res://Levels/Level_2/pixil-frame-0_5.png" id="3_60q5l"]
+[ext_resource type="Texture2D" uid="uid://8ovthq5qvyo" path="res://Levels/Level_2/pixil-frame-0 (40).png" id="4_qdb8c"]
+[ext_resource type="Texture2D" uid="uid://blqr8jkrosoqg" path="res://Levels/Level_2/middle.png" id="5_fvnm7"]
+[ext_resource type="Texture2D" uid="uid://ukmvsvpe7m8t" path="res://Levels/Level_2/st8down.png" id="6_i5vij"]
+[ext_resource type="Texture2D" uid="uid://bhfsrljvu480g" path="res://Levels/Level_2/8.png" id="7_lwqbo"]
+[ext_resource type="Texture2D" uid="uid://c5k3857edxiux" path="res://Levels/Level_2/level_two_bottom_right.png" id="8_2csq6"]
+[ext_resource type="PackedScene" uid="uid://bh2qs4252a5b6" path="res://enemies/firstEnemy/rat.tscn" id="9_5beyq"]
+[ext_resource type="PackedScene" uid="uid://5mo22e3ci4vu" path="res://characters/Miner/player.tscn" id="9_qvft6"]
+[ext_resource type="PackedScene" uid="uid://yj58ag7uuckf" path="res://enemies/thirdEnemy/shadow_person.tscn" id="10_c3vx3"]
+[ext_resource type="PackedScene" uid="uid://ugrkuhmnukym" path="res://Collectables/super_oil_can.tscn" id="12_1iguy"]
+[ext_resource type="PackedScene" uid="uid://cpxs7yjv4jm8g" path="res://Sounds/ThemeSong.tscn" id="12_jiwa6"]
+[ext_resource type="PackedScene" uid="uid://d2itpclivav52" path="res://Collectables/oil_can.tscn" id="13_vqh5w"]
+[ext_resource type="PackedScene" uid="uid://h1l63bs0hfpy" path="res://Levels/lvl2/NextLevelFromLevel2Toend.tscn" id="14_vuxrd"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8iupi"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ofw47"]
+polygon = PackedVector2Array(0, -1, -33, 0, -46, 1486, 1, 1485)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_lvnos"]
+polygon = PackedVector2Array(0, 0, 0, -37, 2416, -32, 2415, 0)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_mjx0h"]
+polygon = PackedVector2Array(1, 1429, 1, 1484, 2546, 1494, 2546, 1430)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wshfb"]
+polygon = PackedVector2Array(2400, 0, 2438, 0, 2435, 1430, 2400, 1429)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_1eduf"]
+polygon = PackedVector2Array(-3, 929, 799, 934, 798, 970, 2, 952)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_w5wrt"]
+polygon = PackedVector2Array(780, 765, 827, 766, 821, 1161, 768, 1160)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_kq8r2"]
+polygon = PackedVector2Array(779, 275, 1633, 288, 1619, 482, 769, 488)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jfihs"]
+polygon = PackedVector2Array(1783, 290, 1764, 1537, 1438, 1537, 1446, 290)
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_v3r0v")
+
+[node name="ThemeSong" parent="." instance=ExtResource("12_jiwa6")]
+volume_db = -6.823
+max_distance = 1e+10
+attenuation = 0.015625
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -557.0
+offset_top = -410.0
+offset_right = 2879.0
+offset_bottom = 1745.0
+color = Color(0.415686, 0.286275, 0.282353, 1)
+
+[node name="Frame_1" type="Sprite2D" parent="."]
+position = Vector2(400, 240)
+scale = Vector2(1.25, 1)
+texture = ExtResource("1_xx6f7")
+
+[node name="Frame_2" type="Sprite2D" parent="."]
+position = Vector2(1200, 240)
+scale = Vector2(1.25, 1)
+texture = ExtResource("2_c5bv6")
+flip_v = true
+
+[node name="Frame_3" type="Sprite2D" parent="."]
+position = Vector2(2000, 240)
+scale = Vector2(1.25, 1)
+texture = ExtResource("3_60q5l")
+
+[node name="Frame_4" type="Sprite2D" parent="."]
+position = Vector2(400, 719)
+scale = Vector2(1.25, 1)
+texture = ExtResource("4_qdb8c")
+
+[node name="Frame_5" type="Sprite2D" parent="."]
+position = Vector2(1200, 719)
+scale = Vector2(1.25, 1)
+texture = ExtResource("5_fvnm7")
+
+[node name="Frame_6" type="Sprite2D" parent="."]
+position = Vector2(2000, 719)
+scale = Vector2(1.25, 1)
+texture = ExtResource("6_i5vij")
+
+[node name="Frame_7" type="Sprite2D" parent="."]
+position = Vector2(400, 1189)
+scale = Vector2(1.25, 1)
+texture = SubResource("CompressedTexture2D_8iupi")
+
+[node name="Frame_8" type="Sprite2D" parent="."]
+position = Vector2(1200, 1189)
+scale = Vector2(1.25, 1)
+texture = ExtResource("7_lwqbo")
+
+[node name="Frame_9" type="Sprite2D" parent="."]
+position = Vector2(2000, 1189)
+scale = Vector2(1.25, 1)
+texture = ExtResource("8_2csq6")
+
+[node name="Collision" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collision"]
+polygon = PackedVector2Array(7, 1420, 23, 993, 14, 49, 61, -10, 2411, -6, 2378, 1420, 19, 1432, 2288, 1697, 2682.48, 1556.75, 2568, -244, 2335, -270, 1589, -198, 317, -215, -60, -261, -304, 1061, -376, 1550)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Collision"]
+polygon = PackedVector2Array(8, 959, 755, 991, 764, 1170, 831, 1162, 853, 759, 772, 749, 748, 925, 4, 905)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Collision"]
+polygon = PackedVector2Array(1408, 1627, 1424, 493, 751, 503, 766, 271, 1779, 284, 1782, 1684)
+
+[node name="FixedBug" parent="Collision" instance=ExtResource("9_5beyq")]
+position = Vector2(779, 1284)
+
+[node name="FixedBug2" parent="Collision" instance=ExtResource("9_5beyq")]
+position = Vector2(779, 636)
+
+[node name="FixedBug3" parent="Collision" instance=ExtResource("9_5beyq")]
+position = Vector2(2087, 763)
+
+[node name="FixedBug4" parent="Collision" instance=ExtResource("9_5beyq")]
+position = Vector2(2081, 192)
+
+[node name="Shadow_person" parent="Collision" instance=ExtResource("10_c3vx3")]
+position = Vector2(198, 728)
+
+[node name="Shadow_person2" parent="Collision" instance=ExtResource("10_c3vx3")]
+position = Vector2(1186, 925)
+
+[node name="Shadow_person3" parent="Collision" instance=ExtResource("10_c3vx3")]
+position = Vector2(1084, 176)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_ofw47")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_lvnos")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_mjx0h")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_wshfb")
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_1eduf")
+
+[node name="LightOccluder2D6" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_w5wrt")
+
+[node name="LightOccluder2D7" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_kq8r2")
+
+[node name="LightOccluder2D8" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_jfihs")
+
+[node name="Player" parent="." instance=ExtResource("9_qvft6")]
+position = Vector2(403, 164)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.152941, 0.152941, 0.152941, 1)
+
+[node name="OilCan" parent="." instance=ExtResource("12_1iguy")]
+position = Vector2(1198, 652)
+
+[node name="OilCan2" parent="." instance=ExtResource("12_1iguy")]
+position = Vector2(1887, 500)
+
+[node name="OilCan3" parent="." instance=ExtResource("13_vqh5w")]
+position = Vector2(1109, 1284)
+
+[node name="OilCan4" parent="." instance=ExtResource("13_vqh5w")]
+position = Vector2(363, 1192)
+
+[node name="OilCan5" parent="." instance=ExtResource("13_vqh5w")]
+position = Vector2(208, 423)
+
+[node name="OilCan6" parent="." instance=ExtResource("13_vqh5w")]
+position = Vector2(1489, 154)
+
+[node name="Shadow_person" parent="." instance=ExtResource("10_c3vx3")]
+position = Vector2(2003, 1278)
+
+[node name="NextLevel" parent="." instance=ExtResource("14_vuxrd")]
+position = Vector2(2295, 1307)
+scale = Vector2(1.37583, 2.37158)
