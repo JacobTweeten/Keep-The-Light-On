@@ -135,7 +135,7 @@ scale = Vector2(0.55, 0.55)
 occluder = SubResource("OccluderPolygon2D_gvaxd")
 
 [node name="Lantern" parent="." instance=ExtResource("8_ug0sm")]
-position = Vector2(1428, 461)
+position = Vector2(1823, 443)
 
 [node name="Pickaxe" parent="." instance=ExtResource("9_3qv58")]
 position = Vector2(1485, 126)

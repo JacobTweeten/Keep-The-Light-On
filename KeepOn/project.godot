@@ -83,6 +83,7 @@ config/icon="res://icon.png"
 
 Global="*res://Global.gd"
 SceneTransition="*res://Assets/SceneTranstion/SceneTransition.tscn"
+ThemeSong="*res://Sounds/ThemeSong.tscn"
 
 [display]
 

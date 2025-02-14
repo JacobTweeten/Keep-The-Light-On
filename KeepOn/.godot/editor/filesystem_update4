@@ -1,7 +1,7 @@
+res://Sounds/ThemeSong.tscn
 res://survivors_game.tscn
-res://Levels/titleScreen/main_menu.tscn
+res://Levels/level_0_and_1.tscn
+res://characters/Miner/weapon/boomarang.tscn
 res://Levels/testLevel.tscn
-res://enemies/firstEnemy/rat.tscn
-res://enemies/secondenemy/bat.tscn
-res://enemies/thirdEnemy/shadow_person.tscn
+res://Levels/titleScreen/main_menu.tscn
 res://characters/Miner/player.tscn

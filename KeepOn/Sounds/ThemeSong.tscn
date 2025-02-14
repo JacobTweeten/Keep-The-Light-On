@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpxs7yjv4jm8g"]
+
+[ext_resource type="AudioStream" uid="uid://jkfclpadf5m5" path="res://Sounds/KeepOn_Song_Loop_A1.wav" id="1_ow0vf"]
+
+[node name="ThemeSong" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_ow0vf")
+volume_db = -73.54
+autoplay = true

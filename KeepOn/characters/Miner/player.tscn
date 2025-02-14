@@ -47,7 +47,16 @@ var player: Player
 var boomerang_instance: Boomerang = null
 
 func _ready() -> void:
+	await get_tree().process_frame
 	player = get_node(\"/root/Game/Player\")
+	if player == null:
+		print(\"Error: Player node not found!\")
+	for child in get_tree().get_root().get_children():
+		if child.name == \"Player\":  # Adjust name if different
+			player = child
+			print(\"Player found:\", player.name)
+			break
+
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:

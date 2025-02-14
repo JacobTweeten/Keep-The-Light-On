@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cjgq0nxhkr82u"]
+[gd_scene load_steps=13 format=3 uid="uid://cjgq0nxhkr82u"]
 
 [ext_resource type="Script" path="res://survivors_game.gd" id="1_110yh"]
 [ext_resource type="PackedScene" uid="uid://5mo22e3ci4vu" path="res://characters/Miner/player.tscn" id="1_n6sk1"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ugrkuhmnukym" path="res://Collectables/super_oil_can.tscn" id="7_miykr"]
 [ext_resource type="PackedScene" uid="uid://yj58ag7uuckf" path="res://enemies/thirdEnemy/shadow_person.tscn" id="8_o3eak"]
 [ext_resource type="PackedScene" uid="uid://c63vlxu56qld8" path="res://characters/Miner/ui.tscn" id="9_41hwq"]
+[ext_resource type="PackedScene" uid="uid://cpxs7yjv4jm8g" path="res://Sounds/ThemeSong.tscn" id="10_dgebx"]
 
 [sub_resource type="Curve2D" id="Curve2D_0v7uw"]
 _data = {
@@ -165,6 +166,9 @@ modulate = Color(0.0569268, 0.159853, 0.0656713, 1)
 position = Vector2(1092, 489)
 scale = Vector2(0.55, 0.55)
 occluder = SubResource("OccluderPolygon2D_gvaxd")
+
+[node name="ThemeSong" parent="." instance=ExtResource("10_dgebx")]
+volume_db = -6.88
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
