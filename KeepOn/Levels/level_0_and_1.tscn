@@ -112,9 +112,6 @@ position = Vector2(1230, 731)
 [node name="OilCan2" parent="." instance=ExtResource("5_f6tlu")]
 position = Vector2(1548, 165)
 
-[node name="OilCan3" parent="." instance=ExtResource("5_f6tlu")]
-position = Vector2(864, 234)
-
 [node name="FixedBug" parent="." instance=ExtResource("6_ksodg")]
 position = Vector2(1496, 520)
 
@@ -163,14 +160,8 @@ position = Vector2(2247, 878)
 [node name="FixedBug4" parent="." instance=ExtResource("6_ksodg")]
 position = Vector2(1777, 919)
 
-[node name="OilCan4" parent="." instance=ExtResource("5_f6tlu")]
-position = Vector2(332, 1040)
-
 [node name="OilCan5" parent="." instance=ExtResource("14_h0hqs")]
 position = Vector2(2061, 1136)
-
-[node name="OilCan6" parent="." instance=ExtResource("5_f6tlu")]
-position = Vector2(1957, 439)
 
 [node name="OilCan7" parent="." instance=ExtResource("5_f6tlu")]
 position = Vector2(292, 499)
@@ -236,18 +227,21 @@ attenuation = 0.0883886
 [node name="GameOver" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
 layer = 5
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="GameOver"]
 light_mask = 1023
 visibility_layer = 1023
 z_index = 5
-anchors_preset = 15
+anchors_preset = -1
+anchor_left = -0.025
+anchor_top = -0.0555556
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 18.0
-offset_top = 13.0
-offset_right = 18.0
-offset_bottom = 13.0
+offset_left = 36.0
+offset_top = 49.0
+offset_right = 36.0
+offset_bottom = 49.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.644531, 0.0301183, 0, 1)
@@ -304,3 +298,4 @@ script = ExtResource("21_tjefu")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
+[connection signal="pressed" from="GameOver/GameOverButton" to="." method="_on_game_over_button_pressed"]

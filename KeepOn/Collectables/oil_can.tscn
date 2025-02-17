@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d2itpclivav52"]
 
 [ext_resource type="Script" path="res://Collectables/oil_can.gd" id="1_6irb6"]
-[ext_resource type="Texture2D" uid="uid://0rdq1lrxf4um" path="res://characters/Miner/OIL.png" id="1_6yv7r"]
+[ext_resource type="Texture2D" uid="uid://b2mc3af2dox8p" path="res://Collectables/oil_can.png" id="3_uhj3i"]
 [ext_resource type="Texture2D" uid="uid://clswnbo5o1ir0" path="res://characters/Miner/light.png" id="3_yx0o4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8btsm"]
@@ -10,11 +10,6 @@ radius = 220.101
 [node name="OilCan" type="Node2D" groups=["PlayersLight"]]
 scale = Vector2(0.3, 0.3)
 script = ExtResource("1_6irb6")
-
-[node name="Oil" type="Sprite2D" parent="."]
-position = Vector2(25, -99)
-scale = Vector2(0.563228, 0.51)
-texture = ExtResource("1_6yv7r")
 
 [node name="OilPickUp" type="Area2D" parent="." groups=["PlayersLight"]]
 
@@ -25,6 +20,11 @@ shape = SubResource("CircleShape2D_8btsm")
 [node name="PointLight2D" type="PointLight2D" parent="."]
 color = Color(1, 1, 0, 1)
 texture = ExtResource("3_yx0o4")
+
+[node name="OilCan" type="Sprite2D" parent="."]
+position = Vector2(20, -30)
+scale = Vector2(9.09375, 9.04167)
+texture = ExtResource("3_uhj3i")
 
 [connection signal="body_entered" from="OilPickUp" to="." method="_on_oil_pick_up_body_entered"]
 [connection signal="body_entered" from="OilPickUp" to="OilPickUp" method="_on_body_entered"]

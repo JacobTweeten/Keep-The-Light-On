@@ -21,11 +21,8 @@ func _ready() -> void:
 func _on_player_health_depleted():
 	%GameOver.show()
 
-	
-	
 
-
-func _on_button_pressed() -> void:
+func _on_game_over_button_pressed() -> void:
 	print("Button Clicked!")
 	%GameOverButton.disabled = false
 	get_tree().paused = false

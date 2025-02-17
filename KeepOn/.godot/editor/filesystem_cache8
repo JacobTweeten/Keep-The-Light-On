@@ -1,11 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739496559
+::res://::1739807433
 first_level_game.tscn::PackedScene::6027864439341497363::1739489522::0::1::::<><>::res://survivors_game.gd<>uid://5mo22e3ci4vu::::res://characters/Miner/player.tscn<>uid://dql203qeyagwm::::res://Assets/FFFFORWA.TTF<>res://Assets/score_label.gd<>uid://d2itpclivav52::::res://Collectables/oil_can.tscn<>uid://c3028soe562lp::::res://enemies/secondenemy/bat.tscn<>uid://ugrkuhmnukym::::res://Collectables/super_oil_can.tscn<>uid://c63vlxu56qld8::::res://characters/Miner/ui.tscn<>uid://yj58ag7uuckf::::res://enemies/thirdEnemy/shadow_person.tscn
 Global.gd::GDScript::-1::1739489521::0::1::::<>Node<>::
 pixil-frame-0 (28).png::CompressedTexture2D::4879585167028081388::1739493576::1739493849::1::::<><>::
 Score.gd::GDScript::-1::1739242205::0::1::::<>Label<>::
 survivors_game.gd::GDScript::-1::1739489522::0::1::::<>Node2D<>::
-survivors_game.tscn::PackedScene::5417944062050910070::1739496545::0::1::::<><>::res://survivors_game.gd<>uid://5mo22e3ci4vu::::res://characters/Miner/player.tscn<>uid://dql203qeyagwm::::res://Assets/FFFFORWA.TTF<>uid://d2itpclivav52::::res://Collectables/oil_can.tscn<>res://Assets/score_label.gd<>uid://c3028soe562lp::::res://enemies/secondenemy/bat.tscn<>uid://ugrkuhmnukym::::res://Collectables/super_oil_can.tscn<>uid://yj58ag7uuckf::::res://enemies/thirdEnemy/shadow_person.tscn<>uid://c63vlxu56qld8::::res://characters/Miner/ui.tscn<>uid://cpxs7yjv4jm8g::::res://Sounds/ThemeSong.tscn
+survivors_game.tscn::PackedScene::5417944062050910070::1739807433::0::1::::<><>::res://survivors_game.gd<>uid://5mo22e3ci4vu::::res://characters/Miner/player.tscn<>uid://dql203qeyagwm::::res://Assets/FFFFORWA.TTF<>uid://d2itpclivav52::::res://Collectables/oil_can.tscn<>res://Assets/score_label.gd<>uid://c3028soe562lp::::res://enemies/secondenemy/bat.tscn<>uid://ugrkuhmnukym::::res://Collectables/super_oil_can.tscn<>uid://yj58ag7uuckf::::res://enemies/thirdEnemy/shadow_person.tscn<>uid://c63vlxu56qld8::::res://characters/Miner/ui.tscn<>uid://cpxs7yjv4jm8g::::res://Sounds/ThemeSong.tscn
 ::res://addons/::1738423678
 ::res://addons/colorpicker_presets/::1738423678
 colorpicker_presets.gd::GDScript::-1::1737842738::0::1::::<>EditorPlugin<>::
@@ -25,26 +25,28 @@ scene_transition.gd::GDScript::-1::1739489521::0::1::::<>CanvasLayer<>::
 ::res://characters/::1739493849
 ground_shadow.png::CompressedTexture2D::2671517082038095037::1737842738::1739493849::1::::<><>::
 miner.png::CompressedTexture2D::6506565895002986531::1739489522::1739493849::1::::<><>::
-::res://characters/Miner/::1739496546
+::res://characters/Miner/::1739807434
 light.gd::GDScript::-1::1739489522::0::1::::<>Area2D<>::
 light.png::CompressedTexture2D::5583436511672675307::1738427508::1739493849::1::::<><>::
 minerwalk1.png::CompressedTexture2D::4630600823039258342::1739489522::1739493849::1::::<><>::
 minerwalk2.png::CompressedTexture2D::1731040122753912263::1739489522::1739493849::1::::<><>::
 minerwalkNUETRAL.png::CompressedTexture2D::3289261909847232240::1739489522::1739493849::1::::<><>::
 player.gd::GDScript::-1::1739496492::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::2131337522108736306::1739496546::0::1::::<><>::res://characters/Miner/player.gd<>uid://cmgkom8c8hvly::::res://OldFilesFromDemo2/gun.tscn<>res://characters/Miner/light.gd<>uid://clswnbo5o1ir0::::res://characters/Miner/light.png<>uid://dql203qeyagwm::::res://Assets/FFFFORWA.TTF<>uid://dljfmfp2jg4td::::res://Sounds/KeepOn_Foot_Step_Var_1.wav<>uid://dtnn06ymuaxyi::::res://Sounds/KeepOn_Foot_Step_Var_2.wav<>uid://bm4lwssamvxfc::::res://characters/Miner/minerwalkNUETRAL.png<>uid://b68dk31u30enu::::res://characters/Miner/minerwalk1.png<>uid://ywr8ip6gn4op::::res://characters/Miner/minerwalk2.png
+player.tscn::PackedScene::2131337522108736306::1739807434::0::1::::<><>::res://characters/Miner/player.gd<>uid://cmgkom8c8hvly::::res://OldFilesFromDemo2/gun.tscn<>res://characters/Miner/light.gd<>uid://clswnbo5o1ir0::::res://characters/Miner/light.png<>uid://dql203qeyagwm::::res://Assets/FFFFORWA.TTF<>uid://dljfmfp2jg4td::::res://Sounds/KeepOn_Foot_Step_Var_1.wav<>uid://dtnn06ymuaxyi::::res://Sounds/KeepOn_Foot_Step_Var_2.wav<>uid://bm4lwssamvxfc::::res://characters/Miner/minerwalkNUETRAL.png<>uid://b68dk31u30enu::::res://characters/Miner/minerwalk1.png<>uid://ywr8ip6gn4op::::res://characters/Miner/minerwalk2.png
 ui.gd::GDScript::-1::1739242352::0::1::::<>Control<>::
 ui.tscn::PackedScene::7007794038198201827::1739489522::0::1::::<><>::res://characters/Miner/ui.gd<>uid://dql203qeyagwm::::res://Assets/FFFFORWA.TTF
-::res://characters/Miner/weapon/::1739496546
+::res://characters/Miner/weapon/::1739807316
 boomarang.gd::GDScript::-1::1739489522::0::1::::Boomerang<>Node2D<>::
-boomarang.tscn::PackedScene::8045818425778973786::1739496546::0::1::::<><>::res://characters/Miner/weapon/boomarang.gd<>uid://c4v1k5lljrjfb::::res://characters/Miner/weapon/boomarangAxe.png
+boomarang.tscn::PackedScene::8045818425778973786::1739807316::0::1::::<><>::res://characters/Miner/weapon/boomarang.gd<>uid://c4v1k5lljrjfb::::res://characters/Miner/weapon/boomarangAxe.png
 boomarangAxe.png::CompressedTexture2D::6853267858681221895::1739489522::1739493849::1::::<><>::
-::res://Collectables/::1739493849
+::res://Collectables/::1739807510
+gas_can.png::CompressedTexture2D::6223435315826405479::1739807494::1739807511::1::::<><>::
 OIL.png::CompressedTexture2D::8353635132815275801::1738433229::1739493849::1::::<><>::
 oil_can.gd::GDScript::-1::1739242205::0::1::::Oil<>Node2D<>::
+oil_can.png::CompressedTexture2D::4306463440138928269::1739807488::1739807511::1::::<><>::
 oil_can.tscn::PackedScene::9072056383540912635::1739459514::0::1::::<><>::res://Collectables/oil_can.gd<>uid://0rdq1lrxf4um::::res://characters/Miner/OIL.png<>uid://clswnbo5o1ir0::::res://characters/Miner/light.png
 super_oil_can.gd::GDScript::-1::1739242630::0::1::::SuperOil<>Node2D<>::
-super_oil_can.tscn::PackedScene::1417214247945114900::1739242713::0::1::::<><>::res://Collectables/super_oil_can.gd<>uid://0rdq1lrxf4um::::res://characters/Miner/OIL.png<>uid://clswnbo5o1ir0::::res://characters/Miner/light.png
+super_oil_can.tscn::PackedScene::1417214247945114900::1739807465::0::1::::<><>::res://Collectables/super_oil_can.gd<>uid://0rdq1lrxf4um::::res://characters/Miner/OIL.png<>uid://clswnbo5o1ir0::::res://characters/Miner/light.png
 ::res://enemies/::1739242879
 ::res://enemies/firstEnemy/::1739493857
 fixed_bug.gd::GDScript::-1::1739489522::0::1::::<>CharacterBody2D<>::
@@ -54,11 +56,11 @@ rat.tscn::PackedScene::2934485970979545193::1739489522::0::1::::<><>::res://enem
 ratbob.png::CompressedTexture2D::7581122393463785306::1739481456::1739493849::1::::<><>::
 Rathurt.png::CompressedTexture2D::3395548928495317714::1739481456::1739493849::1::::<><>::
 ratstill.png::CompressedTexture2D::8626397276550827475::1739481456::1739493849::1::::<><>::
-::res://enemies/secondenemy/::1739493849
+::res://enemies/secondenemy/::1739807434
 Bat bottom wing.png::CompressedTexture2D::5191158019380663251::1739481456::1739493849::1::::<><>::
 Bat Top wing.png::CompressedTexture2D::2931187303928621907::1739481456::1739493849::1::::<><>::
 bat.gd::GDScript::-1::1739489522::0::1::::<>CharacterBody2D<>::
-bat.tscn::PackedScene::6791437690376805577::1739489522::0::1::::<><>::res://enemies/secondenemy/bat.gd<>res://enemies/secondenemy/bathitbox.gd<>uid://bh05hyaam1i2n::::res://enemies/secondenemy/Bat Top wing.png<>uid://cf7vu47hon0u6::::res://enemies/secondenemy/Bat bottom wing.png<>uid://campk2keassbj::::res://Sounds/KeepOn_Bat_Hit_A1.wav<>uid://bpxjw55478hgc::::res://enemies/secondenemy/hurt bat up.png<>uid://pak68bjl8tec::::res://enemies/secondenemy/hurt bat down.png<>uid://bhp4a3ip3qr0w::::res://Sounds/BATFLY.wav
+bat.tscn::PackedScene::6791437690376805577::1739807434::0::1::::<><>::res://enemies/secondenemy/bat.gd<>res://enemies/secondenemy/bathitbox.gd<>uid://bh05hyaam1i2n::::res://enemies/secondenemy/Bat Top wing.png<>uid://cf7vu47hon0u6::::res://enemies/secondenemy/Bat bottom wing.png<>uid://campk2keassbj::::res://Sounds/KeepOn_Bat_Hit_A1.wav<>uid://bpxjw55478hgc::::res://enemies/secondenemy/hurt bat up.png<>uid://pak68bjl8tec::::res://enemies/secondenemy/hurt bat down.png<>uid://bhp4a3ip3qr0w::::res://Sounds/BATFLY.wav
 bathitbox.gd::GDScript::-1::1739489522::0::1::::BatHitBox<>Node2D<>::
 hurt bat down.png::CompressedTexture2D::1053496919349498990::1739481456::1739493849::1::::<><>::
 hurt bat up.png::CompressedTexture2D::3487321390414099730::1739481456::1739493849::1::::<><>::
@@ -78,7 +80,7 @@ pixil-frame-0 (1).png::CompressedTexture2D::1365860705101584003::1739312266::173
 rat_side.png::CompressedTexture2D::1252607069793247684::1739312266::1739493849::1::::<><>::
 shadow_side.png::CompressedTexture2D::7277504571453168086::1739312266::1739493849::1::::<><>::
 titleSprite2.png::CompressedTexture2D::2368782824729920373::1739489521::1739493857::1::::<><>::
-::res://Levels/::1739496546
+::res://Levels/::1739807434
 8.png::CompressedTexture2D::1745092055563831838::1739494416::1739494422::1::::<><>::
 KTLO_Frame_1_A1.png::CompressedTexture2D::3499545112637547779::1739493576::1739493849::1::::<><>::
 KTLO_Frame_2_A1.png::CompressedTexture2D::7583324292632281122::1739460092::1739493849::1::::<><>::
@@ -89,8 +91,8 @@ KTLO_Frame_6_A1.png::CompressedTexture2D::6789218380516715302::1739493576::17394
 KTLO_Frame_7_A1.png::CompressedTexture2D::2461799860826507626::1739493576::1739493849::1::::<><>::
 KTLO_Frame_8_A1.png::CompressedTexture2D::6651355071893945225::1739493576::1739493849::1::::<><>::
 KTLO_Frame_9_A1.png::CompressedTexture2D::3021908112063791717::1739493576::1739493849::1::::<><>::
-level_0_and_1.gd::GDScript::-1::1739496116::0::1::::<>Node2D<>::
-level_0_and_1.tscn::PackedScene::6172567549516105328::1739496546::0::1::::<><>::uid://c10731jmkpson::::res://Levels/KTLO_Frame_8_A1.png<>res://Levels/level_0_and_1.gd<>uid://dgboijdijrjt7::::res://Levels/KTLO_Frame_2_A1.png<>uid://v4rkjpwj053v::::res://Levels/KTLO_Frame_5_A2.png<>uid://bjb3ndf7gckpp::::res://Levels/KTLO_Frame_9_A1.png<>uid://bp4g85g5n0qdf::::res://Levels/KTLO_Frame_1_A1.png<>uid://dw4h53tr6678r::::res://Levels/KTLO_Frame_3_A1.png<>uid://d2itpclivav52::::res://Collectables/oil_can.tscn<>uid://5mo22e3ci4vu::::res://characters/Miner/player.tscn<>uid://bh2qs4252a5b6::::res://enemies/firstEnemy/rat.tscn<>uid://cbryb4lixh4ei::::res://pixil-frame-0 (28).png<>uid://c3028soe562lp::::res://enemies/secondenemy/bat.tscn<>uid://c3y0o1v1d03fu::::res://Levels/KTLO_Frame_6_A1.png<>uid://bbcrqpsqr830q::::res://Levels/KTLO_Frame_7_A1.png<>uid://ugrkuhmnukym::::res://Collectables/super_oil_can.tscn<>uid://cnc47aisa587q::::res://Levels/lvl1/lantern.tscn<>uid://dfrf0d5uadrn::::res://Levels/lvl1/pickaxe.tscn<>uid://dh820eveop7rx::::res://Levels/lvl1/NextLevelFromLevel1To2.tscn<>uid://cpxs7yjv4jm8g::::res://Sounds/ThemeSong.tscn<>uid://dql203qeyagwm::::res://Assets/FFFFORWA.TTF<>res://Assets/score_label.gd
+level_0_and_1.gd::GDScript::-1::1739807035::0::1::::<>Node2D<>::
+level_0_and_1.tscn::PackedScene::6172567549516105328::1739807433::0::1::::<><>::uid://c10731jmkpson::::res://Levels/KTLO_Frame_8_A1.png<>res://Levels/level_0_and_1.gd<>uid://dgboijdijrjt7::::res://Levels/KTLO_Frame_2_A1.png<>uid://v4rkjpwj053v::::res://Levels/KTLO_Frame_5_A2.png<>uid://bjb3ndf7gckpp::::res://Levels/KTLO_Frame_9_A1.png<>uid://bp4g85g5n0qdf::::res://Levels/KTLO_Frame_1_A1.png<>uid://dw4h53tr6678r::::res://Levels/KTLO_Frame_3_A1.png<>uid://d2itpclivav52::::res://Collectables/oil_can.tscn<>uid://5mo22e3ci4vu::::res://characters/Miner/player.tscn<>uid://bh2qs4252a5b6::::res://enemies/firstEnemy/rat.tscn<>uid://cbryb4lixh4ei::::res://pixil-frame-0 (28).png<>uid://c3028soe562lp::::res://enemies/secondenemy/bat.tscn<>uid://c3y0o1v1d03fu::::res://Levels/KTLO_Frame_6_A1.png<>uid://bbcrqpsqr830q::::res://Levels/KTLO_Frame_7_A1.png<>uid://ugrkuhmnukym::::res://Collectables/super_oil_can.tscn<>uid://cnc47aisa587q::::res://Levels/lvl1/lantern.tscn<>uid://dfrf0d5uadrn::::res://Levels/lvl1/pickaxe.tscn<>uid://dh820eveop7rx::::res://Levels/lvl1/NextLevelFromLevel1To2.tscn<>uid://cpxs7yjv4jm8g::::res://Sounds/ThemeSong.tscn<>uid://dql203qeyagwm::::res://Assets/FFFFORWA.TTF<>res://Assets/score_label.gd
 level_two_bottom_right.png::CompressedTexture2D::1754110768246016087::1739494416::1739494422::1::::<><>::
 middle.png::CompressedTexture2D::9127659791277347319::1739494416::1739494422::1::::<><>::
 pixil-frame-0 (39).png::CompressedTexture2D::1377168160094899215::1739494416::1739494422::1::::<><>::
@@ -100,12 +102,12 @@ pixil-frame-0_3.png::CompressedTexture2D::6368797078545436123::1739494416::17394
 pixil-frame-0_4.png::CompressedTexture2D::5526492756213668095::1739494416::1739494422::1::::<><>::
 pixil-frame-0_5.png::CompressedTexture2D::2733144713298648452::1739494416::1739494422::1::::<><>::
 st8down.png::CompressedTexture2D::4103488392626399366::1739494416::1739494422::1::::<><>::
-testLevel2.tscn::PackedScene::1947622555564052299::1739496546::0::1::::<><>::res://survivors_game.gd<>uid://5mo22e3ci4vu::::res://characters/Miner/player.tscn<>uid://dql203qeyagwm::::res://Assets/FFFFORWA.TTF<>res://Assets/score_label.gd<>uid://d2itpclivav52::::res://Collectables/oil_can.tscn<>uid://c63vlxu56qld8::::res://characters/Miner/ui.tscn<>uid://oet7fm1ib1xd::::res://Assets/NextLevel.tscn<>res://Levels/lvl2/next_level_from_level_2_end.gd<>uid://yj58ag7uuckf::::res://enemies/thirdEnemy/shadow_person.tscn
-testLevel.tscn::PackedScene::3981232045208928871::1739496546::0::1::::<><>::res://survivors_game.gd<>uid://5mo22e3ci4vu::::res://characters/Miner/player.tscn<>uid://dql203qeyagwm::::res://Assets/FFFFORWA.TTF<>res://Assets/score_label.gd<>uid://d2itpclivav52::::res://Collectables/oil_can.tscn<>uid://c63vlxu56qld8::::res://characters/Miner/ui.tscn<>uid://cnc47aisa587q::::res://Levels/lvl1/lantern.tscn<>uid://dfrf0d5uadrn::::res://Levels/lvl1/pickaxe.tscn<>uid://dh820eveop7rx::::res://Levels/lvl1/NextLevelFromLevel1To2.tscn<>uid://c3028soe562lp::::res://enemies/secondenemy/bat.tscn<>uid://bh2qs4252a5b6::::res://enemies/firstEnemy/rat.tscn<>uid://yj58ag7uuckf::::res://enemies/thirdEnemy/shadow_person.tscn
-::res://Levels/Level_2/::1739496546
+testLevel2.tscn::PackedScene::1947622555564052299::1739807434::0::1::::<><>::res://survivors_game.gd<>uid://5mo22e3ci4vu::::res://characters/Miner/player.tscn<>uid://dql203qeyagwm::::res://Assets/FFFFORWA.TTF<>res://Assets/score_label.gd<>uid://d2itpclivav52::::res://Collectables/oil_can.tscn<>uid://c63vlxu56qld8::::res://characters/Miner/ui.tscn<>uid://oet7fm1ib1xd::::res://Assets/NextLevel.tscn<>res://Levels/lvl2/next_level_from_level_2_end.gd<>uid://yj58ag7uuckf::::res://enemies/thirdEnemy/shadow_person.tscn
+testLevel.tscn::PackedScene::3981232045208928871::1739807433::0::1::::<><>::res://survivors_game.gd<>uid://5mo22e3ci4vu::::res://characters/Miner/player.tscn<>uid://dql203qeyagwm::::res://Assets/FFFFORWA.TTF<>res://Assets/score_label.gd<>uid://d2itpclivav52::::res://Collectables/oil_can.tscn<>uid://c63vlxu56qld8::::res://characters/Miner/ui.tscn<>uid://cnc47aisa587q::::res://Levels/lvl1/lantern.tscn<>uid://dfrf0d5uadrn::::res://Levels/lvl1/pickaxe.tscn<>uid://dh820eveop7rx::::res://Levels/lvl1/NextLevelFromLevel1To2.tscn<>uid://c3028soe562lp::::res://enemies/secondenemy/bat.tscn<>uid://bh2qs4252a5b6::::res://enemies/firstEnemy/rat.tscn<>uid://yj58ag7uuckf::::res://enemies/thirdEnemy/shadow_person.tscn
+::res://Levels/Level_2/::1739807434
 8.png::CompressedTexture2D::2889188334937946980::1739494495::1739494502::1::::<><>::
-level_2.gd::GDScript::-1::1739495944::0::1::::<>Node2D<>::
-Level_2.tscn::PackedScene::7703083371831479994::1739496546::0::1::::<><>::res://Levels/Level_2/level_2.gd<>uid://dxh5q2swxhmch::::res://Levels/Level_2/pixil-frame-0_3.png<>uid://bdyiyhx7iye6h::::res://Levels/Level_2/pixil-frame-0 (39).png<>uid://ddutfp7i5j71k::::res://Levels/Level_2/pixil-frame-0_5.png<>uid://8ovthq5qvyo::::res://Levels/Level_2/pixil-frame-0 (40).png<>uid://blqr8jkrosoqg::::res://Levels/Level_2/middle.png<>uid://ukmvsvpe7m8t::::res://Levels/Level_2/st8down.png<>uid://bhfsrljvu480g::::res://Levels/Level_2/8.png<>uid://c5k3857edxiux::::res://Levels/Level_2/level_two_bottom_right.png<>uid://bh2qs4252a5b6::::res://enemies/firstEnemy/rat.tscn<>uid://5mo22e3ci4vu::::res://characters/Miner/player.tscn<>uid://yj58ag7uuckf::::res://enemies/thirdEnemy/shadow_person.tscn<>uid://ugrkuhmnukym::::res://Collectables/super_oil_can.tscn<>uid://cpxs7yjv4jm8g::::res://Sounds/ThemeSong.tscn<>uid://d2itpclivav52::::res://Collectables/oil_can.tscn<>uid://h1l63bs0hfpy::::res://Levels/lvl2/NextLevelFromLevel2Toend.tscn<>uid://dql203qeyagwm::::res://Assets/FFFFORWA.TTF<>res://Assets/score_label.gd
+level_2.gd::GDScript::-1::1739807057::0::1::::<>Node2D<>::
+Level_2.tscn::PackedScene::7703083371831479994::1739807434::0::1::::<><>::res://Levels/Level_2/level_2.gd<>uid://dxh5q2swxhmch::::res://Levels/Level_2/pixil-frame-0_3.png<>uid://bdyiyhx7iye6h::::res://Levels/Level_2/pixil-frame-0 (39).png<>uid://ddutfp7i5j71k::::res://Levels/Level_2/pixil-frame-0_5.png<>uid://8ovthq5qvyo::::res://Levels/Level_2/pixil-frame-0 (40).png<>uid://blqr8jkrosoqg::::res://Levels/Level_2/middle.png<>uid://ukmvsvpe7m8t::::res://Levels/Level_2/st8down.png<>uid://bhfsrljvu480g::::res://Levels/Level_2/8.png<>uid://c5k3857edxiux::::res://Levels/Level_2/level_two_bottom_right.png<>uid://bh2qs4252a5b6::::res://enemies/firstEnemy/rat.tscn<>uid://5mo22e3ci4vu::::res://characters/Miner/player.tscn<>uid://yj58ag7uuckf::::res://enemies/thirdEnemy/shadow_person.tscn<>uid://cpxs7yjv4jm8g::::res://Sounds/ThemeSong.tscn<>uid://d2itpclivav52::::res://Collectables/oil_can.tscn<>uid://h1l63bs0hfpy::::res://Levels/lvl2/NextLevelFromLevel2Toend.tscn<>uid://dql203qeyagwm::::res://Assets/FFFFORWA.TTF<>res://Assets/score_label.gd<>uid://c3028soe562lp::::res://enemies/secondenemy/bat.tscn
 level_two_bottom_right.png::CompressedTexture2D::6900911086385004231::1739494495::1739494502::1::::<><>::
 middle.png::CompressedTexture2D::3192619616802335726::1739494495::1739494502::1::::<><>::
 pixil-frame-0 (39).png::CompressedTexture2D::2647061280360007861::1739494495::1739494502::1::::<><>::
@@ -125,8 +127,8 @@ next_level_from_level_1_2.gd::GDScript::-1::1739495229::0::1::::<>Area2D<>::
 pickaxe.gd::GDScript::-1::1739489521::0::1::::<>Node2D<>::
 pickaxe.tscn::PackedScene::221930856638910747::1739489521::0::1::::<><>::uid://c4v1k5lljrjfb::::res://characters/Miner/weapon/boomarangAxe.png<>res://Levels/lvl1/pickaxe.gd<>res://Levels/lvl1/pickaxe_pickup.gd<>uid://46aqpqw47msy::::res://OldFilesFromDemo2/light.png
 pickaxe_pickup.gd::GDScript::-1::1739489521::0::1::::<>Area2D<>::
-::res://Levels/lvl2/::1739496546
-NextLevelFromLevel2Toend.tscn::PackedScene::545720446653399666::1739496546::0::1::::<><>::res://Levels/lvl2/next_level_from_level_2_end.gd
+::res://Levels/lvl2/::1739807434
+NextLevelFromLevel2Toend.tscn::PackedScene::545720446653399666::1739807434::0::1::::<><>::res://Levels/lvl2/next_level_from_level_2_end.gd
 next_level_from_level_2_end.gd::GDScript::-1::1739489521::0::1::::<>Area2D<>::
 ::res://Levels/testendlvl/::1739493849
 end1.png::CompressedTexture2D::4820895650995244715::1739489521::1739493849::1::::<><>::
@@ -134,10 +136,10 @@ end2.png::CompressedTexture2D::604114718967489124::1739489521::1739493849::1::::
 end4.png::CompressedTexture2D::4017581471588623041::1739489521::1739493849::1::::<><>::
 miner.png::CompressedTexture2D::6055245525565153111::1739489521::1739493849::1::::<><>::
 testendlvl.tscn::PackedScene::8645801073791605271::1739489521::0::1::::<><>::uid://caxjpg1ctxngd::::res://Levels/testendlvl/end1.png<>uid://iuvxfojp4ivc::::res://Levels/testendlvl/end2.png<>uid://bxie8kypu8h1j::::res://Levels/testendlvl/end4.png<>uid://csjhaksuhkyjf::::res://Levels/testendlvl/miner.png
-::res://Levels/titleScreen/::1739496546
+::res://Levels/titleScreen/::1739807316
 button.gd::GDScript::-1::1739489521::0::1::::<>Button<>::
 main_menu.gd::GDScript::-1::1739493576::0::1::::<>Node2D<>::
-main_menu.tscn::PackedScene::6441466502719055110::1739496546::0::1::::<><>::res://Levels/titleScreen/main_menu.gd<>uid://v63nbfhrufa7::::res://Levels/titleScreen/titleimg1.png<>uid://cn8qear7d7bgw::::res://Levels/titleScreen/titleimg2.png<>uid://hd76answh0ug::::res://Levels/titleScreen/titleimg3.png<>uid://jgrimxpyilwp::::res://Levels/titleScreen/title4.png<>uid://dql203qeyagwm::::res://Assets/FFFFORWA.TTF
+main_menu.tscn::PackedScene::6441466502719055110::1739807316::0::1::::<><>::res://Levels/titleScreen/main_menu.gd<>uid://v63nbfhrufa7::::res://Levels/titleScreen/titleimg1.png<>uid://cn8qear7d7bgw::::res://Levels/titleScreen/titleimg2.png<>uid://hd76answh0ug::::res://Levels/titleScreen/titleimg3.png<>uid://jgrimxpyilwp::::res://Levels/titleScreen/title4.png<>uid://dql203qeyagwm::::res://Assets/FFFFORWA.TTF
 title4.png::CompressedTexture2D::645133001019553799::1739489521::1739493849::1::::<><>::
 titleimg1.png::CompressedTexture2D::1539684778481687556::1739489521::1739493849::1::::<><>::
 titleimg2.png::CompressedTexture2D::5754399443345355478::1739489521::1739493849::1::::<><>::
