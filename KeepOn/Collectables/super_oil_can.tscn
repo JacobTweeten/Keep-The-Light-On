@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ugrkuhmnukym"]
+[gd_scene load_steps=6 format=3 uid="uid://ugrkuhmnukym"]
 
 [ext_resource type="Script" path="res://Collectables/super_oil_can.gd" id="1_784no"]
 [ext_resource type="Texture2D" uid="uid://0rdq1lrxf4um" path="res://characters/Miner/OIL.png" id="2_14v3y"]
 [ext_resource type="Texture2D" uid="uid://clswnbo5o1ir0" path="res://characters/Miner/light.png" id="3_fper6"]
+[ext_resource type="Texture2D" uid="uid://dvvwt6x4fsmd0" path="res://KTLO_art/gas_can.png" id="4_pj184"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8btsm"]
 radius = 220.101
@@ -12,6 +13,7 @@ scale = Vector2(0.3, 0.3)
 script = ExtResource("1_784no")
 
 [node name="Oil" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-7.62939e-06, -136.667)
 scale = Vector2(1.01095, 0.511667)
 texture = ExtResource("2_14v3y")
@@ -28,6 +30,11 @@ scale = Vector2(1.49349, 1.55208)
 color = Color(1, 1, 0, 1)
 energy = 11.35
 texture = ExtResource("3_fper6")
+
+[node name="GasCan" type="Sprite2D" parent="."]
+position = Vector2(33.3333, -60)
+scale = Vector2(4.875, 5.60417)
+texture = ExtResource("4_pj184")
 
 [connection signal="body_entered" from="OilPickUp" to="." method="_on_oil_pick_up_body_entered"]
 [connection signal="body_entered" from="OilPickUp" to="OilPickUp" method="_on_body_entered"]

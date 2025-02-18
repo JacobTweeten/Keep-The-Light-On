@@ -224,4 +224,40 @@ position = Vector2(-1.81818, -38.1818)
 scale = Vector2(0.446637, 0.435771)
 texture = ExtResource("9_chy1v")
 
+[node name="Death1" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+light_mask = 512
+visibility_layer = 512
+offset_left = -576.0
+offset_top = 547.0
+offset_right = 667.0
+offset_bottom = 638.0
+theme_override_font_sizes/font_size = 50
+text = "The dark is so loud"
+
+[node name="Death2" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+light_mask = 512
+visibility_layer = 512
+offset_left = -576.0
+offset_top = 547.0
+offset_right = 667.0
+offset_bottom = 638.0
+theme_override_font_sizes/font_size = 50
+text = "You can hear it so much clearer"
+
+[node name="Death3" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+light_mask = 512
+visibility_layer = 512
+offset_left = -576.0
+offset_top = 547.0
+offset_right = 667.0
+offset_bottom = 638.0
+theme_override_font_sizes/font_size = 50
+text = "It says…"
+
 [connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]
